@@ -1,6 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Abdul's Portfolio
 
-## Getting Started
+[https://abdul-portfolio-psi.vercel.app/](https://abdul-portfolio-psi.vercel.app/)
+
+## Stack
+
+- [Next.js](https://nextjs.org/) - A React framework with hybrid static & server rendering, and route pre-fetching, etc.
+- [Tailwindcss](https://tailwindcss.com/) - A simple, modular and CSS framework for React
+- [Shadcn/ui](https://ui.shadcn.com/) - A Re-usable components built using Radix UI and Tailwind CSS.
+- [Framer Motion](https://www.framer.com/motion/) - An animation library for React
+
+```
+$PROJECT_ROOT / App
+│   # Page files
+├── pages
+│   # React component files
+├── components
+│   # Non-react modules
+├── lib
+│   # Static files, validators, constant, and utils
+└── public
+```
 
 First, run the development server:
 

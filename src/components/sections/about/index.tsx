@@ -45,7 +45,7 @@ const About: FC<AboutProps> = ({ viewport }) => {
             </div>
           </div>
 
-          <div className="pt-[40px] text-[#D8D3CB] text-3xl ">
+          <div className="pt-[40px] text-[#D8D3CB] text-3xl max-w-lg ">
             <span className="text-[#32DD89]">
               {/* Hi, {""}👋 */}
               {/* <span className=" text-[#32DD89] bg-text-[#32DD89]">
@@ -55,7 +55,7 @@ const About: FC<AboutProps> = ({ viewport }) => {
             </span>{" "}
             {""}
             <div className="">
-              Every great design begin with an even
+              Every great design begin with an even {""}
               {/* {`I'm Abdul Suleiman,`}{" "} */}
               <span className="text-[#32DD89]">better story</span>
             </div>

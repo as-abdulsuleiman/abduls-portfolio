@@ -19,7 +19,7 @@ const Projects: FC<ProjectsProps> = ({ viewport }) => {
     return (
       <div
         onClick={onClick}
-        className="ring-[0.9px] top-[35%] ring-[#D8D3CB] group hover:ring-[#32DD89] absolute z-[1000] inline-block left-[3px] cursor-pointer bg-[rgba(0,0,0,0.5)] min-h-[34px] min-w-[34px] overflow-hidden rounded-full "
+        className="ring-[0.9px] top-[35%] ring-[#D8D3CB] group hover:ring-[#32DD89] absolute z-[1000] inline-block left-[6px] cursor-pointer bg-[rgba(0,0,0,0.5)] min-h-[34px] min-w-[34px] overflow-hidden rounded-full "
       >
         <span className="h-full w-full top-[5.3px] left-[4px] absolute">
           <ChevronLeft
@@ -35,7 +35,7 @@ const Projects: FC<ProjectsProps> = ({ viewport }) => {
     return (
       <div
         onClick={onClick}
-        className="ring-[0.9px] top-[35%] ring-[#D8D3CB] group hover:ring-[#32DD89] absolute z-[1000] inline-block right-[3px] cursor-pointer bg-[rgba(0,0,0,0.5)] min-h-[34px] min-w-[34px] overflow-hidden rounded-full "
+        className="ring-[0.9px] top-[35%] ring-[#D8D3CB] group hover:ring-[#32DD89] absolute z-[1000] inline-block right-[6px] cursor-pointer bg-[rgba(0,0,0,0.5)] min-h-[34px] min-w-[34px] overflow-hidden rounded-full "
       >
         <span className="h-full w-full top-[5.3px] left-[5.5px] absolute">
           <ChevronRight
@@ -130,7 +130,7 @@ const Projects: FC<ProjectsProps> = ({ viewport }) => {
             transitionDuration={500}
             responsive={responsive}
             autoPlay={false}
-            itemClass=""
+            itemClass="px-2 sm:px-1"
           >
             {projectItems?.map((val, index) => {
               return (

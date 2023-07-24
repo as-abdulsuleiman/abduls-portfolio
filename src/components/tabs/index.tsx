@@ -2,13 +2,10 @@
 
 "use client";
 
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import { NavContext } from "@/scroll-provider";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { FC, useContext, useRef } from "react";
 import {
   Briefcase,
   Contact,
@@ -17,9 +14,12 @@ import {
   User2,
   FolderKanban,
 } from "lucide-react";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { FC, useContext, useRef } from "react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 interface indexProps {}
 
@@ -113,10 +113,11 @@ const Tabs: FC<indexProps> = ({}) => {
         }`;
         const Icon = () => val.icon({ className: iconClass, color: "#D8D3CB" });
         return (
-          <TooltipProvider key={index} delayDuration={100}>
+          <TooltipProvider key={index} delayDuration={500}>
             <Tooltip>
-              <TooltipTrigger>
+              <TooltipTrigger id="open-menu" aria-label="open-menu">
                 <Link
+                  aria-label={val.name}
                   onClick={(e) => onPress(e, val.path)}
                   href={`#${val.path}`}
                 >

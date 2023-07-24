@@ -9,6 +9,12 @@ import { AtSign, Linkedin, Twitter, Gitlab } from "lucide-react";
 import { motion } from "framer-motion";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { collection, getDocs } from "firebase/firestore";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { db } from "@/config";
 
 interface indexProps {}
@@ -60,8 +66,10 @@ const SideBar: FC<indexProps> = ({}) => {
     },
     {
       hasFill: false,
-      onclick: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
-      name: "Gitlab",
+      onclick: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        handleRedirect("https://gitlab.com/Abdul_Suleiman/abdul-portfolio");
+      },
+      name: "Source Code",
       icon: ({ className, color }: IconProps) => (
         <Gitlab className={className} color={color} />
       ),
@@ -72,7 +80,7 @@ const SideBar: FC<indexProps> = ({}) => {
         e.preventDefault();
         window.location.href = "mailto:a.s.abdulsuleiman@gmail.com";
       },
-      name: "AtSign | Mail",
+      name: "Email",
       icon: ({ className, color }: IconProps) => (
         <AtSign className={className} color={color} />
       ),
@@ -119,24 +127,42 @@ const SideBar: FC<indexProps> = ({}) => {
       <div className="font-sans text-[11px] mt-[6px] text-center text-[#717070] font-medium">{`© ${year} Abdul. All Rights Reserved`}</div>
       <div className="flex space-x-4 mx-auto justify-center items-center mt-[20px]">
         {sidebarItems?.map((item, index) => {
-          const iconClass = `flex items-center justify-center mx-auto mt-[8px] h-4 w-4 text-center  ${
+          const iconClass = `flex items-center justify-center mx-auto mt-[8px] h-4 w-4 text-center absolute inset-0  ${
             item.hasFill
               ? "group-hover:fill-[#2BD984] text-[#717070] group-hover:text-[#2BD984] fill-[#717070]"
               : "group-hover:stroke-[#2BD984] text-[#717070] group-hover:text-[#2BD984] stroke-[#717070]"
           }`;
           const Icon = () => item.icon({ className: iconClass, color: "" });
           return (
-            <motion.div
-              whileHover={{
-                scale: 1.1,
-                transition: { duration: 0.2 },
-              }}
-              onClick={(e) => item.onclick(e)}
-              key={index}
-              className="inline-block h-8 w-8 group rounded-full ring-[0.6px] ring-[#717070] cursor-pointer hover:ring-[#2BD984]"
-            >
-              <Icon />
-            </motion.div>
+            <TooltipProvider key={index} delayDuration={500}>
+              <Tooltip>
+                <TooltipTrigger id="open-tooltip" aria-label="open-tooltip">
+                  <motion.div
+                    whileHover={{
+                      scale: 1.1,
+                      transition: { duration: 0.2 },
+                    }}
+                    onClick={(e) => item?.onclick(e)}
+                    key={index}
+                    className="inline-block h-8 w-8 group rounded-full ring-[0.6px] ring-[#717070] cursor-pointer hover:ring-[#2BD984] relative"
+                  >
+                    <Icon />
+                  </motion.div>
+                </TooltipTrigger>
+                <TooltipContent
+                  hideWhenDetached={true}
+                  align="center"
+                  className="text-[#D8D3CB] font-medium px-[8px] py-[0.6px] bg-[#727171] border-[#717070] border-[0.1px]"
+                  side="bottom"
+                  alignOffset={900}
+                  sideOffset={2}
+                >
+                  <small className="text-[#D8D3CB] font-medium cursor-pointer">
+                    {item?.name}
+                  </small>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           );
         })}
       </div>

@@ -98,9 +98,13 @@ const Navbar: FC<NavbarProps> = ({}) => {
   ];
 
   return (
-    <Menu as="div" className="block fixed top-[60px]">
+    <Menu as="div" className="block fixed top-[32px] md:top-[63px]">
       <div>
-        <Menu.Button className="rounded-full z-[1000] ring-[1px] cursor-pointer ring-[#717070] p-1.5 bg-primary-black ">
+        <Menu.Button
+          id="open menu"
+          aria-label="open menu"
+          className="rounded-full z-[1000] ring-[1px] cursor-pointer ring-[#717070] p-1.5 bg-primary-black "
+        >
           <MenuIcon className="h-5 w-5" color="#D8D3CB" />
         </Menu.Button>
       </div>
@@ -121,7 +125,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
                   ? "fill-[1px] group-hover:fill-[#2BD984]"
                   : " stroke-[1px] group-hover:stroke-[#2BD984]"
               } ${
-                value === `${val.path}`
+                value === `${val?.path}`
                   ? `${val.hasFill ? "fill-[#2BD984]" : "stroke-[#2BD984]"}`
                   : `${val.hasFill ? "fill-[#D8D3CB]" : "stroke-[#D8D3CB]"}`
               }`;
@@ -131,15 +135,15 @@ const Navbar: FC<NavbarProps> = ({}) => {
                 <Menu.Item key={index} as={Fragment}>
                   {({ active, close }) => (
                     <Link
-                      href={`#${val.path}`}
-                      onClick={(e) => onPress(e, val.path, close)}
+                      href={`#${val?.path}`}
+                      onClick={(e) => onPress(e, val?.path, close)}
                       className={`text-sm flex group items-center px-2 py-2 rounded-md ${
                         active || value === val.path
                           ? "bg-[#717070] text-[#32DD89]"
                           : "text-[#D8D3CB]"
                       }`}
                     >
-                      <span ref={navContainerRef}>{val.name}</span>
+                      <span ref={navContainerRef}>{val?.name}</span>
                       <Icon />
                     </Link>
                   )}
