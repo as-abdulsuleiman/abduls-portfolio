@@ -114,14 +114,15 @@ const Contact: FC<ContactProps> = ({ viewport }) => {
     }
   };
 
-  const scrollRef = useRef<HTMLDivElement | null>(null);
-
   return (
-    <motion.section id="contact">
+    <motion.section
+      className="h-full lg:h-screen flex flex-col justify-start"
+      id="contact"
+    >
       <motion.div
         variants={staggerContainer({
           delayChildren: 0.1,
-          staggerChildren: 0.3,
+          staggerChildren: 0.1,
         })}
         className="mb-[100px] md:mb-[160px]"
         initial="hidden"
@@ -145,7 +146,7 @@ const Contact: FC<ContactProps> = ({ viewport }) => {
             CONTACT
           </div>
         </motion.div>
-        <div className="pt-[30px]">
+        <div className="pt-[40px]">
           <motion.div
             variants={fadeIn({
               direction: "up",

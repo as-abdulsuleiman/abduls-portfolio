@@ -3,9 +3,8 @@
 "use client";
 
 import { Home } from "lucide-react";
-import { FC, useContext, useRef } from "react";
+import { FC, useContext } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { NavContext } from "@/scroll-provider";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer, zoomIn } from "@/lib/constant";
@@ -29,10 +28,12 @@ const Introduction: FC<IntroductionProps> = ({ viewport }) => {
       });
     }
   };
-  const scrollRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <motion.section id="introduction">
+    <motion.section
+      className="h-full lg:h-screen flex flex-col justify-start"
+      id="introduction"
+    >
       <motion.div
         className="mb-[100px] md:mb-[160px]"
         viewport={{
@@ -44,7 +45,7 @@ const Introduction: FC<IntroductionProps> = ({ viewport }) => {
         whileInView="show"
         variants={staggerContainer({
           delayChildren: 0.1,
-          staggerChildren: 0.3,
+          staggerChildren: 0.1,
         })}
       >
         <motion.div
@@ -70,16 +71,16 @@ const Introduction: FC<IntroductionProps> = ({ viewport }) => {
             duration: 1,
           })}
         >
-          <div className="pt-[30px]">
-            <h1 className="text-[#D8D3CB] font-medium text-3xl sm:text-5xl lg:text-5xl">
+          <div className="pt-[40px]">
+            <h1 className="text-[#D8D3CB] font-medium text-3xl md:text-5xl">
               Hi 👋 from <span className="text-[#32DD89]">Abdul</span>, {""}
-              <p className="mt-[8px]">A Software Developer</p>
+              <p className="mt-[8px]">{`I'm a Software Developer`}</p>
             </h1>
             <p className="font-sans max-w-lg text-base text-[#717070] font-medium pt-[20px]">
               I specialize in the development of interactive, user-friendly, and
               efficient web applications.
             </p>
-            <div className="pt-[60px] flex flex-col relative max-w-lg md:max-w-lg">
+            <div className="pt-[60px] flex flex-col relative">
               <Image
                 onClick={(e) => {
                   e.preventDefault();
@@ -100,7 +101,7 @@ const Introduction: FC<IntroductionProps> = ({ viewport }) => {
               />
             </div>
 
-            <div className="flex items-center w-full pt-[60px]">
+            <div className="flex items-center w-full pt-[50px]">
               <div className="ml-0">
                 <div className="text-[#32DD89] text-5xl lg:text-6xl">
                   3<span className="text-5xl font-medium">+</span>

@@ -1,7 +1,6 @@
 /** @format */
 
 import { Variants } from "framer-motion";
-import { useViewportSize } from '@mantine/hooks';
 
 export const navVariants: Variants = {
   
@@ -193,7 +192,7 @@ export const resumeItems  = [
     section:"Courses",
     showButton: false,
     date: "2019",
-    name: "React - The Complete Guide (Including Hooks, React Router, Redux) Web Development Course",
+    name: "React - The Complete Guide (Including Hooks, React Router, Redux)",
     company: "Academind on Udemy",
   },
   {   
@@ -204,12 +203,6 @@ export const resumeItems  = [
     name: "Bachelor Degree in Computer Application",
     company: "Bangalore University",
   },
-  // {
-  //   showButton: true,
-  //   name: "Download Resume",
-  //   onclick: () =>
-  //     window.open("/static/icons/a.s.abdulsuleiman.pdf", "_blank"),
-  // },
 ]
 
 export const projectItems = [
@@ -244,7 +237,7 @@ export const projectItems = [
 
 export const aboutMeItems = [
   {
-    description: `I am Abdul Suleiman, a passionate software developer with three years of expertise in React.js, Next.js, JavaScript, and TypeScript. Originally from Nigeria, I pursued a Computer Applications degree from a Bangalore University-affiliated college in Bengaluru, India.`,
+    description: `I am Abdul Suleiman, a passionate software developer with three years of expertise in React.js, Next.js, JavaScript, and TypeScript. I'm from Nigeria, I pursued a Computer Applications degree from a Bangalore University-affiliated college in Bengaluru, India.`,
   },
   {
     description: `My dedication to staying current with industry trends and delivering high-quality solutions makes me an invaluable asset to any development team. Collaboration is central to my approach, fostering a creative environment that leads to remarkable outcomes. I thrive on embracing new challenges and contributing to the advancement of software development.`,

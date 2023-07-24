@@ -2,13 +2,7 @@
 
 "use client";
 
-import {
-  Dispatch,
-  SetStateAction,
-  createContext,
-  useEffect,
-  useState,
-} from "react";
+import { createContext, useEffect } from "react";
 import { useSessionStorage } from "@mantine/hooks";
 interface NavContextProps {
   value: string;
@@ -48,27 +42,6 @@ const ScrollProvider = ({ children }: ScrollProviderProps) => {
     return () => {
       window.removeEventListener("beforeunload", alertUser);
     };
-
-    // const handler = () => {
-    //   if (value) {
-    //     const target = window.document.getElementById(value);
-    //     if (target) {
-    //       setValue(value);
-    //       target.scrollIntoView({
-    //         behavior: "smooth",
-    //       });
-    //     }
-    //   } else {
-    //     setValue("introduction");
-    //   }
-    // };
-
-    // if (document.readyState === "complete") {
-    //   handler();
-    // } else {
-    //   window.addEventListener("load", handler);
-    //   return () => document.removeEventListener("load", handler);
-    // }
   }, [setValue, value]);
 
   return (

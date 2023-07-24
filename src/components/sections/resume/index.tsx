@@ -5,7 +5,7 @@
 import { fadeIn, resumeItems, slideIn, staggerContainer } from "@/lib/constant";
 import { motion } from "framer-motion";
 import { FileText } from "lucide-react";
-import { FC, useRef } from "react";
+import { FC } from "react";
 
 interface ResumeProps {
   viewport: boolean;
@@ -21,8 +21,6 @@ type ResumeItemsProps = {
 };
 
 const Resume: FC<ResumeProps> = ({ viewport }) => {
-  const scrollRef = useRef<HTMLDivElement | null>(null);
-
   const newItems = resumeItems.reduce((acc: any, value: ResumeItemsProps) => {
     if (!acc[value.section]) {
       acc[value.section] = [];
@@ -32,11 +30,14 @@ const Resume: FC<ResumeProps> = ({ viewport }) => {
   }, {});
 
   return (
-    <motion.section id="resume">
+    <motion.section
+      className="h-full lg:h-screen flex flex-col justify-start"
+      id="resume"
+    >
       <motion.div
         variants={staggerContainer({
           delayChildren: 0.1,
-          staggerChildren: 0.3,
+          staggerChildren: 0.1,
         })}
         className="mb-[100px] md:mb-[160px]"
         initial="hidden"
@@ -61,7 +62,7 @@ const Resume: FC<ResumeProps> = ({ viewport }) => {
               RESUME
             </div>
           </div>
-          <div className="pt-[30px] text-[#D8D3CB] text-3xl md:text-4xl">
+          <div className="pt-[40px] text-[#D8D3CB] text-3xl md:text-4xl">
             Education & <span className="text-[#32DD89]">Experience</span>
           </div>
         </motion.div>
@@ -111,7 +112,7 @@ const Resume: FC<ResumeProps> = ({ viewport }) => {
                               <div className="text-base text-[#D8D3CB] font-semibold">
                                 {val.name}
                               </div>
-                              <div className="text-[#D8D3CB] text-xs">
+                              <div className="text-[#D8D3CB] text-xs ml-0.5">
                                 {val.company}
                               </div>
                             </div>

@@ -4,7 +4,7 @@
 
 import { fadeIn, projectItems, staggerContainer } from "@/lib/constant";
 import { ChevronLeft, ChevronRight, FolderKanban } from "lucide-react";
-import { FC, useRef } from "react";
+import { FC } from "react";
 import { motion } from "framer-motion";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
@@ -15,8 +15,6 @@ interface ProjectsProps {
 }
 
 const Projects: FC<ProjectsProps> = ({ viewport }) => {
-  const scrollRef = useRef<HTMLDivElement | null>(null);
-
   const CustomRightArrow = ({ onClick }: ArrowProps) => {
     return (
       <div
@@ -69,7 +67,10 @@ const Projects: FC<ProjectsProps> = ({ viewport }) => {
   };
 
   return (
-    <motion.section id="projects">
+    <motion.section
+      className="h-full lg:h-screen flex flex-col justify-start"
+      id="projects"
+    >
       <motion.div
         initial="hidden"
         whileInView="show"
@@ -80,7 +81,7 @@ const Projects: FC<ProjectsProps> = ({ viewport }) => {
         }}
         variants={staggerContainer({
           delayChildren: 0.1,
-          staggerChildren: 0.3,
+          staggerChildren: 0.1,
         })}
       >
         <motion.div
@@ -97,7 +98,7 @@ const Projects: FC<ProjectsProps> = ({ viewport }) => {
               PROJECTS
             </div>
           </div>
-          <div className="pt-[30px]">
+          <div className="pt-[40px]">
             <div className="text-[#D8D3CB] text-3xl md:text-4xl">
               Featured {""}
               <span className="text-[#32DD89]">Projects</span>
@@ -105,7 +106,7 @@ const Projects: FC<ProjectsProps> = ({ viewport }) => {
           </div>
         </motion.div>
         <motion.div
-          className="grid grid-cols-1 gap-y-12 mt-[40px]"
+          className="grid grid-cols-1 gap-y-12 mt-[20px]"
           variants={fadeIn({
             direction: "up",
             type: "tween",
@@ -121,7 +122,7 @@ const Projects: FC<ProjectsProps> = ({ viewport }) => {
             showDots={false}
             ssr={true}
             infinite={true}
-            // removeArrowOnDeviceType={["mobile"]}
+            removeArrowOnDeviceType={["mobile"]}
             customTransition="transform 800ms linear"
             autoPlaySpeed={1300}
             keyBoardControl={true}
@@ -129,7 +130,7 @@ const Projects: FC<ProjectsProps> = ({ viewport }) => {
             transitionDuration={500}
             responsive={responsive}
             autoPlay={false}
-            itemClass="px-2"
+            itemClass=""
           >
             {projectItems?.map((val, index) => {
               return (
@@ -141,21 +142,24 @@ const Projects: FC<ProjectsProps> = ({ viewport }) => {
                         alt={val.name}
                         fill
                         priority
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
                         quality={100}
                         className="rounded-2xl object-cover"
                       />
                       <div className="hidden group-hover:flex bottom-[0px] pb-3 w-full absolute px-3 bg-primary-black/70">
-                        <div className="py-2 px-1 bottom-[20px] text-sm text-[#D8D3CB]">
-                          {val?.description}
+                        <div className="py-2 px-1 bottom-[20px]">
+                          <div
+                            className="pt-3 ml-3 text-[#D8D3CB] text-xl font-medium cursor-pointer hover:underline hover:underline-[0.1px] w-fit"
+                            onClick={() => window.open(val?.path, "_blank")}
+                          >
+                            {val.name}
+                          </div>
                         </div>
                       </div>
                     </AspectRatio>
                   </div>
-                  <div
-                    className="pt-3 ml-3 text-[#D8D3CB] text-xl font-medium cursor-pointer hover:underline hover:underline-[0.1px] w-fit"
-                    onClick={() => window.open(val?.path, "_blank")}
-                  >
-                    {val.name}
+                  <div className="pt-5 text-base text-[#D8D3CB]">
+                    {val?.description}
                   </div>
                 </motion.div>
               );

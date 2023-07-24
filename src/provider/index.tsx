@@ -3,7 +3,6 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { usePathname } from "next/navigation";
 import { FC } from "react";
 
 interface ProviderProps {
@@ -11,9 +10,8 @@ interface ProviderProps {
 }
 
 const Provider: FC<ProviderProps> = ({ children }) => {
-  const pathname = usePathname();
   return (
-    <AnimatePresence mode="wait" key={pathname}>
+    <AnimatePresence mode="wait">
       <motion.div>{children}</motion.div>
     </AnimatePresence>
   );

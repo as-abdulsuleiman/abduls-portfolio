@@ -2,10 +2,10 @@
 
 "use client";
 
-import { FC, Fragment, useRef, useContext } from "react";
+import { FC, useContext } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import { NavContext } from "@/scroll-provider";
-import Link from "next/link";
+import { Fragment, useRef } from "react";
+import { Menu as MenuIcon } from "lucide-react";
 import {
   Briefcase,
   Contact,
@@ -13,17 +13,17 @@ import {
   Home,
   User2,
   FolderKanban,
-  Menu as MenuIcon,
 } from "lucide-react";
-
-interface NavbarProps {}
+import { NavContext } from "@/scroll-provider";
+import Link from "next/link";
+interface MenuProps {}
 
 type IconProps = {
   className: string;
   color: string;
 };
 
-const Navbar: FC<NavbarProps> = ({}) => {
+const MenuBar: FC<MenuProps> = ({}) => {
   const { value, setValue } = useContext(NavContext);
   const navContainerRef = useRef<HTMLDivElement | null>(null);
 
@@ -32,11 +32,10 @@ const Navbar: FC<NavbarProps> = ({}) => {
     path: string,
     close: () => void
   ) => {
-    e.preventDefault();
     const target = window.document.getElementById(
       e.currentTarget.href.split("#")[1]
     );
-
+    e.preventDefault();
     if (target) {
       setValue(path);
       target.scrollIntoView({
@@ -45,7 +44,6 @@ const Navbar: FC<NavbarProps> = ({}) => {
     }
     close();
   };
-
   const menuItems = [
     {
       hasFill: false,
@@ -98,9 +96,9 @@ const Navbar: FC<NavbarProps> = ({}) => {
   ];
 
   return (
-    <Menu as="div" className="block fixed top-[60px]">
+    <Menu as="div" className="block fixed">
       <div>
-        <Menu.Button className="rounded-full z-[1000] ring-[1px] cursor-pointer ring-[#717070] p-1.5 bg-primary-black ">
+        <Menu.Button className="rounded-full ring-[1px] cursor-pointer  ring-[#717070] p-1.5 z-50 bg-transparent focus:bg-transparent focus:text-[#D8D3CB] data-[state=open]:bg-transparent data-[state=open]:text-[#D8D3CB]">
           <MenuIcon className="h-5 w-5" color="#D8D3CB" />
         </Menu.Button>
       </div>
@@ -113,7 +111,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute mt-2 w-48 right-0 z-[3000] rounded-md shadow-lg ring-[1px] ring-[#717070] ring-opacity-5 focus:outline-none bg-primary-black text-[#D8D3CB] drop-shadow-md border-[#717070] border-[0.5px]">
+        <Menu.Items className="absolute mt-2 w-48 right-0  z-[1000]  rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bg-primary-black text-[#D8D3CB] drop-shadow-md border-[#717070] border-[0.5px]">
           <div className="px-1 py-1 ">
             {menuItems.map((val, index) => {
               const iconClass = `h-4 w-4 ml-auto ${
@@ -139,7 +137,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
                           : "text-[#D8D3CB]"
                       }`}
                     >
-                      <span ref={navContainerRef}>{val.name}</span>
+                      {val.name}
                       <Icon />
                     </Link>
                   )}
@@ -153,4 +151,4 @@ const Navbar: FC<NavbarProps> = ({}) => {
   );
 };
 
-export default Navbar;
+export default MenuBar;

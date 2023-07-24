@@ -13,19 +13,21 @@ interface AboutProps {
 
 const About: FC<AboutProps> = ({ viewport }) => {
   return (
-    <motion.section id="about">
+    <motion.section
+      className="h-full lg:h-screen flex flex-col justify-start"
+      id="about"
+    >
       <motion.div
         className="mb-[100px] md:mb-[160px]"
         viewport={{
           once: true,
           amount: "some",
-          margin: "0px 0px 0px 0px",
         }}
         initial="hidden"
         whileInView="show"
         variants={staggerContainer({
           delayChildren: 0.1,
-          staggerChildren: 0.3,
+          staggerChildren: 0.1,
         })}
       >
         <motion.div
@@ -43,18 +45,19 @@ const About: FC<AboutProps> = ({ viewport }) => {
             </div>
           </div>
 
-          <div className="pt-[30px] text-[#D8D3CB] text-3xl md:text-4xl max-w-lg">
+          <div className="pt-[40px] text-[#D8D3CB] text-3xl ">
             <span className="text-[#32DD89]">
-              Hi, {""}👋
+              {/* Hi, {""}👋 */}
               {/* <span className=" text-[#32DD89] bg-text-[#32DD89]">
                 {" "}
                 &#129306;
               </span> */}
             </span>{" "}
             {""}
-            <div className="pt-2">
-              {`I'm Abdul Suleiman,`}{" "}
-              <span className="text-[#32DD89]">a Software Developer</span>
+            <div className="">
+              Every great design begin with an even
+              {/* {`I'm Abdul Suleiman,`}{" "} */}
+              <span className="text-[#32DD89]">better story</span>
             </div>
           </div>
         </motion.div>
@@ -71,7 +74,7 @@ const About: FC<AboutProps> = ({ viewport }) => {
             return (
               <motion.p
                 key={index}
-                className="font-sans text-base text-[#717070] font-medium "
+                className="font-sans text-base text-[#717070] font-medium"
               >
                 {val.description}
               </motion.p>

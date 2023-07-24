@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { FC, useContext, useEffect, useLayoutEffect, useRef } from "react";
+import { FC, useContext, useRef } from "react";
 
 interface indexProps {}
 
@@ -99,44 +99,10 @@ const Tabs: FC<indexProps> = ({}) => {
     }
   };
 
-  // useLayoutEffect(() => {
-  //   // const alertUser = () => {
-  //   //   if (value) {
-  //   //     const target = window.document.getElementById(value);
-  //   //     if (target) {
-  //   //       target.scrollIntoView({
-  //   //         behavior: "smooth",
-  //   //       });
-  //   //     }
-  //   //   } else {
-  //   //     setValue("introduction");
-  //   //   }
-  //   // };
-  //   // window.addEventListener("beforeunload", alertUser);
-  //   // return () => {
-  //   //   window.removeEventListener("beforeunload", alertUser);
-  //   // };
-
-  //   const handler = () => {
-  //     if (value) {
-  //       const target = window.document.getElementById(value);
-  //       if (target) {
-  //         setValue(value);
-  //         target.scrollIntoView({
-  //           behavior: "smooth",
-  //         });
-  //       }
-  //     }
-  //   };
-
-  //   window.addEventListener("load", handler);
-  //   return () => window.removeEventListener("load", handler);
-  // }, [value, setValue]);
-
   return (
     <div className="flex flex-col px-[10px] py-[9px] relative">
       {navs?.map((val, index) => {
-        const iconClass = `h-4 w-4 sm:h-4 sm:w-4  ${
+        const iconClass = `h-3 w-3 sm:h-4 sm:w-4  ${
           val.hasFill
             ? "fill-[1px] group-hover:fill-[#2BD984]"
             : " stroke-[1px] group-hover:stroke-[#2BD984]"

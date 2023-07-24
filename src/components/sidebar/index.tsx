@@ -5,13 +5,18 @@
 import { FC, useEffect, useState } from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
-import { AtSign, Linkedin, Twitter } from "lucide-react";
+import { AtSign, Linkedin, Twitter, Gitlab } from "lucide-react";
 import { motion } from "framer-motion";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/config";
 
 interface indexProps {}
+
+type IconProps = {
+  className: string;
+  color: string;
+};
 
 const SideBar: FC<indexProps> = ({}) => {
   const year = new Date().getFullYear();
@@ -32,6 +37,48 @@ const SideBar: FC<indexProps> = ({}) => {
     });
   };
 
+  const sidebarItems = [
+    {
+      hasFill: true,
+      onclick: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        handleRedirect("https://twitter.com/Abdul__Suleiman");
+      },
+      name: "Twitter",
+      icon: ({ className, color }: IconProps) => (
+        <Twitter className={className} color={color} />
+      ),
+    },
+    {
+      hasFill: true,
+      onclick: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        handleRedirect("https://www.linkedin.com/in/abdul-suleiman-9448021b7/");
+      },
+      name: "Linkedin",
+      icon: ({ className, color }: IconProps) => (
+        <Linkedin className={className} color={color} />
+      ),
+    },
+    {
+      hasFill: false,
+      onclick: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {},
+      name: "Gitlab",
+      icon: ({ className, color }: IconProps) => (
+        <Gitlab className={className} color={color} />
+      ),
+    },
+    {
+      hasFill: false,
+      onclick: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        e.preventDefault();
+        window.location.href = "mailto:a.s.abdulsuleiman@gmail.com";
+      },
+      name: "AtSign | Mail",
+      icon: ({ className, color }: IconProps) => (
+        <AtSign className={className} color={color} />
+      ),
+    },
+  ];
+
   return (
     <div className="h-full w-full">
       <div className="flex flex-row items-center">
@@ -50,12 +97,13 @@ const SideBar: FC<indexProps> = ({}) => {
           <div> Developer</div>
         </div>
       </div>
-      <div className="w-full h-full relative mt-5">
+      <div className="w-full relative mt-5">
         <AspectRatio ratio={15 / 15}>
           <Image
             src="/static/icons/abdul_suleiman.jpg"
             alt="Photo by Abdul Suleiman"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
             quality={100}
             priority
             className="relative object-cover rounded-3xl"
@@ -70,43 +118,27 @@ const SideBar: FC<indexProps> = ({}) => {
       </div>
       <div className="font-sans text-[11px] mt-[6px] text-center text-[#717070] font-medium">{`© ${year} Abdul. All Rights Reserved`}</div>
       <div className="flex space-x-4 mx-auto justify-center items-center mt-[20px]">
-        <motion.div
-          whileHover={{
-            scale: 1.1,
-            transition: { duration: 0.2 },
-          }}
-          onClick={() => handleRedirect("https://twitter.com/Abdul__Suleiman")}
-          className="inline-block h-8 w-8 group rounded-full ring-[0.6px] ring-[#717070] cursor-pointer hover:ring-[#2BD984] "
-        >
-          <Twitter className="flex items-center justify-center mx-auto  mt-[8px] h-4 w-4 text-center group-hover:fill-[#2BD984] text-[#717070] group-hover:text-[#2BD984]  fill-[#717070] " />
-        </motion.div>
-        <motion.div
-          whileHover={{
-            scale: 1.1,
-            transition: { duration: 0.2 },
-          }}
-          onClick={() =>
-            handleRedirect(
-              "https://www.linkedin.com/in/abdul-suleiman-9448021b7/"
-            )
-          }
-          className="inline-block h-8 w-8 group rounded-full ring-[0.6px] ring-[#717070] cursor-pointer hover:ring-[#2BD984]"
-        >
-          <Linkedin className="flex items-center justify-center mx-auto mt-[7px] h-4 w-4 text-center group-hover:fill-[#2BD984] text-[#717070] group-hover:text-[#2BD984]  fill-[#717070] " />
-        </motion.div>
-        <motion.div
-          whileHover={{
-            scale: 1.1,
-            transition: { duration: 0.2 },
-          }}
-          onClick={(e) => {
-            e.preventDefault();
-            window.location.href = "mailto:a.s.abdulsuleiman@gmail.com";
-          }}
-          className="inline-block h-8 w-8 group rounded-full ring-[0.6px] ring-[#717070] cursor-pointer hover:ring-[#2BD984]"
-        >
-          <AtSign className="flex items-center justify-center mx-auto mt-[8.5px] h-4 w-4 text-center group-hover:stroke-[#2BD984] text-[#717070] group-hover:text-[#2BD984]  stroke-[#717070] " />
-        </motion.div>
+        {sidebarItems?.map((item, index) => {
+          const iconClass = `flex items-center justify-center mx-auto mt-[8px] h-4 w-4 text-center  ${
+            item.hasFill
+              ? "group-hover:fill-[#2BD984] text-[#717070] group-hover:text-[#2BD984] fill-[#717070]"
+              : "group-hover:stroke-[#2BD984] text-[#717070] group-hover:text-[#2BD984] stroke-[#717070]"
+          }`;
+          const Icon = () => item.icon({ className: iconClass, color: "" });
+          return (
+            <motion.div
+              whileHover={{
+                scale: 1.1,
+                transition: { duration: 0.2 },
+              }}
+              onClick={(e) => item.onclick(e)}
+              key={index}
+              className="inline-block h-8 w-8 group rounded-full ring-[0.6px] ring-[#717070] cursor-pointer hover:ring-[#2BD984]"
+            >
+              <Icon />
+            </motion.div>
+          );
+        })}
       </div>
       <motion.div
         whileHover={{

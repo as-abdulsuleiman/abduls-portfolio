@@ -5,7 +5,7 @@
 import { fadeIn, slideIn, staggerContainer } from "@/lib/constant";
 import { motion } from "framer-motion";
 import { Github, Briefcase } from "lucide-react";
-import { FC, useRef } from "react";
+import { FC } from "react";
 import { Figma, Framer } from "lucide-react";
 import { TbBrandNextjs } from "react-icons/tb";
 import { FaReact } from "react-icons/fa";
@@ -66,14 +66,15 @@ const Skills: FC<SkillsProps> = ({ viewport }) => {
     },
   ];
 
-  const scrollRef = useRef<HTMLDivElement | null>(null);
-
   return (
-    <motion.section id="skills">
+    <motion.section
+      className="h-full lg:h-screen flex flex-col justify-start"
+      id="skills"
+    >
       <motion.div
         variants={staggerContainer({
           delayChildren: 0.1,
-          staggerChildren: 0.3,
+          staggerChildren: 0.1,
         })}
         className="mb-[100px] md:mb-[160px]"
         initial="hidden"
@@ -98,11 +99,11 @@ const Skills: FC<SkillsProps> = ({ viewport }) => {
               SKILLS
             </div>
           </div>
-          <div className="pt-[30px] text-[#D8D3CB] font-medium text-4xl">
-            My <span className="text-[#32DD89]">Advantages</span>
+          <div className="pt-[40px] text-[#D8D3CB] font-medium text-4xl">
+            Technologies
           </div>
         </motion.div>
-        <motion.div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-x-7 md:gap-x-6 gap-9 pt-[30px]">
+        <motion.div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-x-3 md:gap-x-6 gap-9 pt-[30px]">
           {skillsItems.map((val, id) => {
             const Icon = () =>
               val.icon({
@@ -124,7 +125,7 @@ const Skills: FC<SkillsProps> = ({ viewport }) => {
                 key={id}
                 className="group justify-between w-full"
               >
-                <div className="h-[180px] lg:h-[150px] flex items-center justify-center rounded-full ring-[0.6px] ring-[#717070] cursor-pointer group-hover:ring-[#2BD984]">
+                <div className="h-[150px] lg:h-[150px] flex items-center justify-center rounded-full ring-[0.6px] ring-[#717070] cursor-pointer group-hover:ring-[#2BD984]">
                   <div className="py-[9px]  cursor-pointer">
                     <Icon />
                   </div>
