@@ -55,7 +55,7 @@ export const metadata = {
   manifest: "/static/favicon/manifest.json",
   archives: [...archivesItems],
   category: "technology",
-  metadataBase: new URL("https://acme.com"),
+  metadataBase: new URL("https://abdul-portfolio-psi.vercel.app/"),
   alternates: {
     canonical: "/",
     languages: {

@@ -3,7 +3,7 @@
 export const openGraphImage = {
   title: "Abdul Suleiman | Software Developer",
   description: "Abdul's portfolio",
-  url: "https://chatbot-ten-iota.vercel.app",
+  url: "https://abdul-portfolio-psi.vercel.app/",
   siteName: "Abdul Suleiman",
   images: [
     {
