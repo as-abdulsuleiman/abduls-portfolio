@@ -142,7 +142,7 @@ const Projects: FC<ProjectsProps> = ({ viewport }) => {
                         alt={val.name}
                         fill
                         priority
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+                        sizes="(max-width: 768px) 100vw"
                         quality={100}
                         className="rounded-2xl object-cover w-full h-auto"
                       />

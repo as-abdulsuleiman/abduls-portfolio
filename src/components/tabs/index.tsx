@@ -115,7 +115,10 @@ const Tabs: FC<indexProps> = ({}) => {
         return (
           <TooltipProvider key={index} delayDuration={400}>
             <Tooltip>
-              <TooltipTrigger id="open-menu" aria-label="open-menu">
+              <TooltipTrigger
+                id={val.name}
+                aria-label={`${val.name}-open-menu`}
+              >
                 <Link
                   aria-label={val.name}
                   onClick={(e) => onPress(e, val.path)}
