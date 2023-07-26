@@ -11,7 +11,7 @@ import {
   keywords,
   appleIcons,
   iconShortcut,
-  archivesItems,
+  archiveItems,
 } from "./shared-metadata";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,10 +22,10 @@ export const metadata = {
     width: "device-width",
     initialScale: 1,
     maximumScale: 1,
-    userScalable: 0,
+    userScalable: "no",
   },
   icons: {
-    icon: "/static/favicon/favicon-96x96.png",
+    icon: "/static/favicon/favicon.ico",
     shortcut: [...iconShortcut],
     apple: [...appleIcons],
     other: {
@@ -33,28 +33,28 @@ export const metadata = {
       url: "/static/favicon/apple-icon-precomposed.png",
     },
   },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-    googleBot: {
-      index: false,
-      follow: true,
-      noimageindex: false,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+  // robots: {
+  //   index: true,
+  //   follow: true,
+  //   nocache: false,
+  //   googleBot: {
+  //     index: true,
+  //     follow: true,
+  //     noimageindex: false,
+  //     "max-video-preview": -1,
+  //     "max-image-preview": "large",
+  //     "max-snippet": -1,
+  //   },
+  // },
   referrer: "origin-when-cross-origin",
   keywords: [...keywords],
   abstract: "Abdul's Portfolio",
   manifest: "/static/favicon/manifest.json",
-  archives: [...archivesItems],
+  archives: [...archiveItems],
   category: "technology",
-  metadataBase: new URL("https://abdul-portfolio-psi.vercel.app/"),
+  metadataBase: new URL("https://abdul-portfolio-psi.vercel.app/portfolio"),
   alternates: {
-    canonical: "/",
+    canonical: "https://abdul-portfolio-psi.vercel.app/portfolio",
     languages: {
       "en-US": "/en-US",
       "en-GB": "/en-GB",

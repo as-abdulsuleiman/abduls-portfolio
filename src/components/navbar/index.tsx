@@ -101,8 +101,8 @@ const Navbar: FC<NavbarProps> = ({}) => {
     <Menu as="div" className="block fixed top-[32px] md:top-[63px]">
       <div>
         <Menu.Button
-          id="open menu"
-          aria-label="open menu"
+          id="open-navbar"
+          aria-label="open-navbar"
           className="rounded-full z-[1000] ring-[1px] cursor-pointer ring-[#717070] p-1.5 bg-primary-black "
         >
           <MenuIcon className="h-5 w-5" color="#D8D3CB" />

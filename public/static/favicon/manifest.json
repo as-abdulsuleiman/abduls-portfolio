@@ -7,6 +7,15 @@
     "theme_color": "#262626",
     "display": "standalone",
     "orientation": "portrait-primary",
+    "categories": [
+        "Software Developer",
+        "React Developer",
+        "Software Engineer",
+        "website builder",
+        "web application development",
+        "web development",
+        "web developer"
+    ],
     "icons": [
         {
             "src": "/static/favicon/android-icon-36x36.png",
@@ -34,7 +43,7 @@
             "type": "image/png"
         },
         {
-            "src": "/static/favicon/android-icon-192x192.png",
+            "src": "/static/favicon/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
@@ -64,6 +73,12 @@
         {
             "src": "/static/favicon/ms-icon-310x310.png",
             "sizes": "310x310",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/static/favicon/android-chrome-512x512.png",
+            "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
         }

@@ -3,7 +3,7 @@
 export const openGraphImage = {
   title: "Abdul Suleiman | Software Developer",
   description: "Abdul's Portfolio",
-  url: "https://abdul-portfolio-psi.vercel.app/",
+  url: "https://abdul-portfolio-psi.vercel.app/portfolio",
   siteName: "Abdul Suleiman",
   images: [
     {
@@ -19,15 +19,16 @@ export const openGraphImage = {
   type: "website",
 };
 
-export const archivesItems = [
+export const archiveItems = [
   "https://bloco.co.uk/",
   "https://www.sadiqakuki.com/",
   "https://firstactive365.com/",
 ];
 
 export const iconShortcut = [
-  "/static/favicon/favicon-96x96.png",
   "/static/favicon/favicon-32x32.png",
+  "/static/favicon/favicon-16x16.png",
+  "/static/favicon/favicon-96x96.png",
 ];
 
 export const keywords = [
@@ -74,7 +75,7 @@ export const keywords = [
 
 export const appleIcons = [
   {
-    url: "/static/favicon/apple-icon.png",
+    url: "/static/favicon/apple-touch-icon.png",
     type: "image/png",
   },
   {

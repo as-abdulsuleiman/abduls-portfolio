@@ -140,7 +140,10 @@ const SideBar: FC<indexProps> = ({}) => {
           return (
             <TooltipProvider key={index} delayDuration={400}>
               <Tooltip>
-                <TooltipTrigger id="open-tooltip" aria-label="open-tooltip">
+                <TooltipTrigger
+                  id={item.name}
+                  aria-label={`${item.name}-open-tooltip`}
+                >
                   <motion.div
                     whileHover={{
                       scale: 1.1,
