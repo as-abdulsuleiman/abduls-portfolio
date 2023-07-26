@@ -54,7 +54,7 @@ export const metadata = {
   category: "technology",
   metadataBase: new URL("https://abdul-portfolio-psi.vercel.app/portfolio"),
   alternates: {
-    canonical: "https://abdul-portfolio-psi.vercel.app/portfolio",
+    canonical: "/",
     languages: {
       "en-US": "/en-US",
       "en-GB": "/en-GB",
