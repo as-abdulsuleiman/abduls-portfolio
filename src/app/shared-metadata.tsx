@@ -26,8 +26,9 @@ export const archivesItems = [
 ];
 
 export const iconShortcut = [
-  "/static/favicon/favicon-96x96.png",
   "/static/favicon/favicon-32x32.png",
+  "/static/favicon/favicon-16x16.png",
+  "/static/favicon/favicon-96x96.png",
 ];
 
 export const keywords = [
