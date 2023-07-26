@@ -27,6 +27,7 @@ type IconProps = {
 const SideBar: FC<indexProps> = ({}) => {
   const year = new Date().getFullYear();
   const [resume, setResume] = useState<string>("");
+  const [loading, setLoading] = useState(true);
 
   const handleRedirect = (link: string) => {
     return window.open(link, "_blank");
@@ -109,12 +110,15 @@ const SideBar: FC<indexProps> = ({}) => {
         <AspectRatio ratio={15 / 15}>
           <Image
             src="/static/icons/abdul_suleiman.jpg"
-            alt="Photo by Abdul Suleiman"
+            alt="Photo by Abdul"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
             quality={100}
             priority
-            className="relative object-cover rounded-3xl"
+            className={`relative object-cover rounded-3xl ${
+              loading ? "blur-sm " : "blur-none"
+            }`}
+            onLoadingComplete={() => setLoading(false)}
           />
         </AspectRatio>
       </div>
@@ -134,7 +138,7 @@ const SideBar: FC<indexProps> = ({}) => {
           }`;
           const Icon = () => item.icon({ className: iconClass, color: "" });
           return (
-            <TooltipProvider key={index} delayDuration={500}>
+            <TooltipProvider key={index} delayDuration={400}>
               <Tooltip>
                 <TooltipTrigger id="open-tooltip" aria-label="open-tooltip">
                   <motion.div
@@ -176,7 +180,7 @@ const SideBar: FC<indexProps> = ({}) => {
         <Button
           onClick={() => handleRedirect(resume)}
           size="default"
-          className="mt-[30px] w-[70%] flex mx-auto rounded-3xl text-[13px] font-light border-[#2CDB86] bg-[#2CDB86] text-[#1C1C23] hover:bg-[#2CDB86]"
+          className="mt-[20px] w-[70%] flex mx-auto rounded-3xl text-[13px] font-light border-[#2CDB86] bg-[#2CDB86] text-[#1C1C23] hover:bg-[#2CDB86]"
         >
           View Resume
         </Button>

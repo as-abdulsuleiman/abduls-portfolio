@@ -113,7 +113,7 @@ const Tabs: FC<indexProps> = ({}) => {
         }`;
         const Icon = () => val.icon({ className: iconClass, color: "#D8D3CB" });
         return (
-          <TooltipProvider key={index} delayDuration={500}>
+          <TooltipProvider key={index} delayDuration={400}>
             <Tooltip>
               <TooltipTrigger id="open-menu" aria-label="open-menu">
                 <Link
