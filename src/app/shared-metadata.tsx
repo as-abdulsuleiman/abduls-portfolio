@@ -19,7 +19,7 @@ export const openGraphImage = {
   type: "website",
 };
 
-export const archivesItems = [
+export const archiveItems = [
   "https://bloco.co.uk/",
   "https://www.sadiqakuki.com/",
   "https://firstactive365.com/",

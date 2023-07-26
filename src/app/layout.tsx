@@ -11,7 +11,7 @@ import {
   keywords,
   appleIcons,
   iconShortcut,
-  archivesItems,
+  archiveItems,
 } from "./shared-metadata";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -50,11 +50,11 @@ export const metadata = {
   keywords: [...keywords],
   abstract: "Abdul's Portfolio",
   manifest: "/static/favicon/manifest.json",
-  archives: [...archivesItems],
+  archives: [...archiveItems],
   category: "technology",
   metadataBase: new URL("https://abdul-portfolio-psi.vercel.app/portfolio"),
   alternates: {
-    canonical: "/",
+    canonical: "https://abdul-portfolio-psi.vercel.app/portfolio",
     languages: {
       "en-US": "/en-US",
       "en-GB": "/en-GB",

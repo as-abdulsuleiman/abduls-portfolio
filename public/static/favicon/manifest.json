@@ -7,6 +7,15 @@
     "theme_color": "#262626",
     "display": "standalone",
     "orientation": "portrait-primary",
+    "categories": [
+        "Software Developer",
+        "React Developer",
+        "Software Engineer",
+        "website builder",
+        "web application development",
+        "web development",
+        "web developer"
+    ],
     "icons": [
         {
             "src": "/static/favicon/android-icon-36x36.png",
