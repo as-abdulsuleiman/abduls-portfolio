@@ -144,7 +144,7 @@ const Projects: FC<ProjectsProps> = ({ viewport }) => {
                         priority
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
                         quality={100}
-                        className="rounded-2xl object-cover"
+                        className="rounded-2xl object-cover w-full h-auto"
                       />
                       <div className="hidden group-hover:flex bottom-[0px] pb-3 w-full absolute px-3 bg-primary-black/70">
                         <div className="py-2 px-1 bottom-[20px]">

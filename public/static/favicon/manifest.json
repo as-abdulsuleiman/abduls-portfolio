@@ -2,12 +2,11 @@
     "name": "Abdul Suleiman | Software Developer",
     "short_name": "Abdul Suleiman",
     "start_url": "/",
-    "description": "Abdul's portfolio",
+    "description": "Abdul's Portfolio",
     "background_color": "#262626",
     "theme_color": "#262626",
     "display": "standalone",
     "orientation": "portrait-primary",
-    "scope": "/",
     "icons": [
         {
             "src": "/static/favicon/android-icon-36x36.png",
@@ -72,21 +71,23 @@
     "screenshots": [
         {
             "src": "/static/icons/portfolio-bg.png",
-            "type": "image/png",
-            "form_factor": "narrow"
+            "type": "image/jpg",
+            "form_factor": "wide",
+            "label": "Abdul Suleiman / Software Developer"
         },
         {
             "src": "/static/icons/portfolio-bg.png",
-            "type": "image/jpg",
-            "form_factor": "wide"
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Abdul Suleiman / Software Developer"
         }
     ],
     "shortcuts": [
         {
             "name": "Abdul Suleiman | Software Developer",
-            "short_name": "Abdul Suleiman ",
-            "description": "Abdul's portfolio",
-            "url": "/",
+            "short_name": "Abdul Suleiman",
+            "description": "Abdul's Portfolio",
+            "url": "/portfolio",
             "icons": [
                 {
                     "src": "/static/favicon/android-icon-192x192.png",

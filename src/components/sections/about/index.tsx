@@ -46,18 +46,9 @@ const About: FC<AboutProps> = ({ viewport }) => {
           </div>
 
           <div className="pt-[40px] text-[#D8D3CB] text-3xl max-w-lg ">
-            <span className="text-[#32DD89]">
-              {/* Hi, {""}👋 */}
-              {/* <span className=" text-[#32DD89] bg-text-[#32DD89]">
-                {" "}
-                &#129306;
-              </span> */}
-            </span>{" "}
-            {""}
             <div className="">
-              Every great design begin with an even {""}
-              {/* {`I'm Abdul Suleiman,`}{" "} */}
-              <span className="text-[#32DD89]">better story</span>
+              About {""}
+              <span className="text-[#32DD89]">Me</span>
             </div>
           </div>
         </motion.div>

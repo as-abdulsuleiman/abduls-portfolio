@@ -124,7 +124,7 @@ const Contact: FC<ContactProps> = ({ viewport }) => {
           delayChildren: 0.1,
           staggerChildren: 0.1,
         })}
-        className="mb-[100px] md:mb-[160px]"
+        className="mb-[100px] md:mb-[190px]"
         initial="hidden"
         whileInView="show"
         viewport={{
