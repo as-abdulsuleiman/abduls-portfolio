@@ -22,10 +22,10 @@ export const metadata = {
     width: "device-width",
     initialScale: 1,
     maximumScale: 1,
-    userScalable: 0,
+    userScalable: "no",
   },
   icons: {
-    icon: "/static/favicon/favicon-96x96.png",
+    icon: "/static/favicon/favicon.ico",
     shortcut: [...iconShortcut],
     apple: [...appleIcons],
     other: {
@@ -38,7 +38,7 @@ export const metadata = {
     follow: true,
     nocache: false,
     googleBot: {
-      index: false,
+      index: true,
       follow: true,
       noimageindex: false,
       "max-video-preview": -1,
@@ -52,7 +52,7 @@ export const metadata = {
   manifest: "/static/favicon/manifest.json",
   archives: [...archivesItems],
   category: "technology",
-  metadataBase: new URL("https://abdul-portfolio-psi.vercel.app/"),
+  metadataBase: new URL("https://abdul-portfolio-psi.vercel.app/portfolio"),
   alternates: {
     canonical: "/",
     languages: {
