@@ -72,7 +72,7 @@ export const metadata = {
     card: "summary_large_image",
     site: "@Abdul__Suleiman",
     creator: "@Abdul__Suleiman",
-    // description: "Abdul's Portfolio",
+    description: "Abdul's Portfolio",
     title: "Abdul's Portfolio",
     images: ["/icons/portfolio-bg.png"],
   },
