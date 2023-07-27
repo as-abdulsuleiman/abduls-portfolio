@@ -1,8 +1,7 @@
 {
     "name": "Abdul Suleiman / Software Developer",
     "short_name": "Abdul Suleiman",
-    "start_url": "/",
-    "scope": "/",
+    "start_url": "https://abdul-portfolio-psi.vercel.app/portfolio",
     "description": "Abdul's Portfolio",
     "background_color": "#262626",
     "theme_color": "#262626",
