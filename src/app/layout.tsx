@@ -32,11 +32,6 @@ export const metadata = {
       url: "/favicon/apple-icon-precomposed.png",
     },
   },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-  },
   referrer: "origin-when-cross-origin",
   keywords: [...keywords],
   abstract: "Abdul's Portfolio",
