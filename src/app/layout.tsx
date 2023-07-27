@@ -61,7 +61,7 @@ export const metadata = {
   publisher: "Abdul Suleiman",
   creator: "Abdul Suleiman",
   generator: "Abdul Suleiman",
-  applicationName: "Abdul Suleiman",
+  applicationName: "Abdul's Portfolio",
   authors: [
     {
       name: "Abdul Suleiman",
