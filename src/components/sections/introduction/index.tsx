@@ -93,7 +93,7 @@ const Introduction: FC<IntroductionProps> = ({ viewport }) => {
                   }
                 }}
                 className=" cursor-pointer drop-shadow-2xl ml-auto hover:scale-105 hover:-translate-y-0.5 transition ease-in-out duration-300"
-                src="/static/icons/my_project.png"
+                src="/icons/my_project.png"
                 alt="my_project"
                 width={110}
                 height={110}

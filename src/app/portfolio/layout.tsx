@@ -5,7 +5,6 @@ import SideBar from "@/components/sidebar";
 import Tabs from "@/components/tabs";
 import ScrollProvider from "@/scroll-provider";
 import Navbar from "@/components/navbar";
-import { Suspense } from "react";
 
 export default function PortfolioLayout({
   children,
