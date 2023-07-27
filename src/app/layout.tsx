@@ -16,49 +16,43 @@ import {
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
-  title: "Abdul Suleiman | Software Developer",
+  title: "Abdul Suleiman / Software Developer",
   description: "Abdul's Portfolio",
   viewport: {
     width: "device-width",
     initialScale: 1,
     maximumScale: 1,
-    userScalable: "no",
   },
   icons: {
-    icon: "/static/favicon/favicon.ico",
+    icon: "/favicon/android-chrome-512x512.png",
     shortcut: [...iconShortcut],
     apple: [...appleIcons],
     other: {
       rel: "apple-icon-precomposed",
-      url: "/static/favicon/apple-icon-precomposed.png",
+      url: "/favicon/apple-icon-precomposed.png",
     },
   },
-  // robots: {
-  //   index: true,
-  //   follow: true,
-  //   nocache: false,
-  //   googleBot: {
-  //     index: true,
-  //     follow: true,
-  //     noimageindex: false,
-  //     "max-video-preview": -1,
-  //     "max-image-preview": "large",
-  //     "max-snippet": -1,
-  //   },
-  // },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   referrer: "origin-when-cross-origin",
   keywords: [...keywords],
   abstract: "Abdul's Portfolio",
-  manifest: "/static/favicon/manifest.json",
+  manifest: "/favicon/manifest.json",
   archives: [...archiveItems],
   category: "technology",
-  metadataBase: new URL("https://abdul-portfolio-psi.vercel.app/portfolio"),
   alternates: {
-    canonical: "/",
-    languages: {
-      "en-US": "/en-US",
-      "en-GB": "/en-GB",
-    },
+    canonical: "https://abdul-portfolio-psi.vercel.app/portfolio/",
   },
   themeColor: [
     { media: "(prefers-color-scheme: dark)", color: "#262626" },
@@ -80,7 +74,7 @@ export const metadata = {
     creator: "@Abdul__Suleiman",
     description: "Abdul's Portfolio",
     title: "Abdul Suleiman",
-    images: ["/static/icons/portfolio-bg.png"],
+    images: ["/icons/portfolio-bg.png"],
   },
   openGraph: {
     ...openGraphImage,

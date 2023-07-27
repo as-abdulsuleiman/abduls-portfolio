@@ -7,11 +7,11 @@ export const openGraphImage = {
   siteName: "Abdul Suleiman",
   images: [
     {
-      url: "/static/icons/portfolio-bg.png",
+      url: "/icons/portfolio-bg.png",
       alt: "launch-screen",
     },
     {
-      url: "/static/icons/portfolio-bg.png",
+      url: "/icons/portfolio-bg.png",
       alt: "launch-screen",
     },
   ],
@@ -26,9 +26,10 @@ export const archiveItems = [
 ];
 
 export const iconShortcut = [
-  "/static/favicon/favicon-32x32.png",
-  "/static/favicon/favicon-16x16.png",
-  "/static/favicon/favicon-96x96.png",
+  "/favicon/android-chrome-512x512.png",
+  "/favicon/favicon-32x32.png",
+  "/favicon/favicon-16x16.png",
+  "/favicon/favicon-96x96.png",
 ];
 
 export const keywords = [
@@ -75,46 +76,46 @@ export const keywords = [
 
 export const appleIcons = [
   {
-    url: "/static/favicon/apple-touch-icon.png",
+    url: "/favicon/apple-touch-icon.png",
     type: "image/png",
   },
   {
-    url: "/static/favicon/apple-icon-57x57.png",
+    url: "/favicon/apple-icon-57x57.png",
     type: "image/png",
     size: "57x57",
   },
   {
-    url: "/static/favicon/apple-icon-60x60.png",
+    url: "/favicon/apple-icon-60x60.png",
     type: "image/png",
     size: "60x60",
   },
   {
-    url: "/static/favicon/apple-icon-72x72.png",
+    url: "/favicon/apple-icon-72x72.png",
     type: "image/png",
     size: "72x72",
   },
   {
-    url: "/static/favicon/apple-icon-76x76.png",
+    url: "/favicon/apple-icon-76x76.png",
     type: "image/png",
     size: "76x76",
   },
   {
-    url: "/static/favicon/apple-icon-144x144.png",
+    url: "/favicon/apple-icon-144x144.png",
     type: "image/png",
     size: "114x114",
   },
   {
-    url: "/static/favicon/apple-icon-120x120.png",
+    url: "/favicon/apple-icon-120x120.png",
     type: "image/png",
     size: "120x120",
   },
   {
-    url: "/static/favicon/apple-icon-152x152.png",
+    url: "/favicon/apple-icon-152x152.png",
     type: "image/png",
     size: "152x152",
   },
   {
-    url: "/static/favicon/apple-icon-180x180.png",
+    url: "/favicon/apple-icon-180x180.png",
     type: "image/png",
     size: "1180x180",
   },

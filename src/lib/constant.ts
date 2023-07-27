@@ -209,7 +209,7 @@ export const projectItems = [
   {
     name: "Bloco UK",
     path: "https://bloco.co.uk/",
-    url: "/static/icons/bloco.png",
+    url: "/icons/bloco.png",
     bg: "bg-[#D8D3CB]",
     tech: [{ name: "React.js" }, { name: "Next.js" }, { name: "Figma" }],
     description:
@@ -218,7 +218,7 @@ export const projectItems = [
   {
     name: "SadiqAkuki",
     path: "https://www.sadiqakuki.com/",
-    url: "/static/icons/akuki.png",
+    url: "/icons/akuki.png",
     bg: "bg-[#D8D3CB]",
     tech: [{ name: "React.js" }, { name: "Next.js" }, { name: "Figma" }],
     description: "A portfolio website for SadiqAkuki",
@@ -226,7 +226,7 @@ export const projectItems = [
   {
     name: "Firstactive365",
     path: "https://www.firstactive365.com/",
-    url: "/static/icons/firstactive.png",
+    url: "/icons/firstactive.png",
     tech: [{ name: "React.js" }, { name: "Next.js" }, { name: "Zeplin" }],
     bg: "bg-primary-black",
     description:

@@ -109,7 +109,7 @@ const SideBar: FC<indexProps> = ({}) => {
       <div className="w-full relative mt-5">
         <AspectRatio ratio={15 / 15}>
           <Image
-            src="/static/icons/abdul_suleiman.jpg"
+            src="/icons/abdul_suleiman.jpg"
             alt="Photo by Abdul"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
