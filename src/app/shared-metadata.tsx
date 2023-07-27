@@ -1,7 +1,7 @@
 /** @format */
 
 export const openGraphImage = {
-  title: "Abdul Suleiman | Software Developer",
+  title: "Abdul Suleiman / Software Developer",
   description: "Abdul's Portfolio",
   url: "https://abdul-portfolio-psi.vercel.app/portfolio",
   siteName: "Abdul Suleiman",

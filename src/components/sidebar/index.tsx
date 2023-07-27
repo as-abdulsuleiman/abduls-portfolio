@@ -45,16 +45,16 @@ const SideBar: FC<indexProps> = ({}) => {
   };
 
   const sidebarItems = [
-    {
-      hasFill: true,
-      onclick: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        handleRedirect("https://twitter.com/Abdul__Suleiman");
-      },
-      name: "Twitter",
-      icon: ({ className, color }: IconProps) => (
-        <Twitter className={className} color={color} />
-      ),
-    },
+    // {
+    //   hasFill: true,
+    //   onclick: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    //     handleRedirect("https://twitter.com/Abdul__Suleiman");
+    //   },
+    //   name: "Twitter",
+    //   icon: ({ className, color }: IconProps) => (
+    //     <Twitter className={className} color={color} />
+    //   ),
+    // },
     {
       hasFill: true,
       onclick: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
