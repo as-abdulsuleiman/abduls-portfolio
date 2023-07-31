@@ -24,7 +24,7 @@ export const metadata = {
     maximumScale: 1,
   },
   icons: {
-    icon: "/favicon/android-chrome-512x512.png",
+    icon: "/favicon.ico",
     shortcut: [...iconShortcut],
     apple: [...appleIcons],
     other: {
