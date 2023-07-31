@@ -76,7 +76,7 @@ export const metadata = {
     creator: "@Abdul__Suleiman",
     description: "Abdul's Portfolio",
     title: "Abdul's Portfolio",
-    images: [`${process.env.NEXT_PUBLIC_WEBSITE_URL}/card-bg.png`],
+    images: [`/card-bg.png`],
   },
   openGraph: {
     ...openGraphImage,
