@@ -25,6 +25,12 @@ module.exports = {
       colors: {
         "primary-black": "#262626",
         "secondary-white": "#c7c7c7",
+        "light-text": "#D8D3CB",
+        "gray-text": "#717070",
+        "dark-text": "#1C1C23",
+        "light-green": "#32DD89",
+        "dark-green": "#2CDB86",
+        "light-grey": "#717070",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

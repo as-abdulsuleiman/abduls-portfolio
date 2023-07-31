@@ -3,18 +3,9 @@
 export const openGraphImage = {
   title: "Abdul Suleiman / Software Developer",
   description: "Abdul's Portfolio",
-  url: "https://abdul-portfolio-psi.vercel.app/portfolio",
+  url: process.env.NEXT_PUBLIC_WEBSITE_URL,
   siteName: "Abdul's Portfolio",
-  images: [
-    {
-      url: "/icons/portfolio-bg.png",
-      alt: "launch-screen",
-    },
-    {
-      url: "/icons/portfolio-bg.png",
-      alt: "launch-screen",
-    },
-  ],
+  images: "/card-bg.png",
   locale: "en-US",
   type: "website",
 };

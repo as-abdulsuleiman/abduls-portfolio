@@ -56,9 +56,9 @@ const Introduction: FC<IntroductionProps> = ({ viewport }) => {
             duration: 1,
           })}
         >
-          <div className="flex items-center justify-center border-[1px] px-[1px] rounded-2xl py-[2.5px] border-[#717070] w-[93px] drop-shadow-md shadow-lg">
+          <div className="flex items-center justify-center border-[1px] px-[1px] rounded-2xl py-[2.5px] border-light-grey w-[93px] drop-shadow-md shadow-lg">
             <Home className="h-3 w-3" color="#D8D3CB" />
-            <div className="ml-[7px] text-[9px] mt-[1.4px] text-[#D8D3CB] font-medium">
+            <div className="ml-[7px] text-[9px] mt-[1.4px] text-light-text font-medium">
               INTRODUCE
             </div>
           </div>
@@ -72,11 +72,11 @@ const Introduction: FC<IntroductionProps> = ({ viewport }) => {
           })}
         >
           <div className="pt-[40px]">
-            <h1 className="text-[#D8D3CB] font-medium text-3xl md:text-5xl">
-              Hi 👋 from <span className="text-[#32DD89]">Abdul</span>, {""}
+            <h1 className="text-light-text font-medium text-3xl md:text-5xl">
+              Hi 👋 from <span className="text-light-green">Abdul</span>, {""}
               <p className="mt-[8px]">{`I'm a Software Developer`}</p>
             </h1>
-            <p className="font-sans max-w-lg text-base text-[#717070] font-medium pt-[20px]">
+            <p className="font-sans max-w-lg text-base text-gray-text font-medium pt-[20px]">
               I specialize in the development of interactive, user-friendly, and
               efficient web applications.
             </p>
@@ -103,10 +103,10 @@ const Introduction: FC<IntroductionProps> = ({ viewport }) => {
 
             <div className="flex items-center w-full pt-[50px]">
               <div className="ml-0">
-                <div className="text-[#32DD89] text-5xl lg:text-6xl">
+                <div className="text-light-green text-5xl lg:text-6xl">
                   3<span className="text-5xl font-medium">+</span>
                 </div>
-                <div className="font-sans text-xs leading-3 text-[#717070] font-medium mt-[6px]">
+                <div className="font-sans text-xs leading-3 text-light-grey font-medium mt-[6px]">
                   <div className="text-[10px]">
                     YEARS OF
                     <div>EXPERIENCE</div>
@@ -114,10 +114,10 @@ const Introduction: FC<IntroductionProps> = ({ viewport }) => {
                 </div>
               </div>
               <div className="ml-[80px]">
-                <div className="text-[#32DD89] text-5xl lg:text-6xl">
+                <div className="text-light-green text-5xl lg:text-6xl">
                   3<span className="text-5xl font-medium">+</span>
                 </div>
-                <div className="font-sans text-xs leading-3 text-[#717070] font-medium mt-[6px]">
+                <div className="font-sans text-xs leading-3 text-light-grey font-medium mt-[6px]">
                   <div className="text-[10px]">
                     PROJECTS
                     <div>COMPLETED</div>

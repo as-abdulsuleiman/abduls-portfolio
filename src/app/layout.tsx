@@ -35,11 +35,9 @@ export const metadata = {
   robots: {
     index: true,
     follow: true,
-    nocache: true,
     googleBot: {
       index: true,
       follow: true,
-      noimageindex: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
@@ -51,8 +49,12 @@ export const metadata = {
   manifest: "/favicon/manifest.json",
   archives: [...archiveItems],
   category: "technology",
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_WEBSITE_URL}`),
   alternates: {
-    canonical: "https://abdul-portfolio-psi.vercel.app/portfolio/",
+    canonical: "/",
+    languages: {
+      "en-US": "/en-US",
+    },
   },
   themeColor: [
     { media: "(prefers-color-scheme: dark)", color: "#262626" },
@@ -74,7 +76,7 @@ export const metadata = {
     creator: "@Abdul__Suleiman",
     description: "Abdul's Portfolio",
     title: "Abdul's Portfolio",
-    images: ["/icons/portfolio-bg.png"],
+    images: [`${process.env.NEXT_PUBLIC_WEBSITE_URL}/card-bg.png`],
   },
   openGraph: {
     ...openGraphImage,
@@ -96,7 +98,7 @@ export default function RootLayout({
     >
       <body
         suppressHydrationWarning={true}
-        className="min-h-screen antialiased w-full overflow-x-hidden overflow-y-scroll bg-primary-black"
+        className="min-h-screen antialiased w-full overflow-x-hidden overflow-y-scroll hover:bg-primary-black bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/10 to-zinc-900"
       >
         {children}
         <Toaster />

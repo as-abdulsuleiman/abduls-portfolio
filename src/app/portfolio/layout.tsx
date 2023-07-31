@@ -18,7 +18,7 @@ export default function PortfolioLayout({
           <div className="mx-auto lg:ml-0 w-full hidden lg:flex lg:w-[350px] relative lg:fixed z-40 flex-col border-[#717070] px-6 py-7 rounded-xl border-[0.1px] drop-shadow-md shadow-lg">
             <SideBar />
           </div>
-          <main className="lg:ml-[350px] xl:ml-[300px] lg:max-w-2xl xl:max-w-3xl h-full w-full">
+          <main className="lg:ml-[300px] xl:ml-[300px] lg:max-w-2xl xl:max-w-3xl h-full w-full">
             <Provider>
               <div className="flex flex-col w-full ">
                 <div className="flex flex-col ml-auto mr-[35px] sm:mr-[15px] md:mr-[35px] z-[1000]">

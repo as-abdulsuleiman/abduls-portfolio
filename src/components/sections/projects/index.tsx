@@ -4,7 +4,7 @@
 
 import { fadeIn, projectItems, staggerContainer } from "@/lib/constant";
 import { ChevronLeft, ChevronRight, FolderKanban } from "lucide-react";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { motion } from "framer-motion";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
@@ -105,16 +105,51 @@ const Projects: FC<ProjectsProps> = ({ viewport }) => {
             </div>
           </div>
         </motion.div>
-        <motion.div
-          className="grid grid-cols-1 gap-y-12 mt-[20px]"
-          variants={fadeIn({
-            direction: "up",
-            type: "tween",
-            delay: 0.1,
-            duration: 1,
+        <motion.div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-6 mt-[20px]">
+          {projectItems?.map((val, index) => {
+            return (
+              <motion.div
+                key={index}
+                variants={fadeIn({
+                  direction: "up",
+                  type: "tween",
+                  delay: index + 1 * 0.1,
+                  duration: 1,
+                })}
+                className="grid grid-cols-1 gap-4"
+              >
+                <div className="group w-full relative cursor-pointer  ">
+                  <AspectRatio
+                    ratio={14 / 9}
+                    className="hover:scale-105 transition-transform ease-out duration-200 bg-transparent "
+                  >
+                    <Image
+                      src={val?.url}
+                      alt={val.name}
+                      fill
+                      priority
+                      sizes="(max-width: 768px) 100vw"
+                      quality={100}
+                      className="rounded-xl object-cover w-full h-full"
+                    />
+                    {/* <div className="hidden group-hover:flex bottom-[0px] pb-3 w-full absolute px-3 bg-primary-black/70">
+                      <div className="py-2 px-1 bottom-[20px]"></div>
+                    </div> */}
+                  </AspectRatio>
+                </div>
+                <div
+                  className="pt-3 ml-3 text-[#D8D3CB] text-base font-medium cursor-pointer hover:underline hover:underline-[0.1px] w-fit"
+                  onClick={() => window.open(val?.path, "_blank")}
+                >
+                  {val.name}
+                </div>
+                {/* <div className="pt-5 text-base text-[#D8D3CB]">
+                  {val?.description}
+                </div> */}
+              </motion.div>
+            );
           })}
-        >
-          <Carousel
+          {/* <Carousel
             customLeftArrow={<CustomLeftArrow />}
             customRightArrow={<CustomRightArrow />}
             swipeable={true}
@@ -164,7 +199,7 @@ const Projects: FC<ProjectsProps> = ({ viewport }) => {
                 </motion.div>
               );
             })}
-          </Carousel>
+          </Carousel> */}
         </motion.div>
       </motion.div>
     </motion.section>

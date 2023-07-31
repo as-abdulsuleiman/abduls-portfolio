@@ -232,8 +232,16 @@ export const projectItems = [
     description:
       "FirstActive365 is a recruitment agency based in the UK that specializes in offering temporary and contract staffing solutions within the healthcare industry.",
   },
+  {
+    name: "Pramie Technologies",
+    path: "https://www.pramie.tech/",
+    url: "/icons/pramie-bg.png",
+    tech: [{ name: "React.js" }, { name: "Next.js" }, { name: "Figma" }],
+    bg: "bg-primary-black",
+    description:
+      "FirstActive365 is a recruitment agency based in the UK that specializes in offering temporary and contract staffing solutions within the healthcare industry.",
+  },
 ]
-
 
 export const aboutMeItems = [
   {
