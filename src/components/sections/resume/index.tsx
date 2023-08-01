@@ -56,7 +56,7 @@ const Resume: FC<ResumeProps> = ({ viewport }) => {
             opacity: viewport ? 1 : 1,
           })}
         >
-          <div className="flex items-center justify-center border-[1px] px-[1px] rounded-2xl py-[2.5px] border-[#717070] w-[83px] drop-shadow-md shadow-lg">
+          <div className="flex items-center justify-center border-[1px] px-[1px] bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 rounded-2xl py-[2.5px] border-[#717070] w-[83px] drop-shadow-md shadow-lg">
             <FileText className="h-2 w-3" color="#D8D3CB" />
             <div className="ml-[7px] text-[9px] mt-[1.4px] text-[#D8D3CB] font-medium">
               RESUME

@@ -92,16 +92,16 @@ const SideBar: FC<indexProps> = ({}) => {
     <div className="h-full w-full">
       <div className="flex flex-row items-center">
         <div className="relative">
-          <h2 className="text-[#D8D3CB] font-semibold font-sans text-lg">
+          <h2 className="text-light-text font-semibold font-sans text-lg">
             Abdul Suleiman
           </h2>
           <div className="absolute rounded-full border border-zinc-50 h-3 w-3 top-[-5px] right-[-10px]">
-            <div className="h-full w-full flex mx-auto my-auto items-center justify-center text-[8px] text-[#D8D3CB] ">
+            <div className="h-full w-full flex mx-auto my-auto items-center justify-center text-[8px] text-light-text">
               A
             </div>
           </div>
         </div>
-        <div className="ml-auto font-sans text-[10px] text-[#D8D3CB]">
+        <div className="ml-auto font-sans text-[10px] text-light-text">
           <span>Software</span>
           <div> Developer</div>
         </div>
@@ -112,9 +112,9 @@ const SideBar: FC<indexProps> = ({}) => {
             src="/icons/abdul_suleiman.jpg"
             alt="Photo by Abdul"
             fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
             quality={100}
             priority
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
             className={`relative object-cover rounded-3xl ${
               loading ? "blur-sm " : "blur-none"
             }`}
@@ -122,13 +122,13 @@ const SideBar: FC<indexProps> = ({}) => {
           />
         </AspectRatio>
       </div>
-      <div className="font-sans text-[16px] mt-[30px] text-center text-[#D8D3CB] font-semibold">
+      <div className="font-sans text-[16px] mt-[30px] text-center text-light-text font-semibold">
         a.s.abdulsuleiman@gmail.com
       </div>
-      <div className="font-sans text-[16px] text-center text-[#D8D3CB] font-medium">
+      <div className="font-sans text-[16px] text-center text-light-text font-medium">
         Base in Bangalore, India
       </div>
-      <div className="font-sans text-[11px] mt-[6px] text-center text-[#717070] font-medium">{`© ${year} Abdul. All Rights Reserved`}</div>
+      <div className="font-sans text-[11px] mt-[4px] text-center text-gray-text font-medium">{`© ${year} Abdul. All Rights Reserved`}</div>
       <div className="flex space-x-4 mx-auto justify-center items-center mt-[20px]">
         {sidebarItems?.map((item, index) => {
           const iconClass = `flex items-center justify-center mx-auto mt-[8px] h-4 w-4 text-center absolute inset-0  ${
@@ -159,7 +159,7 @@ const SideBar: FC<indexProps> = ({}) => {
                 <TooltipContent
                   hideWhenDetached={true}
                   align="center"
-                  className="text-[#D8D3CB] font-medium px-[8px] py-[0.6px] bg-[#727171] border-[#717070] border-[0.1px]"
+                  className="text-[#D8D3CB] font-medium px-[8px] py-[0.6px] bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/10 to-zinc-900 border-[#717070] border-[0.1px]"
                   side="bottom"
                   alignOffset={900}
                   sideOffset={2}
@@ -173,21 +173,13 @@ const SideBar: FC<indexProps> = ({}) => {
           );
         })}
       </div>
-      <motion.div
-        whileHover={{
-          scale: 1.1,
-          transition: { duration: 0.6 },
-        }}
-        whileTap={{ scale: 0.9 }}
+      <Button
+        onClick={() => handleRedirect(resume)}
+        size="default"
+        className="mt-[20px] w-[70%] hover:scale-105 transition-transform ease-out duration-200 flex mx-auto rounded-3xl text-[13px] font-light border-[#2CDB86] bg-[#2CDB86] text-[#1C1C23] hover:bg-[#2CDB86]"
       >
-        <Button
-          onClick={() => handleRedirect(resume)}
-          size="default"
-          className="mt-[20px] w-[70%] flex mx-auto rounded-3xl text-[13px] font-light border-[#2CDB86] bg-[#2CDB86] text-[#1C1C23] hover:bg-[#2CDB86]"
-        >
-          View Resume
-        </Button>
-      </motion.div>
+        View Resume
+      </Button>
     </div>
   );
 };

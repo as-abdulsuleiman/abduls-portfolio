@@ -139,7 +139,7 @@ const Contact: FC<ContactProps> = ({ viewport }) => {
             delay: 0,
             duration: 1,
           })}
-          className="flex items-center justify-center border-[1px] px-[1px] rounded-2xl py-[2.5px] border-[#717070] w-[93px] drop-shadow-md shadow-lg"
+          className="flex items-center justify-center border-[1px] px-[1px] rounded-2xl py-[2.5px] bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 border-[#717070] w-[93px] drop-shadow-md shadow-lg"
         >
           <ContactIcon className="h-3 w-3" color="#D8D3CB" />
           <div className="ml-[7px] text-[9px] mt-[1.4px] text-[#D8D3CB] font-medium">
@@ -185,6 +185,7 @@ const Contact: FC<ContactProps> = ({ viewport }) => {
                 className="grid grid-cols-1 md:grid-cols-2 gap-4 gap-y-6 md:gap-y-4"
               >
                 <Input
+                  className="bg-transparent"
                   id="name"
                   {...register("fullName", { required: true })}
                   placeholder="Your full name"
@@ -193,6 +194,7 @@ const Contact: FC<ContactProps> = ({ viewport }) => {
                   error={errors?.fullName?.message}
                 />
                 <Input
+                  className="bg-transparent"
                   placeholder="Your email address"
                   type="email"
                   label="EMAIL"
@@ -211,6 +213,7 @@ const Contact: FC<ContactProps> = ({ viewport }) => {
                 className="grid grid-cols-1 gap-4 mt-8"
               >
                 <Textarea
+                  className="bg-transparent"
                   rows={6}
                   label="MESSAGE"
                   placeholder="Write your message here..."
@@ -267,7 +270,7 @@ const Contact: FC<ContactProps> = ({ viewport }) => {
                   disabled={isSubmitting || !isValid}
                   type="submit"
                   size="default"
-                  className="mt-6 mx-auto md:ml-0 md:mr-auto md:mt-3 w-[90%] md:w-[32%] flex rounded-3xl text-[13px] font-light hover:scale-110 hover:-translate-y-0.5 transition ease-in-out duration-300 border-[#2CDB86] bg-[#2CDB86] text-[#1C1C23] hover:bg-[#2CDB86]"
+                  className="mt-6 mx-auto md:ml-0 md:mr-auto md:mt-3 w-[90%] md:w-[32%] flex rounded-3xl text-[13px] font-light hover:scale-105 transition-transform ease-out duration-200 border-[#2CDB86] bg-[#2CDB86] text-[#1C1C23] hover:bg-[#2CDB86]"
                 >
                   {loading ? (
                     <div className="flex items-center">
