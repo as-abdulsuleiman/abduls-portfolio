@@ -50,7 +50,7 @@ export const metadata = {
   manifest: "/favicon/manifest.json",
   archives: [...archiveItems],
   category: "technology",
-  metadataBase: new URL(`${process.env.NEXT_PUBLIC_METADATABASE_URL}`),
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_WEBSITE_URL}`),
   alternates: {
     canonical: "/",
   },
@@ -72,7 +72,7 @@ export const metadata = {
     creator: "@Abdul__Suleiman",
     title: "Abdul's Portfolio",
     description: "Software developer at pramie.tech",
-    images: [`/card-bg.png`],
+    images: [`${process.env.NEXT_PUBLIC_METADATABASE_URL}/card-bg.png`],
   },
 };
 

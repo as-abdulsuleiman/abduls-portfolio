@@ -85,16 +85,14 @@
     ],
     "screenshots": [
         {
-            "src": "/card-bg.png",
+            "src": "https://abduls-portfolio.vercel.app/card-bg.png",
             "type": "image/jpg",
-            "form_factor": "wide",
-            "label": "Abdul Suleiman / Software Developer"
+            "form_factor": "wide"
         },
         {
-            "src": "/card-bg.png",
+            "src": "https://abduls-portfolio.vercel.app/card-bg.png",
             "type": "image/png",
-            "form_factor": "narrow",
-            "label": "Abdul Suleiman / Software Developer"
+            "form_factor": "narrow"
         }
     ],
     "shortcuts": [
