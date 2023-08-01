@@ -22,6 +22,9 @@ export const metadata = {
     initialScale: 1,
     maximumScale: 1,
   },
+  openGraph: {
+    ...openGraphImage,
+  },
   icons: {
     icon: "/favicon.ico",
     shortcut: [...iconShortcut],
@@ -62,6 +65,7 @@ export const metadata = {
       url: "https://www.linkedin.com/in/abdul-suleiman-9448021b7/",
     },
   ],
+
   twitter: {
     card: "summary_large_image",
     site: "@Abdul__Suleiman",
@@ -69,9 +73,6 @@ export const metadata = {
     title: "Abdul's Portfolio",
     description: "Software developer at pramie.tech",
     images: [`/card-bg.png`],
-  },
-  openGraph: {
-    ...openGraphImage,
   },
 };
 
