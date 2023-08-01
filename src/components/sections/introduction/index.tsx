@@ -44,7 +44,7 @@ const Introduction: FC<IntroductionProps> = ({ viewport }) => {
         initial="hidden"
         whileInView="show"
         variants={staggerContainer({
-          delayChildren: 0,
+          delayChildren: 0.1,
           staggerChildren: 0.1,
         })}
       >
