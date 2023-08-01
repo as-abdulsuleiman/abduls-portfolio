@@ -140,7 +140,7 @@ const Tabs: FC<indexProps> = ({}) => {
               </TooltipTrigger>
               <TooltipContent
                 hideWhenDetached={true}
-                className="text-[#D8D3CB] font-medium px-[8px] py-[0.6px] bg-[#727171] border-[#717070] border-[0.1px]"
+                className="text-[#D8D3CB] font-medium px-[8px] py-[0.6px] bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/10 to-zinc-900 border-[#717070] border-[0.1px]"
                 side="left"
                 alignOffset={0}
                 sideOffset={11}

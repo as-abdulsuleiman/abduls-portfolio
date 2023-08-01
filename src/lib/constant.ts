@@ -234,7 +234,7 @@ export const projectItems = [
   },
   {
     name: "Pramie Technologies",
-    path: "https://www.pramie.tech/",
+    path: "https://pramie-web-git-feat-update-website-content-hmoskva.vercel.app/",
     url: "/icons/pramie-bg.png",
     tech: [{ name: "React.js" }, { name: "Next.js" }, { name: "Figma" }],
     bg: "bg-primary-black",
@@ -242,6 +242,8 @@ export const projectItems = [
       "FirstActive365 is a recruitment agency based in the UK that specializes in offering temporary and contract staffing solutions within the healthcare industry.",
   },
 ]
+
+// https://www.pramie.tech/
 
 export const aboutMeItems = [
   {

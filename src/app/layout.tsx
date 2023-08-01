@@ -14,10 +14,10 @@ import {
   archiveItems,
 } from "./shared-metadata";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata = {
   title: "Abdul Suleiman / Software Developer",
-  description: "Abdul's Portfolio",
+  description: "Software developer at pramie.tech",
   viewport: {
     width: "device-width",
     initialScale: 1,
@@ -45,7 +45,6 @@ export const metadata = {
   },
   referrer: "origin-when-cross-origin",
   keywords: [...keywords],
-  abstract: "Abdul's Portfolio",
   manifest: "/favicon/manifest.json",
   archives: [...archiveItems],
   category: "technology",
@@ -60,9 +59,6 @@ export const metadata = {
     { media: "(prefers-color-scheme: dark)", color: "#262626" },
     { media: "(prefers-color-scheme: light)", color: "#262626" },
   ],
-  publisher: "Abdul Suleiman",
-  creator: "Abdul Suleiman",
-  generator: "Abdul Suleiman",
   applicationName: "Abdul's Portfolio",
   authors: [
     {
@@ -74,7 +70,7 @@ export const metadata = {
     card: "summary_large_image",
     site: "@Abdul__Suleiman",
     creator: "@Abdul__Suleiman",
-    description: "Abdul's Portfolio",
+    description: "Software developer at pramie.tech",
     title: "Abdul's Portfolio",
     images: [`/card-bg.png`],
   },
@@ -98,7 +94,9 @@ export default function RootLayout({
     >
       <body
         suppressHydrationWarning={true}
-        className="min-h-screen antialiased w-full overflow-x-hidden overflow-y-scroll hover:bg-primary-black bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/10 to-zinc-900"
+        className={`min-h-screen antialiased w-full overflow-x-hidden overflow-y-scroll bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 ${
+          process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+        }`}
       >
         {children}
         <Toaster />

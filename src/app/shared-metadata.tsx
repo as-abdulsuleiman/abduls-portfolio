@@ -2,7 +2,7 @@
 
 export const openGraphImage = {
   title: "Abdul Suleiman / Software Developer",
-  description: "Abdul's Portfolio",
+  description: "Software developer at pramie.tech",
   url: process.env.NEXT_PUBLIC_WEBSITE_URL,
   siteName: "Abdul's Portfolio",
   images: "/card-bg.png",

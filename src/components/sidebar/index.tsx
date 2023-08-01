@@ -112,7 +112,6 @@ const SideBar: FC<indexProps> = ({}) => {
             src="/icons/abdul_suleiman.jpg"
             alt="Photo by Abdul"
             fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
             quality={100}
             priority
             className={`relative object-cover rounded-3xl ${
@@ -128,7 +127,7 @@ const SideBar: FC<indexProps> = ({}) => {
       <div className="font-sans text-[16px] text-center text-light-text font-medium">
         Base in Bangalore, India
       </div>
-      <div className="font-sans text-[11px] mt-[6px] text-center text-gray-text font-medium">{`© ${year} Abdul. All Rights Reserved`}</div>
+      <div className="font-sans text-[11px] mt-[4px] text-center text-gray-text font-medium">{`© ${year} Abdul. All Rights Reserved`}</div>
       <div className="flex space-x-4 mx-auto justify-center items-center mt-[20px]">
         {sidebarItems?.map((item, index) => {
           const iconClass = `flex items-center justify-center mx-auto mt-[8px] h-4 w-4 text-center absolute inset-0  ${
@@ -159,7 +158,7 @@ const SideBar: FC<indexProps> = ({}) => {
                 <TooltipContent
                   hideWhenDetached={true}
                   align="center"
-                  className="text-[#D8D3CB] font-medium px-[8px] py-[0.6px] bg-[#727171] border-[#717070] border-[0.1px]"
+                  className="text-[#D8D3CB] font-medium px-[8px] py-[0.6px] bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/10 to-zinc-900 border-[#717070] border-[0.1px]"
                   side="bottom"
                   alignOffset={900}
                   sideOffset={2}

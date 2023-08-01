@@ -1,8 +1,8 @@
 {
     "name": "Abdul Suleiman / Software Developer",
-    "short_name": "Abdul Suleiman",
+    "short_name": "Abdul's Portfolio",
     "start_url": "/",
-    "description": "Abdul's Portfolio",
+    "description": "Software developer at pramie.tech",
     "background_color": "#262626",
     "theme_color": "#262626",
     "display": "standalone",
@@ -85,13 +85,13 @@
     ],
     "screenshots": [
         {
-            "src": "/icons/portfolio-bg.png",
+            "src": "/card-bg.png",
             "type": "image/jpg",
             "form_factor": "wide",
             "label": "Abdul Suleiman / Software Developer"
         },
         {
-            "src": "/icons/portfolio-bg.png",
+            "src": "/card-bg.png",
             "type": "image/png",
             "form_factor": "narrow",
             "label": "Abdul Suleiman / Software Developer"
@@ -100,8 +100,8 @@
     "shortcuts": [
         {
             "name": "Abdul Suleiman / Software Developer",
-            "short_name": "Abdul Suleiman",
-            "description": "Abdul's Portfolio",
+            "short_name": "Abdul's Portfolio",
+            "description": "Software developer at pramie.tech",
             "url": "/portfolio",
             "icons": [
                 {
