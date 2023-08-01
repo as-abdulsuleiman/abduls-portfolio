@@ -67,7 +67,7 @@ export const metadata = {
     site: "@Abdul__Suleiman",
     creator: "@Abdul__Suleiman",
     description: "Software developer at pramie.tech",
-    title: "Abdul's Portfolio",
+    title: "Software developer at pramie.tech",
     images: [`/card-bg.png`],
   },
   openGraph: {
