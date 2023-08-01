@@ -34,7 +34,6 @@ export default function Modal({ isOpen, openModal, closeModal }: ModalProps) {
               aria-hidden="true"
             />
           </Transition.Child>
-
           <div className="fixed inset-0 overflow-y-auto">
             <div className="flex min-h-screen items-center justify-center p-4 text-center">
               <Transition.Child
