@@ -47,12 +47,9 @@ export const metadata = {
   manifest: "/favicon/manifest.json",
   archives: [...archiveItems],
   category: "technology",
-  metadataBase: new URL(`${process.env.NEXT_PUBLIC_WEBSITE_URL}`),
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_METADATABASE_URL}`),
   alternates: {
     canonical: "/",
-    languages: {
-      "en-US": "/en-US",
-    },
   },
   themeColor: [
     { media: "(prefers-color-scheme: dark)", color: "#262626" },
