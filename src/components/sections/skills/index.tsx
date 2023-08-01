@@ -90,7 +90,6 @@ const Skills: FC<SkillsProps> = ({ viewport }) => {
             type: "tween",
             delay: 0,
             duration: 1,
-            opacity: viewport ? 1 : 1,
           })}
         >
           <div className="flex items-center justify-center border-[1px] px-[1px] bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 rounded-2xl py-[2.5px] border-[#717070] w-[86px] drop-shadow-md shadow-lg">

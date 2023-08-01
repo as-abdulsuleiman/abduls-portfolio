@@ -44,7 +44,6 @@ const About: FC<AboutProps> = ({ viewport }) => {
               ABOUT
             </div>
           </div>
-
           <div className="pt-[40px] text-[#D8D3CB] text-3xl max-w-lg ">
             <div className="">
               About {""}
