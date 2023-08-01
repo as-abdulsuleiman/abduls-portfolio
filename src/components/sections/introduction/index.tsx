@@ -100,7 +100,6 @@ const Introduction: FC<IntroductionProps> = ({ viewport }) => {
                 priority
               />
             </div>
-
             <div className="flex items-center w-full pt-[50px]">
               <div className="ml-0">
                 <div className="text-light-green text-5xl lg:text-6xl">
