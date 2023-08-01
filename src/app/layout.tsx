@@ -13,7 +13,7 @@ import {
   archiveItems,
 } from "./shared-metadata";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Abdul Suleiman / Software Developer",
   description: "Software developer at pramie.tech",

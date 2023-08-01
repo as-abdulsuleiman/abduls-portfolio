@@ -25,7 +25,7 @@ export default function PortfolioLayout({
                   <Navbar />
                 </div>
                 <div className="hidden md:flex flex-col ml-auto mr-[20px] sm:mr-[15px] md:mr-[38px] z-50">
-                  <div className="top-[280px] fixed z-50 bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 border-[#717070] border-[0.1px] rounded-3xl drop-shadow-md shadow-lg">
+                  <div className="top-[280px] fixed z-50  border-[#717070] border-[0.1px] rounded-3xl drop-shadow-md shadow-lg">
                     <Tabs />
                   </div>
                 </div>
