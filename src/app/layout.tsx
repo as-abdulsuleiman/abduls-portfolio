@@ -91,9 +91,7 @@ export default function RootLayout({
     >
       <body
         suppressHydrationWarning={true}
-        className={`min-h-screen antialiased w-full overflow-x-hidden overflow-y-scroll bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 ${
-          process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-        }`}
+        className={`min-h-screen antialiased w-full overflow-x-hidden overflow-y-scroll bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900`}
       >
         {children}
         <Toaster />
