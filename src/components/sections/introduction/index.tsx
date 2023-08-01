@@ -44,7 +44,7 @@ const Introduction: FC<IntroductionProps> = ({ viewport }) => {
         initial="hidden"
         whileInView="show"
         variants={staggerContainer({
-          delayChildren: 0.1,
+          delayChildren: 0,
           staggerChildren: 0.1,
         })}
       >
@@ -67,7 +67,7 @@ const Introduction: FC<IntroductionProps> = ({ viewport }) => {
           variants={fadeIn({
             direction: "up",
             type: "tween",
-            delay: 0.2,
+            delay: 0.1,
             duration: 1,
           })}
         >
