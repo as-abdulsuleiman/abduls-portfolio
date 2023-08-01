@@ -1,7 +1,6 @@
 /** @format */
 
 import "@/styles/globals.css";
-import "react-multi-carousel/lib/styles.css";
 import { cn } from "@/lib/utils";
 import { Inter } from "next/font/google";
 import { Toaster } from "@/components/ui/toaster";

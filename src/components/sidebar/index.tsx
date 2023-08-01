@@ -114,6 +114,7 @@ const SideBar: FC<indexProps> = ({}) => {
             fill
             quality={100}
             priority
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
             className={`relative object-cover rounded-3xl ${
               loading ? "blur-sm " : "blur-none"
             }`}
