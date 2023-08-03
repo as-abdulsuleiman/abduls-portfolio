@@ -5,7 +5,7 @@
 import { NavContext } from "@/scroll-provider";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { FC, useContext, useRef } from "react";
+import { ElementRef, FC, useContext, useRef } from "react";
 import {
   Briefcase,
   Contact,
@@ -30,7 +30,7 @@ type IconProps = {
 
 const Tabs: FC<indexProps> = ({}) => {
   const { value, setValue } = useContext(NavContext);
-  const navContainerRef = useRef<HTMLDivElement | null>(null);
+  const navContainerRef = useRef<ElementRef<"div">>(null);
 
   const navs = [
     {
@@ -90,7 +90,7 @@ const Tabs: FC<indexProps> = ({}) => {
     e.preventDefault();
     const target = window.document.getElementById(
       e.currentTarget.href.split("#")[1]
-    );
+    ) as HTMLAnchorElement;
     if (target) {
       setValue(path);
       target.scrollIntoView({

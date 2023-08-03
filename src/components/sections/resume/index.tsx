@@ -7,9 +7,7 @@ import { motion } from "framer-motion";
 import { FileText } from "lucide-react";
 import { FC } from "react";
 
-interface ResumeProps {
-  viewport: boolean;
-}
+interface ResumeProps {}
 
 type ResumeItemsProps = {
   isPresent: boolean;
@@ -20,7 +18,7 @@ type ResumeItemsProps = {
   company: string;
 };
 
-const Resume: FC<ResumeProps> = ({ viewport }) => {
+const Resume: FC<ResumeProps> = () => {
   const newItems = resumeItems.reduce((acc: any, value: ResumeItemsProps) => {
     if (!acc[value.section]) {
       acc[value.section] = [];
@@ -53,7 +51,6 @@ const Resume: FC<ResumeProps> = ({ viewport }) => {
             type: "tween",
             delay: 0,
             duration: 1,
-            opacity: viewport ? 1 : 1,
           })}
         >
           <div className="flex items-center justify-center border-[1px] px-[1px] bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 rounded-2xl py-[2.5px] border-[#717070] w-[83px] drop-shadow-md shadow-lg">
@@ -89,9 +86,9 @@ const Resume: FC<ResumeProps> = ({ viewport }) => {
                     <div className="pb-2 text-base text-[#D8D3CB]">
                       {header}
                     </div>
-                    {newItems[header].map(
+                    {newItems[header]?.map(
                       (val: ResumeItemsProps, id: number) => {
-                        const newsp = val.section === "Courses";
+                        const newsp = val?.section === "Courses";
                         return (
                           <div
                             className={`flex flex-col ${
@@ -101,19 +98,19 @@ const Resume: FC<ResumeProps> = ({ viewport }) => {
                           >
                             <div
                               className={`font-medium pb-1 ${
-                                val.isPresent
+                                val?.isPresent
                                   ? "text-[#32DD89] text-sm"
                                   : "text-[#717070] text-xs"
                               }`}
                             >
-                              {val.date}
+                              {val?.date}
                             </div>
                             <div className="">
                               <div className="text-base text-[#D8D3CB] font-semibold">
-                                {val.name}
+                                {val?.name}
                               </div>
                               <div className="text-[#D8D3CB] text-xs ml-0.5">
-                                {val.company}
+                                {val?.company}
                               </div>
                             </div>
                           </div>

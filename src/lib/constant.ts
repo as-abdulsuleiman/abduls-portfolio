@@ -253,6 +253,6 @@ export const aboutMeItems = [
     description: `My dedication to staying current with industry trends and delivering high-quality solutions makes me an invaluable asset to any development team. Collaboration is central to my approach, fostering a creative environment that leads to remarkable outcomes. I thrive on embracing new challenges and contributing to the advancement of software development.`,
   },
   {
-    description: `When I'm not immersed in programming, I find joy in playing FIFA, watching Football matches, and Formula 1 races. These leisure activities provide the perfect balance to my intense dedication to software development`,
+    description: `When I'm not immersed in programming, I find joy in playing football, FIFA, watching Football matches, and Formula 1 races. These leisure activities provide the perfect balance to my intense dedication to software development.`,
   },
 ];

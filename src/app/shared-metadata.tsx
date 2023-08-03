@@ -5,7 +5,7 @@ export const openGraphImage = {
   description: "Software developer at pramie.tech",
   url: process.env.NEXT_PUBLIC_WEBSITE_URL,
   siteName: "Abdul's Portfolio",
-  images: `${process.env.NEXT_PUBLIC_METADATABASE_URL}/card-bg.png`,
+  images: `/card-bg.png`,
   locale: "en-US",
   type: "website",
 };

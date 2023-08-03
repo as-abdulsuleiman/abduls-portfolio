@@ -2,7 +2,7 @@
 
 "use client";
 
-import { FC, useEffect, useState } from "react";
+import { FC, ReactNode, useEffect, useState } from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { AtSign, Linkedin, Twitter, Gitlab } from "lucide-react";
@@ -22,6 +22,13 @@ interface indexProps {}
 type IconProps = {
   className: string;
   color: string;
+};
+
+type sidebarItemsProps = {
+  hasFill: boolean;
+  name: string;
+  icon: ({ className, color }: IconProps) => ReactNode;
+  onclick: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 };
 
 const SideBar: FC<indexProps> = ({}) => {
@@ -130,18 +137,18 @@ const SideBar: FC<indexProps> = ({}) => {
       </div>
       <div className="font-sans text-[11px] mt-[4px] text-center text-gray-text font-medium">{`© ${year} Abdul. All Rights Reserved`}</div>
       <div className="flex space-x-4 mx-auto justify-center items-center mt-[20px]">
-        {sidebarItems?.map((item, index) => {
+        {sidebarItems?.map((item: sidebarItemsProps, index: number) => {
           const iconClass = `flex items-center justify-center mx-auto mt-[8px] h-4 w-4 text-center absolute inset-0  ${
-            item.hasFill
+            item?.hasFill
               ? "group-hover:fill-[#2BD984] text-[#717070] group-hover:text-[#2BD984] fill-[#717070]"
               : "group-hover:stroke-[#2BD984] text-[#717070] group-hover:text-[#2BD984] stroke-[#717070]"
           }`;
-          const Icon = () => item.icon({ className: iconClass, color: "" });
+          const Icon = () => item?.icon({ className: iconClass, color: "" });
           return (
             <TooltipProvider key={index} delayDuration={400}>
               <Tooltip>
                 <TooltipTrigger
-                  id={item.name}
+                  id={item?.name}
                   aria-label={`${item.name}-open-tooltip`}
                 >
                   <motion.div

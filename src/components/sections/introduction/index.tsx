@@ -9,11 +9,9 @@ import { NavContext } from "@/scroll-provider";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer, zoomIn } from "@/lib/constant";
 
-interface IntroductionProps {
-  viewport: boolean;
-}
+interface IntroductionProps {}
 
-const Introduction: FC<IntroductionProps> = ({ viewport }) => {
+const Introduction: FC<IntroductionProps> = () => {
   const { setValue } = useContext(NavContext);
 
   const onPress = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {

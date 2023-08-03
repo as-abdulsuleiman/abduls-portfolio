@@ -30,12 +30,12 @@ export default function Home() {
           setValue(id);
         }}
       >
-        <Introduction viewport={initialWidth} />
-        <About viewport={initialWidth} />
-        <Resume viewport={initialWidth} />
-        <Skills viewport={initialWidth} />
-        <Projects viewport={initialWidth} />
-        <Contact viewport={initialWidth} />
+        <Introduction />
+        <About />
+        <Resume />
+        <Skills />
+        <Projects />
+        <Contact />
       </ScrollSpy>
     </div>
   );

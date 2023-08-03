@@ -7,11 +7,13 @@ import { motion } from "framer-motion";
 import { User2 } from "lucide-react";
 import { FC } from "react";
 
-interface AboutProps {
-  viewport: boolean;
-}
+interface AboutProps {}
 
-const About: FC<AboutProps> = ({ viewport }) => {
+type aboutMeItemsProps = {
+  description: string;
+};
+
+const About: FC<AboutProps> = () => {
   return (
     <motion.section
       className="h-full lg:h-screen flex flex-col justify-start"
@@ -45,7 +47,7 @@ const About: FC<AboutProps> = ({ viewport }) => {
             </div>
           </div>
           <div className="pt-[40px] text-[#D8D3CB] text-3xl max-w-lg ">
-            <div className="">
+            <div className="text-[#D8D3CB]">
               About {""}
               <span className="text-[#32DD89]">Me</span>
             </div>
@@ -60,13 +62,13 @@ const About: FC<AboutProps> = ({ viewport }) => {
             duration: 1,
           })}
         >
-          {aboutMeItems?.map((val, index) => {
+          {aboutMeItems?.map((val: aboutMeItemsProps, index: number) => {
             return (
               <motion.p
                 key={index}
                 className="font-sans text-base text-[#717070] "
               >
-                {val.description}
+                {val?.description}
               </motion.p>
             );
           })}

@@ -2,25 +2,29 @@
 
 "use client";
 
-import { fadeIn, slideIn, staggerContainer } from "@/lib/constant";
+import { fadeIn, staggerContainer } from "@/lib/constant";
 import { motion } from "framer-motion";
 import { Github, Briefcase } from "lucide-react";
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { Figma, Framer } from "lucide-react";
 import { TbBrandNextjs } from "react-icons/tb";
 import { FaReact } from "react-icons/fa";
 import { BiLogoFirebase } from "react-icons/bi";
 
-interface SkillsProps {
-  viewport: boolean;
-}
+interface SkillsProps {}
 
 type IconProps = {
   className: string;
   color: string;
 };
 
-const Skills: FC<SkillsProps> = ({ viewport }) => {
+type skillsItemsProps = {
+  hasFill: boolean;
+  name: string;
+  icon: ({ className, color }: IconProps) => ReactNode;
+};
+
+const Skills: FC<SkillsProps> = () => {
   const skillsItems = [
     {
       hasFill: false,
@@ -103,11 +107,11 @@ const Skills: FC<SkillsProps> = ({ viewport }) => {
           </div>
         </motion.div>
         <motion.div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-x-3 md:gap-x-6 gap-9 pt-[30px]">
-          {skillsItems.map((val, id) => {
+          {skillsItems.map((val: skillsItemsProps, id: number) => {
             const Icon = () =>
               val.icon({
                 className: `h-[60px] w-[60px] ${
-                  val.hasFill
+                  val?.hasFill
                     ? "fill-[1px] fill-[#D8D3CB] group-hover:fill-[#2BD984]"
                     : "stroke-[1px] stroke-[#D8D3CB] group-hover:stroke-[#2BD984]"
                 }`,
@@ -130,7 +134,7 @@ const Skills: FC<SkillsProps> = ({ viewport }) => {
                   </div>
                 </div>
                 <div className="text-center mt-2 text-sm text-[#D8D3CB] font-semibold group-hover:text-[#2BD984]">
-                  {val.name}
+                  {val?.name}
                 </div>
               </motion.div>
             );
