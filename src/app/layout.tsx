@@ -31,7 +31,7 @@ export const metadata = {
     creator: "@Abdul__Suleiman",
     title: "Abdul's Portfolio",
     description: "Software developer at pramie.tech",
-    images: [`/card-bg.png`],
+    images: [`${process.env.NEXT_PUBLIC_METADATABASE_URL}card-bg.png`],
   },
   icons: {
     icon: "/favicon.ico",
@@ -58,6 +58,10 @@ export const metadata = {
   manifest: "/favicon/manifest.json",
   archives: [...archiveItems],
   category: "technology",
+  // metadataBase: new URL(`${process.env.NEXT_PUBLIC_WEBSITE_URL}`),
+  // alternates: {
+  //   canonical: "/",
+  // },
   themeColor: [
     { media: "(prefers-color-scheme: dark)", color: "#262626" },
     { media: "(prefers-color-scheme: light)", color: "#262626" },
@@ -69,10 +73,6 @@ export const metadata = {
       url: "https://www.linkedin.com/in/abdul-suleiman-9448021b7/",
     },
   ],
-  metadataBase: new URL(`${process.env.NEXT_PUBLIC_WEBSITE_URL}`),
-  alternates: {
-    canonical: "/",
-  },
 };
 
 export default function RootLayout({
