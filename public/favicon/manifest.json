@@ -91,13 +91,13 @@
             "src": "https://abduls-portfolio.vercel.app/card-bg.png",
             "type": "image/jpg",
             "form_factor": "wide",
-            "sizes": "2188x1380"
+            "sizes": "2255x1380"
         },
         {
             "src": "https://abduls-portfolio.vercel.app/card-bg.png",
             "type": "image/png",
             "form_factor": "narrow",
-            "sizes": "2188x1380"
+            "sizes": "2255x1380"
         }
     ],
     "shortcuts": [
