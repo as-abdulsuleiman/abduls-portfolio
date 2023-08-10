@@ -6,7 +6,7 @@ import { fadeIn, staggerContainer } from "@/lib/constant";
 import { motion } from "framer-motion";
 import { Github, Briefcase } from "lucide-react";
 import { FC, ReactNode } from "react";
-import { Figma, Framer } from "lucide-react";
+import { Figma, Framer, FolderRoot } from "lucide-react";
 import { TbBrandNextjs } from "react-icons/tb";
 import { FaReact } from "react-icons/fa";
 import { BiLogoFirebase } from "react-icons/bi";
@@ -96,8 +96,8 @@ const Skills: FC<SkillsProps> = () => {
             duration: 1,
           })}
         >
-          <div className="flex items-center justify-center border-[1px] px-[1px] bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 rounded-2xl py-[2.5px] border-[#717070] w-[86px] drop-shadow-md shadow-lg">
-            <Briefcase className="h-3 w-3" color="#D8D3CB" />
+          <div className="flex items-center justify-center border-[1px] px-[1px] bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 rounded-2xl py-[2.5px] border-[#717070] w-[80px] drop-shadow-md shadow-lg">
+            <FolderRoot className="h-3 w-3" color="#D8D3CB" />
             <div className="ml-[7px] text-[9px] mt-[1.4px] text-[#D8D3CB] font-medium">
               SKILLS
             </div>

@@ -5,7 +5,14 @@
 import { FC, ReactNode, useEffect, useState } from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
-import { AtSign, Linkedin, Twitter, Gitlab } from "lucide-react";
+import {
+  AtSign,
+  Linkedin,
+  Twitter,
+  Gitlab,
+  Github,
+  FolderKanban,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { collection, getDocs } from "firebase/firestore";
@@ -16,7 +23,6 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { db } from "@/config";
-
 interface indexProps {}
 
 type IconProps = {
@@ -79,7 +85,7 @@ const SideBar: FC<indexProps> = ({}) => {
       },
       name: "Source Code",
       icon: ({ className, color }: IconProps) => (
-        <Gitlab className={className} color={color} />
+        <Github className={className} color={color} />
       ),
     },
     {

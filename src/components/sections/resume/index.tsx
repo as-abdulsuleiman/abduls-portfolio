@@ -30,7 +30,7 @@ const Resume: FC<ResumeProps> = () => {
   return (
     <motion.section
       className="h-full xl:h-screen flex flex-col justify-start"
-      id="resume"
+      id="experience"
     >
       <motion.div
         variants={staggerContainer({
@@ -53,10 +53,10 @@ const Resume: FC<ResumeProps> = () => {
             duration: 1,
           })}
         >
-          <div className="flex items-center justify-center border-[1px] px-[1px] bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 rounded-2xl py-[2.5px] border-[#717070] w-[83px] drop-shadow-md shadow-lg">
+          <div className="flex items-center justify-center border-[1px] px-[1px] bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 rounded-2xl py-[2.5px] border-[#717070] w-[89px] drop-shadow-md shadow-lg">
             <FileText className="h-2 w-3" color="#D8D3CB" />
-            <div className="ml-[7px] text-[9px] mt-[1.4px] text-[#D8D3CB] font-medium">
-              RESUME
+            <div className="ml-[6px] text-[9.5px] mt-[1.4px] text-[#D8D3CB] font-medium">
+              Experience
             </div>
           </div>
           <div className="pt-[40px] text-[#D8D3CB] text-3xl md:text-4xl">
@@ -65,7 +65,6 @@ const Resume: FC<ResumeProps> = () => {
         </motion.div>
         <motion.div className="mt-[20px]">
           {Object.keys(newItems)?.map((header: string, index: number) => {
-            //  direction: index % 2 === 0 ? "up" : "down",
             return (
               <motion.div
                 variants={fadeIn({
@@ -82,7 +81,7 @@ const Resume: FC<ResumeProps> = () => {
                     <div className="w-[6.5px] h-[6.5px] rounded-full bg-[#32DD89]" />
                     <div className="w-1 h-full border-[#717070] border-l-[0.02px] ml-[3px]" />
                   </div>
-                  <div className="flex flex-col ml-[45px] self-start">
+                  <div className="flex flex-col ml-[30px] self-start">
                     <div className="pb-2 text-base text-[#D8D3CB]">
                       {header}
                     </div>

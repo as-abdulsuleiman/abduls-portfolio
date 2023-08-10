@@ -14,6 +14,7 @@ import {
 } from "./shared-metadata";
 
 const inter = Inter({ subsets: ["latin"] });
+
 export const metadata = {
   title: "Abdul Suleiman's Portfolio",
   description: "Software Developer",
@@ -22,9 +23,6 @@ export const metadata = {
     initialScale: 1,
     maximumScale: 1,
   },
-  openGraph: {
-    ...openGraphImage,
-  },
   twitter: {
     card: "summary_large_image",
     site: "@Abdul__Suleiman",
@@ -32,6 +30,9 @@ export const metadata = {
     title: "Abdul Suleiman's Portfolio",
     description: "Software Developer",
     images: [`${process.env.NEXT_PUBLIC_METADATABASE_URL}card-bg.png`],
+  },
+  openGraph: {
+    ...openGraphImage,
   },
   icons: {
     icon: "/favicon.ico",
@@ -53,7 +54,6 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
-  referrer: "origin-when-cross-origin",
   keywords: [...keywords],
   manifest: "/favicon/manifest.json",
   archives: [...archiveItems],
