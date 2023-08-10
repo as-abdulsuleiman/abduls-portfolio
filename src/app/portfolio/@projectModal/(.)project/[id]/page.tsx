@@ -107,7 +107,7 @@ const Page: FC<ProjectProps> = ({ params }) => {
         <div className="flex-1 flex flex-col">
           <div className="flex-1">
             <DialogHeader>
-              <DialogTitle className="mt-[8px] font-medium text-xl text-light-text">
+              <DialogTitle className="mt-[8px] text-left font-medium text-xl text-light-text">
                 {projectItem?.title}
               </DialogTitle>
             </DialogHeader>
