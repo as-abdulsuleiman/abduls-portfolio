@@ -72,7 +72,7 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
           </small>
         </div>
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-4 gap-y-5"
           variants={fadeIn({
             direction: "up",
             type: "tween",
