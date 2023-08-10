@@ -128,7 +128,7 @@ const Skills: FC<SkillsProps> = () => {
                 key={id}
                 className="group justify-between w-full"
               >
-                <div className="h-[150px] md:h-[260px] lg:h-[180px] xl:h-[150px] flex items-center justify-center rounded-full ring-[0.6px] ring-[#717070] cursor-pointer group-hover:ring-[#2BD984]">
+                <div className="h-[150px] md:h-[200px] lg:h-[180px] xl:h-[150px] flex items-center justify-center rounded-full ring-[0.6px] ring-[#717070] cursor-pointer group-hover:ring-[#2BD984]">
                   <div className="py-[9px]  cursor-pointer">
                     <Icon />
                   </div>
