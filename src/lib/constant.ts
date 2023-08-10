@@ -197,46 +197,6 @@ export const resumeItems  = [
   },
 ]
 
-export const projectItems = [
-  {
-    name: "Bloco UK",
-    path: "https://bloco.co.uk/",
-    url: "/icons/bloco.png",
-    bg: "bg-[#D8D3CB]",
-    tech: [{ name: "React.js" }, { name: "Next.js" }, { name: "Figma" }],
-    description:
-      "An e-commerce website that provides a diverse array of services catering to event organizers. These offerings include event ticket sales, white label services, comprehensive admin control features, as well as various optional add-ons.",
-  },
-  {
-    name: "SadiqAkuki",
-    path: "https://www.sadiqakuki.com/",
-    url: "/icons/akuki.png",
-    bg: "bg-[#D8D3CB]",
-    tech: [{ name: "React.js" }, { name: "Next.js" }, { name: "Figma" }],
-    description: "A portfolio website for SadiqAkuki",
-  },
-  {
-    name: "Firstactive365",
-    path: "https://www.firstactive365.com/",
-    url: "/icons/firstactive.png",
-    tech: [{ name: "React.js" }, { name: "Next.js" }, { name: "Zeplin" }],
-    bg: "bg-primary-black",
-    description:
-      "FirstActive365 is a recruitment agency based in the UK that specializes in offering temporary and contract staffing solutions within the healthcare industry.",
-  },
-  {
-    name: "Pramie Technologies Website",
-    path: "https://pramie-web-git-feat-update-website-content-hmoskva.vercel.app/",
-    url: "/icons/pramie-bg.png",
-    tech: [{ name: "React.js" }, { name: "Next.js" }, { name: "Figma" }],
-    bg: "bg-primary-black",
-    description:
-      "FirstActive365 is a recruitment agency based in the UK that specializes in offering temporary and contract staffing solutions within the healthcare industry.",
-  },
-]
-
-// https://www.pramie.tech/
-
 export const aboutMeItems = [
   {
     description: `I pursued a degree in Computer Applications from Bangalore University-affiliated college, Bengaluru, India. After finishing my degree, I decided to pursue my passion for programming. I started my career by enrolling in coding tutorials offered on YouTube and other online platforms, where I learned about web development.`,

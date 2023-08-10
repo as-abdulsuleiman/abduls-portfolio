@@ -56,6 +56,7 @@ export const metadata = {
   },
   keywords: [...keywords],
   manifest: "/favicon/manifest.json",
+  referrer: "origin-when-cross-origin",
   archives: [...archiveItems],
   category: "technology",
   themeColor: [
