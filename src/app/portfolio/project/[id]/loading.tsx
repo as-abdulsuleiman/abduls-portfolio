@@ -4,7 +4,7 @@ import Skeleton from "@/components/skeleton";
 
 export default function Loading() {
   return (
-    <div className="container mx-auto px-0 xl:px-2rem w-full lg:max-w-lg xl:max-w-xl pb-3">
+    <div className="container mx-auto px-0 xl:px-2rem w-full md:max-w-lg xl:max-w-xl pb-3">
       <div className="flex">
         <Skeleton className="w-[100px] h-[30px]" />
       </div>

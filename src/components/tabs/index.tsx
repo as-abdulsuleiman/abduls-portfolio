@@ -13,6 +13,7 @@ import {
   Home,
   User2,
   FolderKanban,
+  FolderRoot,
 } from "lucide-react";
 import {
   Tooltip,
@@ -51,8 +52,8 @@ const Tabs: FC<indexProps> = ({}) => {
     },
     {
       hasFill: false,
-      name: "Resume",
-      path: "resume",
+      name: "Experience",
+      path: "experience",
       icon: ({ className, color }: IconProps) => (
         <FileText className={className} color={color} />
       ),
@@ -62,7 +63,7 @@ const Tabs: FC<indexProps> = ({}) => {
       name: "Skills",
       path: "skills",
       icon: ({ className, color }: IconProps) => (
-        <Briefcase className={className} color={color} />
+        <FolderRoot className={className} color={color} />
       ),
     },
     {

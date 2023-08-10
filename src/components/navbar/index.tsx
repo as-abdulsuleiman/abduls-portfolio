@@ -72,8 +72,8 @@ const Navbar: FC<NavbarProps> = ({}) => {
     },
     {
       hasFill: false,
-      name: "Resume",
-      path: "resume",
+      name: "Experience",
+      path: "experience",
       icon: ({ className, color }: IconProps) => (
         <FileText className={className} color={color} />
       ),

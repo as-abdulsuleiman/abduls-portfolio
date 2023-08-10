@@ -6,7 +6,7 @@ import { fadeIn, staggerContainer } from "@/lib/constant";
 import { motion } from "framer-motion";
 import { Github, Briefcase } from "lucide-react";
 import { FC, ReactNode } from "react";
-import { Figma, Framer } from "lucide-react";
+import { Figma, Framer, FolderRoot } from "lucide-react";
 import { TbBrandNextjs } from "react-icons/tb";
 import { FaReact } from "react-icons/fa";
 import { BiLogoFirebase } from "react-icons/bi";
@@ -96,8 +96,8 @@ const Skills: FC<SkillsProps> = () => {
             duration: 1,
           })}
         >
-          <div className="flex items-center justify-center border-[1px] px-[1px] bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 rounded-2xl py-[2.5px] border-[#717070] w-[86px] drop-shadow-md shadow-lg">
-            <Briefcase className="h-3 w-3" color="#D8D3CB" />
+          <div className="flex items-center justify-center border-[1px] px-[1px] bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 rounded-2xl py-[2.5px] border-[#717070] w-[80px] drop-shadow-md shadow-lg">
+            <FolderRoot className="h-3 w-3" color="#D8D3CB" />
             <div className="ml-[7px] text-[9px] mt-[1.4px] text-[#D8D3CB] font-medium">
               SKILLS
             </div>
@@ -106,7 +106,7 @@ const Skills: FC<SkillsProps> = () => {
             Technologies
           </div>
         </motion.div>
-        <motion.div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-x-3 md:gap-x-6 gap-9 pt-[30px]">
+        <motion.div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-x-3 md:gap-x-6 gap-9 pt-[30px]">
           {skillsItems.map((val: skillsItemsProps, id: number) => {
             const Icon = () =>
               val.icon({
@@ -126,10 +126,10 @@ const Skills: FC<SkillsProps> = () => {
                   duration: 1,
                 })}
                 key={id}
-                className="group justify-between w-full"
+                className="group justify-between"
               >
-                <div className="h-[150px] md:h-[260px] lg:h-[180px] xl:h-[150px] flex items-center justify-center rounded-full ring-[0.6px] ring-[#717070] cursor-pointer group-hover:ring-[#2BD984]">
-                  <div className="py-[9px]  cursor-pointer">
+                <div className="h-[150px] sm:h-[190px] md:h-[150px] flex items-center justify-center rounded-full ring-[0.6px] ring-[#717070] cursor-pointer group-hover:ring-[#2BD984]">
+                  <div className="py-[4px] cursor-pointer">
                     <Icon />
                   </div>
                 </div>

@@ -23,7 +23,7 @@ export default async function Page() {
   const data = await getData();
 
   return (
-    <div className="container mx-auto px-0 xl:px-2rem w-full lg:max-w-lg xl:max-w-xl pb-3">
+    <div className="container mx-auto px-0 xl:px-2rem w-full md:max-w-lg xl:max-w-xl pb-3">
       <Home projectCount={data?.length || 4} />
     </div>
   );

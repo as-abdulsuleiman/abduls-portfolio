@@ -38,7 +38,7 @@ const Page = async ({ params }: ProjectProps) => {
         description,
       };
       return (
-        <div className="container mx-auto px-0 xl:px-2rem w-full lg:max-w-lg xl:max-w-xl pb-3">
+        <div className="container mx-auto px-0 xl:px-2rem w-full md:max-w-lg xl:max-w-xl pb-3">
           <ProjectDetails project={details} />
         </div>
       );

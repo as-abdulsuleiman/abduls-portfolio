@@ -12,7 +12,7 @@ export default function Error({
   reset: () => void;
 }) {
   return (
-    <div className="container h-screen max-w-7xl mx-auto">
+    <div className="container h-screen max-w-6xl mx-auto">
       <div className="flex flex-col items-center justify-center h-full w-full ">
         <div className="self-center text-center">
           <h1 className="text-2xl md:text-5xl text-[#D8D3CB]">
