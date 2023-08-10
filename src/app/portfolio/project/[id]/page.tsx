@@ -5,6 +5,9 @@ import { doc, getDoc } from "firebase/firestore";
 import ProjectDetails from "@/components/project-details";
 import { db } from "@/config";
 
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
 interface ProjectProps {
   params: {
     id: string;
