@@ -47,7 +47,7 @@ const About: FC<AboutProps> = () => {
               ABOUT
             </div>
           </div>
-          <div className="pt-[30px] text-[#D8D3CB] text-3xl max-w-lg ">
+          <div className="pt-[30px] text-[#D8D3CB] text-3xl">
             <div className="text-[#D8D3CB]">
               About {""}
               <span className="text-[#32DD89]">Me</span>
@@ -55,7 +55,7 @@ const About: FC<AboutProps> = () => {
           </div>
         </motion.div>
         <motion.div
-          className="grid grid-cols-1 gap-3 mt-[18px]"
+          className="grid grid-cols-1 gap-3 mt-[10px]"
           variants={fadeIn({
             direction: "up",
             type: "tween",
@@ -65,7 +65,7 @@ const About: FC<AboutProps> = () => {
         >
           {aboutMeItems?.map((val: aboutMeItemsProps, index: number) => {
             return (
-              <motion.article key={index} className="text-[#D8D3CB] py-1">
+              <motion.article key={index} className="text-[#D8D3CB]">
                 <motion.div className="text-[15px] text-[#D8D3CB]">
                   {val?.description}
                 </motion.div>

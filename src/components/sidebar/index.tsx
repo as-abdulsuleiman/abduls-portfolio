@@ -142,7 +142,7 @@ const SideBar: FC<indexProps> = ({}) => {
         Base in Bangalore, India
       </div>
       <div className="font-sans text-[11px] mt-[4px] text-center text-gray-text font-medium">{`© ${year} Abdul. All Rights Reserved`}</div>
-      <div className="flex space-x-4 mx-auto justify-center items-center mt-[20px]">
+      <div className="flex space-x-4 mx-auto justify-center items-center mt-[15px]">
         {sidebarItems?.map((item: sidebarItemsProps, index: number) => {
           const iconClass = `flex items-center justify-center mx-auto mt-[8px] h-4 w-4 text-center absolute inset-0  ${
             item?.hasFill
@@ -190,7 +190,7 @@ const SideBar: FC<indexProps> = ({}) => {
         onClick={() => handleRedirect(resume)}
         size="default"
         variant="default"
-        className="mt-[20px] w-[70%] hover:scale-105  transition-transform ease-out duration-200 flex mx-auto rounded-3xl text-[13px] font-light border-[#2CDB86] bg-[#2CDB86] text-[#1C1C23] hover:bg-[#2CDB86]"
+        className="mt-[15px] w-[70%] hover:scale-105  transition-transform ease-out duration-200 flex mx-auto rounded-3xl text-[13px] font-light border-[#2CDB86] bg-[#2CDB86] text-[#1C1C23] hover:bg-[#2CDB86]"
       >
         Download CV
       </Button>
