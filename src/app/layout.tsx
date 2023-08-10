@@ -15,8 +15,8 @@ import {
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
-  title: "Abdul Suleiman / Software Developer",
-  description: "Software developer at pramie.tech",
+  title: "Abdul Suleiman's Portfolio",
+  description: "Software Developer",
   viewport: {
     width: "device-width",
     initialScale: 1,
@@ -29,8 +29,8 @@ export const metadata = {
     card: "summary_large_image",
     site: "@Abdul__Suleiman",
     creator: "@Abdul__Suleiman",
-    title: "Abdul's Portfolio",
-    description: "Software developer at pramie.tech",
+    title: "Abdul Suleiman's Portfolio",
+    description: "Software Developer",
     images: [`${process.env.NEXT_PUBLIC_METADATABASE_URL}card-bg.png`],
   },
   icons: {
@@ -58,10 +58,6 @@ export const metadata = {
   manifest: "/favicon/manifest.json",
   archives: [...archiveItems],
   category: "technology",
-  // metadataBase: new URL(`${process.env.NEXT_PUBLIC_WEBSITE_URL}`),
-  // alternates: {
-  //   canonical: "/",
-  // },
   themeColor: [
     { media: "(prefers-color-scheme: dark)", color: "#262626" },
     { media: "(prefers-color-scheme: light)", color: "#262626" },
@@ -84,13 +80,13 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(
-        "min-h-screen antialiased scroll-py-9 sm:scroll-py-16 snap-y",
+        "min-h-screen antialiased scroll-smooth light scroll-py-9 sm:scroll-py-16 snap-start snap-y",
         inter.className
       )}
     >
       <body
         suppressHydrationWarning={true}
-        className={`min-h-screen antialiased w-full overflow-x-hidden overflow-y-scroll bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900`}
+        className={`min-h-screen w-full antialiased overflow-x-hidden overflow-y-scroll bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 m-0 p-0`}
       >
         {children}
         <Toaster />

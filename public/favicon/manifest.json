@@ -1,12 +1,14 @@
 {
-    "name": "Abdul Suleiman / Software Developer",
+    "name": "Abdul Suleiman's Portfolio",
     "short_name": "Abdul's Portfolio",
-    "start_url": "/",
-    "description": "Software developer at pramie.tech",
+    "start_url": "/portfolio",
+    "description": "Software Developer",
     "background_color": "#262626",
     "theme_color": "#262626",
     "display": "standalone",
     "orientation": "portrait-primary",
+    "id": "/portfolio",
+    "lang": "en-US",
     "categories": [
         "Software Developer",
         "React Developer",
@@ -45,7 +47,8 @@
         {
             "src": "/favicon/android-chrome-192x192.png",
             "sizes": "192x192",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "maskable"
         },
         {
             "src": "/favicon/apple-icon-152x152.png",
@@ -56,55 +59,71 @@
             "src": "/favicon/ms-icon-70x70.png",
             "sizes": "70x70",
             "type": "image/png",
-            "purpose": "any maskable"
+            "purpose": "maskable"
         },
         {
             "src": "/favicon/ms-icon-144x144.png",
             "sizes": "144x144",
             "type": "image/png",
-            "purpose": "any maskable"
+            "purpose": "maskable"
         },
         {
             "src": "/favicon/ms-icon-150x150.png",
             "sizes": "150x150",
             "type": "image/png",
-            "purpose": "any maskable"
+            "purpose": "maskable"
         },
         {
             "src": "/favicon/ms-icon-310x310.png",
             "sizes": "310x310",
             "type": "image/png",
-            "purpose": "any maskable"
+            "purpose": "maskable"
         },
         {
             "src": "/favicon/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png",
-            "purpose": "any maskable"
+            "purpose": "maskable"
         }
     ],
     "screenshots": [
         {
             "src": "https://abduls-portfolio.vercel.app/card-bg.png",
             "type": "image/jpg",
-            "form_factor": "wide"
+            "form_factor": "wide",
+            "sizes": "2327x1379"
         },
         {
             "src": "https://abduls-portfolio.vercel.app/card-bg.png",
             "type": "image/png",
-            "form_factor": "narrow"
+            "form_factor": "narrow",
+            "sizes": "2327x1379"
         }
     ],
     "shortcuts": [
         {
-            "name": "Abdul Suleiman / Software Developer",
-            "short_name": "Abdul's Portfolio",
-            "description": "Software developer at pramie.tech",
+            "name": "Abdul's Portfolio / Homepage",
+            "short_name": "Homepage",
+            "description": "Software Developer",
             "url": "/portfolio",
             "icons": [
                 {
                     "src": "/favicon/android-icon-192x192.png",
-                    "sizes": "192x192"
+                    "sizes": "192x192",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "Abdul's Portfolio / Projects",
+            "short_name": "Projects",
+            "description": "Software Developer",
+            "url": "/portfolio/projects",
+            "icons": [
+                {
+                    "src": "/favicon/android-icon-192x192.png",
+                    "sizes": "192x192",
+                    "type": "image/png"
                 }
             ]
         }

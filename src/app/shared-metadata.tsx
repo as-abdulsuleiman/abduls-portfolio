@@ -1,11 +1,18 @@
 /** @format */
 
 export const openGraphImage = {
-  title: "Abdul Suleiman / Software Developer",
-  description: "Software developer at pramie.tech",
+  title: "Abdul Suleiman's Portfolio",
+  description: "Software Developer",
   url: process.env.NEXT_PUBLIC_WEBSITE_URL,
   siteName: "Abdul's Portfolio",
-  images: `${process.env.NEXT_PUBLIC_METADATABASE_URL}card-bg.png`,
+  images: [
+    {
+      url: `${process.env.NEXT_PUBLIC_METADATABASE_URL}card-bg.png`,
+      width: 2327,
+      height: 1379,
+      alt: "card-bg",
+    },
+  ],
   locale: "en-US",
   type: "website",
 };

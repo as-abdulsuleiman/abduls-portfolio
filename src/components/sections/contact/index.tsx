@@ -114,7 +114,7 @@ const Contact: FC<ContactProps> = () => {
 
   return (
     <motion.section
-      className="h-full lg:h-screen flex flex-col justify-start"
+      className="h-full xl:h-screen flex flex-col justify-start"
       id="contact"
     >
       <motion.div
@@ -122,7 +122,7 @@ const Contact: FC<ContactProps> = () => {
           delayChildren: 0.1,
           staggerChildren: 0.1,
         })}
-        className="mb-[100px] md:mb-[190px]"
+        className="mb-[100px] md:mb-[190px] xl:mb-0"
         initial="hidden"
         whileInView="show"
         viewport={{
@@ -222,6 +222,7 @@ const Contact: FC<ContactProps> = () => {
                 disabled={isSubmitting || !isValid}
                 type="submit"
                 size="default"
+                variant="default"
                 className="mt-6 mx-auto md:ml-0 md:mr-auto md:mt-3 w-[90%] md:w-[32%] flex rounded-3xl text-[13px] font-light hover:scale-105 transition-transform ease-out duration-200 border-[#2CDB86] bg-[#2CDB86] text-[#1C1C23] hover:bg-[#2CDB86]"
               >
                 {loading ? (

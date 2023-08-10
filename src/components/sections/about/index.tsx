@@ -2,6 +2,7 @@
 
 "use client";
 
+import { Card } from "@/components/card";
 import { aboutMeItems, fadeIn, staggerContainer } from "@/lib/constant";
 import { motion } from "framer-motion";
 import { User2 } from "lucide-react";
@@ -16,11 +17,11 @@ type aboutMeItemsProps = {
 const About: FC<AboutProps> = () => {
   return (
     <motion.section
-      className="h-full lg:h-screen flex flex-col justify-start"
+      className="h-full xl:h-screen flex flex-col justify-start"
       id="about"
     >
       <motion.div
-        className="mb-[100px] md:mb-[160px]"
+        className="mb-[100px] md:mb-[160px] xl:mb-0"
         viewport={{
           once: true,
           amount: "some",
@@ -46,7 +47,7 @@ const About: FC<AboutProps> = () => {
               ABOUT
             </div>
           </div>
-          <div className="pt-[40px] text-[#D8D3CB] text-3xl max-w-lg ">
+          <div className="pt-[30px] text-[#D8D3CB] text-3xl max-w-lg ">
             <div className="text-[#D8D3CB]">
               About {""}
               <span className="text-[#32DD89]">Me</span>
@@ -54,7 +55,7 @@ const About: FC<AboutProps> = () => {
           </div>
         </motion.div>
         <motion.div
-          className="grid grid-cols-1 gap-3 mt-[20px]"
+          className="grid grid-cols-1 gap-3 mt-[18px]"
           variants={fadeIn({
             direction: "up",
             type: "tween",
@@ -64,12 +65,11 @@ const About: FC<AboutProps> = () => {
         >
           {aboutMeItems?.map((val: aboutMeItemsProps, index: number) => {
             return (
-              <motion.p
-                key={index}
-                className="font-sans text-base text-[#717070] "
-              >
-                {val?.description}
-              </motion.p>
+              <motion.article key={index} className="text-[#D8D3CB] py-1">
+                <motion.div className="text-[15px] text-[#D8D3CB]">
+                  {val?.description}
+                </motion.div>
+              </motion.article>
             );
           })}
         </motion.div>

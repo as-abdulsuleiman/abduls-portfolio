@@ -175,7 +175,7 @@ export const resumeItems  = [
     isPresent:true,
     section:"Experience",
     showButton: false,
-    date: "2020 - Present",
+    date: "2021 - Present",
     name: "Software Developer",
     company: "Pramie Technologies",
   },
@@ -233,7 +233,7 @@ export const projectItems = [
       "FirstActive365 is a recruitment agency based in the UK that specializes in offering temporary and contract staffing solutions within the healthcare industry.",
   },
   {
-    name: "Pramie Technologies",
+    name: "Pramie Technologies Website",
     path: "https://pramie-web-git-feat-update-website-content-hmoskva.vercel.app/",
     url: "/icons/pramie-bg.png",
     tech: [{ name: "React.js" }, { name: "Next.js" }, { name: "Figma" }],
@@ -247,12 +247,17 @@ export const projectItems = [
 
 export const aboutMeItems = [
   {
-    description: `Meet Abdul Suleiman, a passionate software developer with 3 years of expertise in React.js, Next.js, JavaScript, and TypeScript. I'm from Nigeria, I pursued a Computer Applications degree from a Bangalore University-affiliated college in Bengaluru, India.`,
+    description: `I pursued a degree in Computer Applications from Bangalore University-affiliated college, Bengaluru, India. After finishing my degree, I decided to pursue my passion for programming. I started my career by enrolling in coding tutorials offered on YouTube and other online platforms, where I learned about web development.`,
   },
   {
-    description: `My dedication to staying current with industry trends and delivering high-quality solutions makes me an invaluable asset to any development team. Collaboration is central to my approach, fostering a creative environment that leads to remarkable outcomes. I thrive on embracing new challenges and contributing to the advancement of software development.`,
+    description:"The art of problem-solving is one part of programming that I find quite appealing. When I eventually decipher a solution to a complex problem, I feel a sense of accomplishment."
+  },
+  {
+    description: `My primary skill set includes the use of technologies such as React.js, Next.js, JavaScript, and TypeScript, among others. These tools enable me to design dynamic and interesting online applications that promote efficiency and user-friendliness while meeting user needs. My commitment to learning and remaining current with industry developments drives my ongoing development as a web developer.`,
   },
   {
     description: `When I'm not immersed in programming, I find joy in playing football, FIFA, watching Football matches, and Formula 1 races. These leisure activities provide the perfect balance to my intense dedication to software development.`,
   },
 ];
+
+

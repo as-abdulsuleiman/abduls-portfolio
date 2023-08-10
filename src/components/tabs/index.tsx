@@ -102,7 +102,7 @@ const Tabs: FC<indexProps> = ({}) => {
   return (
     <div className="flex flex-col px-[10px] py-[9px] relative">
       {navs?.map((val, index) => {
-        const iconClass = `h-3 w-3 sm:h-4 sm:w-4  ${
+        const iconClass = `h-3 w-3 sm:h-4 sm:w-4 ${
           val.hasFill
             ? "fill-[1px] group-hover:fill-[#2BD984]"
             : " stroke-[1px] group-hover:stroke-[#2BD984]"

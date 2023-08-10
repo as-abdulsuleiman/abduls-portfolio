@@ -7,50 +7,38 @@ import { FC, useContext } from "react";
 import Image from "next/image";
 import { NavContext } from "@/scroll-provider";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer, zoomIn } from "@/lib/constant";
+import { fadeIn, staggerContainer } from "@/lib/constant";
 
-interface IntroductionProps {}
+interface IntroductionProps {
+  projectCount: number;
+}
 
-const Introduction: FC<IntroductionProps> = () => {
+const Introduction: FC<IntroductionProps> = ({ projectCount }) => {
   const { setValue } = useContext(NavContext);
-
-  const onPress = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault();
-    const target = window.document.getElementById(
-      e.currentTarget.href.split("#")[1]
-    );
-    if (target) {
-      setValue("projects");
-      target.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
-  };
 
   return (
     <motion.section
-      className="h-full lg:h-screen flex flex-col justify-start"
+      className="h-full xl:h-screen flex flex-col justify-start"
       id="introduction"
     >
       <motion.div
-        className="mb-[100px] md:mb-[160px]"
+        className="mb-[100px] md:mb-[160px] xl:mb-0"
         viewport={{
           once: true,
           amount: "some",
-          margin: "0px 0px 30px 0px",
         }}
         initial="hidden"
         whileInView="show"
         variants={staggerContainer({
-          delayChildren: 0.1,
-          staggerChildren: 0.1,
+          delayChildren: 0,
+          staggerChildren: 0,
         })}
       >
         <motion.div
           variants={fadeIn({
             direction: "up",
             type: "tween",
-            delay: 0.1,
+            delay: 0,
             duration: 1,
           })}
         >
@@ -65,19 +53,19 @@ const Introduction: FC<IntroductionProps> = () => {
           variants={fadeIn({
             direction: "up",
             type: "tween",
-            delay: 0.1,
+            delay: 0,
             duration: 1,
           })}
         >
           <div className="pt-[40px]">
-            <h1 className="text-light-text font-medium text-3xl md:text-5xl">
-              Hi 👋 from <span className="text-light-green">Abdul</span>, {""}
+            <h1 className="text-light-text font-medium text-3xl md:text-4xl xl:text-5xl">
+              Hi 👋 from <span className="text-light-green">Abdul</span>. {""}
               <p className="mt-[8px]">{`I'm a Software Developer`}</p>
             </h1>
-            <p className="font-sans max-w-lg text-base text-[#717070] pt-[20px]">
-              I specialize in the development of interactive, user-friendly, and
-              efficient web applications.
-            </p>
+            <small className="font-sans max-w-lg text-[15px] text-[#717070] mt-[20px]">
+              I specialize in crafting interactive, user-friendly, and efficient
+              web applications.
+            </small>
             <div className="pt-[60px] flex flex-col relative">
               <Image
                 onClick={(e) => {
@@ -101,24 +89,25 @@ const Introduction: FC<IntroductionProps> = () => {
             <div className="flex items-center w-full pt-[50px]">
               <div className="ml-0">
                 <div className="text-light-green text-5xl lg:text-6xl">
-                  3<span className="text-5xl font-medium">+</span>
+                  3<span className="text-4xl font-medium">+</span>
                 </div>
                 <div className="font-sans text-xs leading-3 text-[#717070] mt-[6px]">
-                  <div className="text-[10px]">
+                  <small className="text-[11px]">
                     YEARS OF
                     <div>EXPERIENCE</div>
-                  </div>
+                  </small>
                 </div>
               </div>
               <div className="ml-[80px]">
                 <div className="text-light-green text-5xl lg:text-6xl">
-                  3<span className="text-5xl font-medium">+</span>
+                  {projectCount - 1}
+                  <span className="text-4xl font-medium">+</span>
                 </div>
                 <div className="font-sans text-xs leading-3 text-[#717070] mt-[6px]">
-                  <div className="text-[10px]">
+                  <small className="text-[11px]">
                     PROJECTS
                     <div>COMPLETED</div>
-                  </div>
+                  </small>
                 </div>
               </div>
             </div>

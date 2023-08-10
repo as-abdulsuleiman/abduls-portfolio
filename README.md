@@ -1,6 +1,6 @@
 ## Abdul's Portfolio
 
-[https://abdul-portfolio-psi.vercel.app/](https://abdul-portfolio-psi.vercel.app/)
+[https://abduls-portfolio.vercel.app/portfolio](https://abduls-portfolio.vercel.app/portfolio)
 
 ## Stack
 
@@ -10,9 +10,9 @@
 - [Framer Motion](https://www.framer.com/motion/) - An animation library for React
 
 ```
-$PROJECT_ROOT / App
+$PROJECT_ROOT 
 │   # Page files
-├── pages
+├── portfolio
 │   # React component files
 ├── components
 │   # Non-react modules

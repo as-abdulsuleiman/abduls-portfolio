@@ -72,7 +72,7 @@ const Skills: FC<SkillsProps> = () => {
 
   return (
     <motion.section
-      className="h-full lg:h-screen flex flex-col justify-start"
+      className="h-full xl:h-screen flex flex-col justify-start"
       id="skills"
     >
       <motion.div
@@ -80,7 +80,7 @@ const Skills: FC<SkillsProps> = () => {
           delayChildren: 0.1,
           staggerChildren: 0.1,
         })}
-        className="mb-[100px] md:mb-[160px]"
+        className="mb-[100px] md:mb-[160px] xl:mb-0"
         initial="hidden"
         whileInView="show"
         viewport={{
@@ -106,7 +106,7 @@ const Skills: FC<SkillsProps> = () => {
             Technologies
           </div>
         </motion.div>
-        <motion.div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-x-3 md:gap-x-6 gap-9 pt-[30px]">
+        <motion.div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-x-3 md:gap-x-6 gap-9 pt-[30px]">
           {skillsItems.map((val: skillsItemsProps, id: number) => {
             const Icon = () =>
               val.icon({
@@ -128,12 +128,12 @@ const Skills: FC<SkillsProps> = () => {
                 key={id}
                 className="group justify-between w-full"
               >
-                <div className="h-[150px] lg:h-[150px] flex items-center justify-center rounded-full ring-[0.6px] ring-[#717070] cursor-pointer group-hover:ring-[#2BD984]">
+                <div className="h-[150px] md:h-[260px] lg:h-[180px] xl:h-[150px] flex items-center justify-center rounded-full ring-[0.6px] ring-[#717070] cursor-pointer group-hover:ring-[#2BD984]">
                   <div className="py-[9px]  cursor-pointer">
                     <Icon />
                   </div>
                 </div>
-                <div className="text-center mt-2 text-sm text-[#D8D3CB] font-semibold group-hover:text-[#2BD984]">
+                <div className="text-center mt-2 text-[15px] text-[#D8D3CB] font-semibold group-hover:text-[#2BD984]">
                   {val?.name}
                 </div>
               </motion.div>

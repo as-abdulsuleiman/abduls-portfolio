@@ -12,7 +12,7 @@ interface ProviderProps {
 const Provider: FC<ProviderProps> = ({ children }) => {
   return (
     <AnimatePresence mode="wait" initial={true}>
-      <motion.div>{children}</motion.div>
+      <>{children}</>
     </AnimatePresence>
   );
 };

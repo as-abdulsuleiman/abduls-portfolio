@@ -102,7 +102,7 @@ const SideBar: FC<indexProps> = ({}) => {
           <h2 className="text-light-text font-semibold font-sans text-lg">
             Abdul Suleiman
           </h2>
-          <div className="absolute rounded-full border border-zinc-50 h-3 w-3 top-[-5px] right-[-10px]">
+          <div className="absolute rounded-full border border-light-text h-3 w-3 top-[-5px] right-[-10px]">
             <div className="h-full w-full flex mx-auto my-auto items-center justify-center text-[8px] text-light-text">
               A
             </div>
@@ -183,9 +183,10 @@ const SideBar: FC<indexProps> = ({}) => {
       <Button
         onClick={() => handleRedirect(resume)}
         size="default"
-        className="mt-[20px] w-[70%] hover:scale-105 transition-transform ease-out duration-200 flex mx-auto rounded-3xl text-[13px] font-light border-[#2CDB86] bg-[#2CDB86] text-[#1C1C23] hover:bg-[#2CDB86]"
+        variant="default"
+        className="mt-[20px] w-[70%] hover:scale-105  transition-transform ease-out duration-200 flex mx-auto rounded-3xl text-[13px] font-light border-[#2CDB86] bg-[#2CDB86] text-[#1C1C23] hover:bg-[#2CDB86]"
       >
-        View Resume
+        Download CV
       </Button>
     </div>
   );

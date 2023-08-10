@@ -15,14 +15,8 @@ export default function Error({
     <div className="container h-screen max-w-7xl mx-auto">
       <div className="flex flex-col items-center justify-center h-full w-full ">
         <div className="self-center text-center">
-          <h1 className="text-3xl md:text-5xl text-[#D8D3CB]">
-            {error.message ? (
-              error.message
-            ) : (
-              <span>
-                Something went <span className="text-[#32DD89]">wrong</span>!
-              </span>
-            )}
+          <h1 className="text-2xl md:text-5xl text-[#D8D3CB]">
+            Something went <span className="text-[#32DD89]">wrong</span>!
           </h1>
           <Button className="mt-5" onClick={() => reset()}>
             Try again

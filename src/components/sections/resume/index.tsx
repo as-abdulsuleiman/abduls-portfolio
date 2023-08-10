@@ -29,7 +29,7 @@ const Resume: FC<ResumeProps> = () => {
 
   return (
     <motion.section
-      className="h-full lg:h-screen flex flex-col justify-start"
+      className="h-full xl:h-screen flex flex-col justify-start"
       id="resume"
     >
       <motion.div
@@ -37,7 +37,7 @@ const Resume: FC<ResumeProps> = () => {
           delayChildren: 0.1,
           staggerChildren: 0.1,
         })}
-        className="mb-[100px] md:mb-[160px]"
+        className="mb-[100px] md:mb-[160px] xl:mb-0"
         initial="hidden"
         whileInView="show"
         viewport={{
@@ -93,10 +93,10 @@ const Resume: FC<ResumeProps> = () => {
                           <div
                             className={`flex flex-col ${
                               newsp ? "py-2" : "py-0"
-                            }`}
+                            } `}
                             key={id}
                           >
-                            <div
+                            <small
                               className={`font-medium pb-1 ${
                                 val?.isPresent
                                   ? "text-[#32DD89] text-sm"
@@ -104,9 +104,9 @@ const Resume: FC<ResumeProps> = () => {
                               }`}
                             >
                               {val?.date}
-                            </div>
+                            </small>
                             <div className="">
-                              <div className="text-base text-[#D8D3CB] font-semibold">
+                              <div className="text-[15px] text-[#D8D3CB] font-semibold">
                                 {val?.name}
                               </div>
                               <div className="text-[#D8D3CB] text-xs ml-0.5">
