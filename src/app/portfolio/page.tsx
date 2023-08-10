@@ -4,9 +4,6 @@ import Home from "@/components/home";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/config";
 
-export const dynamic = "force-dynamic";
-export const fetchCache = "force-no-store";
-
 async function getData() {
   let Newitems: any = [];
   const querySnapshot = await getDocs(collection(db, "projects"));

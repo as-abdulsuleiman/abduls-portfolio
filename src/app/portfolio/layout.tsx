@@ -5,9 +5,6 @@ import SideBar from "@/components/sidebar";
 import ScrollProvider from "@/scroll-provider";
 import Wrapper from "@/components/wrapper";
 
-export const dynamic = "force-dynamic";
-export const fetchCache = "force-no-store";
-
 export default function PortfolioLayout({
   children,
   projectModal,
