@@ -81,7 +81,7 @@ const SideBar: FC<indexProps> = ({}) => {
     {
       hasFill: false,
       onclick: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        handleRedirect("https://gitlab.com/Abdul_Suleiman/abduls-portfolio");
+        handleRedirect("https://github.com/as-abdulsuleiman/abduls-portfolio");
       },
       name: "Source Code",
       icon: ({ className, color }: IconProps) => (
