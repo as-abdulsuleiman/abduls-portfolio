@@ -88,13 +88,13 @@
     ],
     "screenshots": [
         {
-            "src": "https://abduls-portfolio.vercel.app/card-bg.png",
+            "src": "https://abduls-portfolio-as-abdulsuleiman.vercel.app/card-bg.png",
             "type": "image/jpg",
             "form_factor": "wide",
             "sizes": "2770x1506"
         },
         {
-            "src": "https://abduls-portfolio.vercel.app/card-bg.png",
+            "src": "https://abduls-portfolio-as-abdulsuleiman.vercel.app/card-bg.png",
             "type": "image/png",
             "form_factor": "narrow",
             "sizes": "2770x1506"
