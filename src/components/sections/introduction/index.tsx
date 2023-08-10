@@ -59,7 +59,7 @@ const Introduction: FC<IntroductionProps> = ({ projectCount }) => {
         >
           <div className="pt-[40px]">
             <h1 className="text-light-text font-medium text-3xl md:text-4xl xl:text-5xl">
-              Hi 👋 from <span className="text-light-green">Abdul</span>. {""}
+              Hi 👋 from <span className="text-light-green">Abdul</span>, {""}
               <p className="mt-[8px]">{`I'm a Software Developer`}</p>
             </h1>
             <small className="font-sans max-w-lg text-[15px] text-[#717070] mt-[20px]">

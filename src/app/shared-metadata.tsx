@@ -8,8 +8,8 @@ export const openGraphImage = {
   images: [
     {
       url: `${process.env.NEXT_PUBLIC_METADATABASE_URL}card-bg.png`,
-      width: 2327,
-      height: 1379,
+      width: 2188,
+      height: 1380,
       alt: "card-bg",
     },
   ],
