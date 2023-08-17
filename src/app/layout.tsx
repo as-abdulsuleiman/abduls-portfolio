@@ -22,6 +22,8 @@ export const metadata = {
     width: "device-width",
     initialScale: 1,
     maximumScale: 1,
+    minimumScale: 0.1,
+    userScalable: 1,
   },
   twitter: {
     card: "summary_large_image",
