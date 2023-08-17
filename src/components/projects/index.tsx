@@ -101,7 +101,7 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
                           priority
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
                           quality={100}
-                          className="rounded-2xl object-cover w-full h-auto"
+                          className="rounded-2xl object-cover w-full h-full"
                         />
                       </AspectRatio>
                     </article>
