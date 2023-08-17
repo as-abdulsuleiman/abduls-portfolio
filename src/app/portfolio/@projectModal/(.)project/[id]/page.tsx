@@ -56,7 +56,14 @@ const Page: FC<ProjectProps> = ({ params }) => {
       if (docSnap?.exists()) {
         const { title, url, banner, tech, bgColor, description } =
           docSnap?.data();
-        setProjectItem({ title, url, banner, tech, bgColor, description });
+        setProjectItem({
+          title,
+          url,
+          banner,
+          tech,
+          bgColor,
+          description,
+        });
       }
     } catch (error) {
     } finally {

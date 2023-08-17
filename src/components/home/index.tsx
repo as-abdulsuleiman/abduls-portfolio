@@ -14,10 +14,24 @@ import ScrollSpy from "react-ui-scrollspy";
 
 interface HomeProps {
   projectCount: number;
+  projects: Projects[];
 }
 
-const Home = ({ projectCount }: HomeProps) => {
+type Projects = {
+  url: string;
+  bgColor: string;
+  tech: {
+    name: string;
+  }[];
+  description: string;
+  title: string;
+  banner: string;
+  id: string;
+};
+
+const Home = ({ projectCount, projects }: HomeProps) => {
   const { value, setValue } = useContext(NavContext);
+
   return (
     <>
       <ScrollSpy
@@ -34,7 +48,7 @@ const Home = ({ projectCount }: HomeProps) => {
         <About />
         <Resume />
         <Skills />
-        <Projects />
+        <Projects projects={projects} />
         <Contact />
       </ScrollSpy>
     </>
