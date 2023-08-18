@@ -7,6 +7,9 @@ import { notFound } from "next/navigation";
 
 export const metadata = {
   title: "Abdul Suleiman's Portfolio / Projects",
+  alternates: {
+    canonical: `/projects`,
+  },
 };
 
 async function getProjects() {

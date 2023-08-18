@@ -4,6 +4,13 @@ import Home from "@/components/home";
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { db } from "@/config";
 
+export const metadata = {
+  title: "Abdul Suleiman's Portfolio",
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_WEBSITE_URL}`,
+  },
+};
+
 async function getProjects() {
   let projects: any = [];
   const projectRef = query(
@@ -13,7 +20,7 @@ async function getProjects() {
   const querySnapshot = await getDocs(projectRef);
   querySnapshot.forEach((doc) => {
     if (doc.exists()) {
-      projects.push({
+      projects?.push({
         ...doc?.data(),
         id: doc?.id,
       });
