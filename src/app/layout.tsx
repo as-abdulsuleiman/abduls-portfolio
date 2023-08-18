@@ -16,7 +16,6 @@ import {
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  metadataBase: new URL(`${process.env.NEXT_PUBLIC_WEBSITE_URL}`),
   title: "Abdul Suleiman's Portfolio",
   description: "Software Developer",
   viewport: {
@@ -33,6 +32,9 @@ export const metadata = {
     title: "Abdul Suleiman's Portfolio",
     description: "Software Developer",
     images: "/opengraph-image.png",
+  },
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_WEBSITE_URL}`,
   },
   openGraph: {
     ...openGraphImage,
