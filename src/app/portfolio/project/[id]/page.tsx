@@ -1,8 +1,8 @@
 /** @format */
 
+import ProjectDetails from "@/components/project-details";
 import { notFound } from "next/navigation";
 import { doc, getDoc } from "firebase/firestore";
-import ProjectDetails from "@/components/project-details";
 import { db } from "@/config";
 
 interface ProjectProps {
