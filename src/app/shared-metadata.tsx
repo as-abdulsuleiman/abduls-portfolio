@@ -7,13 +7,12 @@ export const openGraphImage = {
   siteName: "Abdul's Portfolio",
   images: [
     {
-      url: `${process.env.NEXT_PUBLIC_METADATABASE_URL}card-bg.png`,
+      url: "/opengraph-image.png",
       width: 2770,
       height: 1506,
-      alt: "card-bg",
+      alt: "opengraph-image",
     },
   ],
-  locale: "en-US",
   type: "website",
 };
 
@@ -24,10 +23,9 @@ export const archiveItems = [
 ];
 
 export const iconShortcut = [
-  "/favicon/android-chrome-512x512.png",
-  "/favicon/favicon-32x32.png",
-  "/favicon/favicon-16x16.png",
-  "/favicon/favicon-96x96.png",
+  { url: "/favicon/favicon-32x32.png", rel: "icon" },
+  { url: "/favicon/favicon-16x16.png", rel: "icon" },
+  { url: "/favicon/favicon-96x96.png", rel: "icon" },
 ];
 
 export const keywords = [
@@ -76,45 +74,54 @@ export const appleIcons = [
   {
     url: "/favicon/apple-touch-icon.png",
     type: "image/png",
+    rel: "apple-touch-icon",
   },
   {
     url: "/favicon/apple-icon-57x57.png",
     type: "image/png",
     size: "57x57",
+    rel: "apple-touch-icon",
   },
   {
     url: "/favicon/apple-icon-60x60.png",
     type: "image/png",
     size: "60x60",
+    rel: "apple-touch-icon",
   },
   {
     url: "/favicon/apple-icon-72x72.png",
     type: "image/png",
     size: "72x72",
+    rel: "apple-touch-icon",
   },
   {
     url: "/favicon/apple-icon-76x76.png",
     type: "image/png",
     size: "76x76",
+    rel: "apple-touch-icon",
   },
   {
     url: "/favicon/apple-icon-144x144.png",
     type: "image/png",
     size: "114x114",
+    rel: "apple-touch-icon",
   },
   {
     url: "/favicon/apple-icon-120x120.png",
     type: "image/png",
     size: "120x120",
+    rel: "apple-touch-icon",
   },
   {
     url: "/favicon/apple-icon-152x152.png",
     type: "image/png",
     size: "152x152",
+    rel: "apple-touch-icon",
   },
   {
     url: "/favicon/apple-icon-180x180.png",
     type: "image/png",
     size: "1180x180",
+    rel: "apple-touch-icon",
   },
 ];

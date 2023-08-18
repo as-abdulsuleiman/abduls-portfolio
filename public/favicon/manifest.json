@@ -9,6 +9,11 @@
     "orientation": "portrait-primary",
     "id": "/portfolio",
     "lang": "en-US",
+    "display_override": [
+        "window-controls-overlay",
+        "fullscreen",
+        "minimal-ui"
+    ],
     "categories": [
         "Software Developer",
         "React Developer",

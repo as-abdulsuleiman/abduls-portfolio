@@ -4,16 +4,16 @@
 
 import { fadeIn, staggerContainer } from "@/lib/constant";
 import { FolderKanban } from "lucide-react";
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 import { motion } from "framer-motion";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
 import { Card } from "@/components/card";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "@/config";
 import { useRouter } from "next/navigation";
 
-interface ProjectsProps {}
+interface ProjectsProps {
+  projects: ProjectItemsProps[];
+}
 
 type ProjectItemsProps = {
   url: string;
@@ -27,29 +27,8 @@ type ProjectItemsProps = {
   id: string;
 };
 
-const Projects: FC<ProjectsProps> = () => {
+const Projects: FC<ProjectsProps> = ({ projects }) => {
   const router = useRouter();
-  const [projectItems, setProjectItems] = useState<ProjectItemsProps[]>([]);
-
-  useEffect(() => {
-    getAllprojects();
-  }, []);
-
-  const getAllprojects = async () => {
-    let Newitems: any = [];
-    try {
-      const querySnapshot = await getDocs(collection(db, "projects"));
-      querySnapshot.forEach((doc) => {
-        if (doc.exists()) {
-          Newitems.push({
-            ...doc?.data(),
-            id: doc?.id,
-          });
-          setProjectItems(Newitems);
-        }
-      });
-    } catch (error) {}
-  };
 
   return (
     <motion.section
@@ -102,13 +81,13 @@ const Projects: FC<ProjectsProps> = () => {
                 className="text-[15px] text-[#D8D3CB] cursor-pointer ml-auto flex"
                 onClick={() => router.push("/portfolio/projects")}
               >
-                See all <span className="text-[#32DD89] ml-1">→</span>
+                View all <span className="text-[#32DD89] ml-1">→</span>
               </div>
             </div>
           </div>
           <motion.div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 sm:grid-cols-1 mt-[20px]">
             <motion.div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {projectItems?.slice(0, 4)?.map((val: ProjectItemsProps) => {
+              {projects?.slice(0, 4)?.map((val: ProjectItemsProps) => {
                 return (
                   <Card key={val?.id}>
                     <div className="group w-full overflow-hidden relative cursor-pointer duration-700 rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600">
@@ -129,7 +108,7 @@ const Projects: FC<ProjectsProps> = () => {
                               priority
                               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
                               quality={100}
-                              className="rounded-2xl object-cover w-full h-auto"
+                              className="rounded-2xl object-cover w-full h-full"
                             />
                           </AspectRatio>
                         </article>

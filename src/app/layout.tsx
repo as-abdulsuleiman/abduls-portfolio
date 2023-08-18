@@ -16,12 +16,15 @@ import {
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_WEBSITE_URL}`),
   title: "Abdul Suleiman's Portfolio",
   description: "Software Developer",
   viewport: {
     width: "device-width",
     initialScale: 1,
     maximumScale: 1,
+    minimumScale: 1,
+    userScalable: 1,
   },
   twitter: {
     card: "summary_large_image",
@@ -29,7 +32,7 @@ export const metadata = {
     creator: "@Abdul__Suleiman",
     title: "Abdul Suleiman's Portfolio",
     description: "Software Developer",
-    images: [`${process.env.NEXT_PUBLIC_METADATABASE_URL}card-bg.png`],
+    images: "/opengraph-image.png",
   },
   openGraph: {
     ...openGraphImage,
@@ -38,10 +41,12 @@ export const metadata = {
     icon: "/favicon.ico",
     shortcut: [...iconShortcut],
     apple: [...appleIcons],
-    other: {
-      rel: "apple-icon-precomposed",
-      url: "/favicon/apple-icon-precomposed.png",
-    },
+    other: [
+      {
+        rel: "apple-icon-precomposed",
+        url: "/favicon/apple-icon-precomposed.png",
+      },
+    ],
   },
   robots: {
     index: true,

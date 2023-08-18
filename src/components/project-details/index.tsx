@@ -54,7 +54,7 @@ const ProjectDetails: FC<ProjectProps> = ({ project }) => {
             priority
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
             quality={100}
-            className={`rounded-2xl object-cover border-[#717070] group border-[0.1px] relative ${
+            className={`rounded-2xl object-cover border-[#717070] group border-[0.1px] relative w-full h-full ${
               loadingImage ? "blur-sm " : "blur-none"
             }`}
           />

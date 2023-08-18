@@ -1,8 +1,8 @@
 /** @format */
 
+import ProjectDetails from "@/components/project-details";
 import { notFound } from "next/navigation";
 import { doc, getDoc } from "firebase/firestore";
-import ProjectDetails from "@/components/project-details";
 import { db } from "@/config";
 
 interface ProjectProps {
@@ -17,7 +17,10 @@ export async function generateMetadata({ params }: ProjectProps) {
   if (docSnap?.exists()) {
     const { title } = docSnap?.data();
     return {
-      title: `Abdul Suleiman's Portfolio / ${title} `,
+      title: `Abdul Suleiman's Portfolio / ${title} → Project `,
+      alternates: {
+        canonical: `/project/${params?.id}`,
+      },
     };
   }
 }
