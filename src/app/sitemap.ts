@@ -1,4 +1,6 @@
-import { type MetadataRoute } from "next"
+/** @format */
+
+import { type MetadataRoute } from "next";
 import { collection, getDocs, query, orderBy } from "firebase/firestore";
 import { db } from "@/config";
 
@@ -13,12 +15,10 @@ type ProjectItemsProps = {
   banner: string;
   id: string;
 };
- 
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_WEBSITE_URL
-
+  const baseUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
   let projects: any = [];
-
   const projectRef = query(
     collection(db, "projects"),
     orderBy("timestamp", "desc")
@@ -33,12 +33,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   });
 
-  const projectUrl = projects?.map((project:ProjectItemsProps) => {
-    return {
-      url: `${baseUrl}project/${project?.id}`,
-      lastModified: new Date().toISOString(),
-    }
-  })??[]
+  const projectUrl =
+    projects?.map((project: ProjectItemsProps) => {
+      return {
+        url: `${baseUrl}project/${project?.id}`,
+        lastModified: new Date().toISOString(),
+      };
+    }) ?? [];
 
   return [
     {
@@ -46,9 +47,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date().toISOString(),
     },
     {
-      url:`${baseUrl}projects`,
+      url: `${baseUrl}projects`,
       lastModified: new Date().toISOString(),
     },
-    ...projectUrl
-  ]
+    ...projectUrl,
+  ];
 }

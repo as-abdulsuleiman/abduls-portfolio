@@ -3,7 +3,6 @@
 import { Variants } from "framer-motion";
 
 export const navVariants: Variants = {
-  
   hidden: {
     opacity: 0,
     y: -50,
@@ -30,7 +29,7 @@ interface SlideInProps {
   delay: number;
   duration: number;
   custom?: number;
-  opacity?: number
+  opacity?: number;
 }
 
 export const slideIn = ({
@@ -42,7 +41,7 @@ export const slideIn = ({
   custom,
 }: SlideInProps) => ({
   hidden: {
-    opacity:  0,
+    opacity: 0,
     x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
     y: direction === "up" ? "100%" : direction === "down" ? "100%" : 0,
   },
@@ -93,7 +92,7 @@ interface FadeInProps {
   delay: number;
   duration: number;
   custom?: number;
-  opacity?: number
+  opacity?: number;
 }
 
 export const fadeIn = ({
@@ -105,8 +104,8 @@ export const fadeIn = ({
 }: FadeInProps) => ({
   hidden: {
     opacity: 0,
-    x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,
-    y: direction === 'up' ? 100 : direction === 'down' ? -100 : 0
+    x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
+    y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
   },
   show: {
     opacity: 1,
@@ -127,23 +126,23 @@ interface ZoomInProps {
   custom?: number;
 }
 
-export const zoomIn = ({delay, duration, custom}:ZoomInProps) => ({
+export const zoomIn = ({ delay, duration, custom }: ZoomInProps) => ({
   hidden: {
     scale: 0,
     opacity: 0,
-    x:0,
-    y:0,
+    x: 0,
+    y: 0,
   },
   show: {
-    y:0,
-    x:0,
+    y: 0,
+    x: 0,
     scale: [0, 0.5, 1],
     opacity: 1,
     transition: {
-      type: 'tween',
+      type: "tween",
       delay,
       duration,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 });
@@ -153,7 +152,7 @@ export const footerVariants = {
     opacity: 0,
     y: 50,
     transition: {
-      type: 'spring',
+      type: "spring",
       stiffness: 300,
       damping: 140,
     },
@@ -162,47 +161,47 @@ export const footerVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      type: 'spring',
+      type: "spring",
       stiffness: 80,
       delay: 0.5,
     },
   },
 };
 
-
-export const resumeItems  = [
+export const resumeItems = [
   {
-    isPresent:true,
-    section:"Experience",
+    isPresent: true,
+    section: "Experience",
     showButton: false,
     date: "2021 - Present",
     name: "Software Developer",
     company: "Pramie Technologies",
   },
   {
-    isPresent:true,
-    section:"Freelancing",
+    isPresent: true,
+    section: "Freelancing",
     showButton: false,
     date: "2020",
     name: "Software Developer",
     company: "Pramie Technologies",
   },
-  {   
-    isPresent:false,
-    section:"Education",
+  {
+    isPresent: false,
+    section: "Education",
     showButton: false,
     date: "2016 - 2019",
     name: "Bachelor Degree in Computer Application",
     company: "Bangalore University",
   },
-]
+];
 
 export const aboutMeItems = [
   {
     description: `I pursued a degree in Computer Applications from Bangalore University-affiliated college, Bengaluru, India. After finishing my degree, I decided to pursue my passion for programming. I started my career by enrolling in coding tutorials offered on YouTube and other online platforms, where I learned about web development.`,
   },
   {
-    description:"The art of problem-solving is one part of programming that I find quite appealing. When I eventually decipher a solution to a complex problem, I feel a sense of accomplishment."
+    description:
+      "The art of problem-solving is one part of programming that I find quite appealing. When I eventually decipher a solution to a complex problem, I feel a sense of accomplishment.",
   },
   {
     description: `My primary skill set includes the use of technologies such as React.js, Next.js, JavaScript, and TypeScript, among others. These tools enable me to design dynamic and interesting online applications that promote efficiency and user-friendliness while meeting user needs. My commitment to learning and remaining current with industry developments drives my ongoing development as a web developer.`,
@@ -212,4 +211,4 @@ export const aboutMeItems = [
   },
 ];
 
-
+export const globalSectionStyle = "h-full lg:h-screen flex flex-col justify-start"

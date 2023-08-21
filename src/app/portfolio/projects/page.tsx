@@ -6,7 +6,7 @@ import Projects from "@/components/projects";
 import { notFound } from "next/navigation";
 
 export const metadata = {
-  title: "Abdul Suleiman's Portfolio / Projects",
+  title: "Abdul Suleiman's Portfolio - Projects",
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_WEBSITE_URL}projects`,
   },

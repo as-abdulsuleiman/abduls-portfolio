@@ -71,7 +71,7 @@ const SideBar: FC<indexProps> = ({}) => {
     {
       hasFill: true,
       onclick: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        handleRedirect("https://www.linkedin.com/in/abdul-suleiman-9448021b7/");
+        handleRedirect(`${process.env.NEXT_PUBLIC_LINKEDIN_URL}`);
       },
       name: "Linkedin",
       icon: ({ className, color }: IconProps) => (
@@ -81,7 +81,7 @@ const SideBar: FC<indexProps> = ({}) => {
     {
       hasFill: false,
       onclick: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        handleRedirect("https://github.com/as-abdulsuleiman/abduls-portfolio");
+        handleRedirect(`${process.env.NEXT_PUBLIC_GITHUB_URL}`);
       },
       name: "Source Code",
       icon: ({ className, color }: IconProps) => (
@@ -172,7 +172,7 @@ const SideBar: FC<indexProps> = ({}) => {
                 <TooltipContent
                   hideWhenDetached={true}
                   align="center"
-                  className="text-[#D8D3CB] font-medium px-[8px] py-[0.6px] bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/10 to-zinc-900 border-[#717070] border-[0.1px]"
+                  className="text-[#D8D3CB] font-medium px-[8px] py-[0.6px] bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black border-[#717070] border-[0.1px]"
                   side="bottom"
                   alignOffset={900}
                   sideOffset={2}
@@ -188,11 +188,11 @@ const SideBar: FC<indexProps> = ({}) => {
       </div>
       <Button
         onClick={() => handleRedirect(resume)}
-        size="default"
+        size="sm"
         variant="default"
-        className="mt-[15px] w-[70%] hover:scale-105  transition-transform ease-out duration-200 flex mx-auto rounded-3xl text-[13px] font-light border-[#2CDB86] bg-[#2CDB86] text-[#1C1C23] hover:bg-[#2CDB86]"
+        className="mt-[15px] w-[70%] hover:scale-105 transition-transform ease-out duration-200 flex mx-auto rounded-3xl text-[13px] font-light border-[#2CDB86] bg-[#2CDB86] text-[#1C1C23] hover:bg-[#2CDB86]"
       >
-        Download CV
+        View CV
       </Button>
     </div>
   );

@@ -79,8 +79,8 @@ const ProjectModal: FC<ProjectProps> = ({ params }) => {
         router.back();
       }}
     >
-      <DialogContent className="container mx-auto max-w-2xl rounded-2xl bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900  px-[22px] md:px-[2rem] py-[2rem]">
-        <AspectRatio ratio={14 / 9} className="group relative">
+      <DialogContent className="container mx-auto max-w-2xl rounded-2xl bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black px-[16px] md:px-[2rem] py-[2rem]">
+        <AspectRatio ratio={14 / 9} className="group relative cursor-pointer">
           {loading ? (
             <div className="mx-auto flex container my-auto items-center justify-center h-full w-full">
               <div className="h-8 w-8 rounded-full border-2 border-dotted border-[#2BD984] animate-spin" />
@@ -102,10 +102,19 @@ const ProjectModal: FC<ProjectProps> = ({ params }) => {
                 />
               )}
               {projectItem?.tech && (
-                <div className="absolute hidden bottom-0 pb-5 px-4 py-4 group-hover:hidden bg-primary-black/20 w-full">
-                  {projectItem?.tech.map((t: Tech, i: number) => {
-                    return <div key={i}>{t?.name}</div>;
-                  })}
+                <div className="absolute hidden bottom-0 pb-5 px-4 py-4 group-hover:flex bg-primary-black/20 w-full transition-transform ease-out duration-200">
+                  <div className="flex items-center px-2">
+                    {projectItem?.tech.map((t: Tech, i: number) => {
+                      return (
+                        <div
+                          className="mr-4 bg-[#2CDB86] text-[#1C1C23] hover:scale-105 transition-transform ease-out duration-200 p-1 px-2 text-[12px] rounded-3xl"
+                          key={i}
+                        >
+                          {t?.name}
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               )}
             </>

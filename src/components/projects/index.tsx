@@ -3,7 +3,7 @@
 "use client";
 
 import { FC } from "react";
-import { fadeIn, staggerContainer } from "@/lib/constant";
+import { fadeIn, footerVariants, staggerContainer } from "@/lib/constant";
 import { motion } from "framer-motion";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
@@ -33,58 +33,67 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
   const router = useRouter();
 
   return (
-    <div className="w-full h-full">
-      <div className="flex items-center">
-        <div className="flex items-center justify-center border-[1px] px-[1px] bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 rounded-2xl py-[2.5px] border-[#717070] w-[93px] drop-shadow-md shadow-lg">
-          <FolderKanban className="h-3 w-3" color="#D8D3CB" />
-          <div className="ml-[7px] text-[9px] mt-[1.4px] text-[#D8D3CB] font-medium">
-            PROJECTS
-          </div>
-        </div>
-        <Button
-          className={cn(
-            "bg-primary-black hover:bg-primary-black/80 hover:bg-gradient-to-tl hover:from-primary-black hover:via-zinc-400/5 ml-auto transition-opacity opacity-70 hover:opacity-100"
-          )}
-          onClick={() => router.push("/portfolio")}
-          size="sm"
-          variant="default"
-        >
-          Back
-        </Button>
-      </div>
-
+    <motion.div
+      initial="hidden"
+      whileInView="show"
+      viewport={{
+        once: true,
+        amount: "some",
+      }}
+      variants={staggerContainer({
+        delayChildren: 0.1,
+        staggerChildren: 0.1,
+      })}
+      className="w-full h-full"
+    >
       <motion.div
-        className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 sm:grid-cols-1 mt-[25px]"
-        initial="hidden"
-        whileInView="show"
-        viewport={{
-          once: true,
-          amount: "some",
-        }}
-        variants={staggerContainer({
-          delayChildren: 0.1,
-          staggerChildren: 0.1,
+        variants={fadeIn({
+          direction: "up",
+          type: "tween",
+          delay: 0,
+          duration: 1,
         })}
       >
         <div className="flex items-center">
+          <div className="flex items-center justify-center border-[1px] px-[1px] bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 rounded-2xl py-[2.5px] border-[#717070] w-[93px] drop-shadow-md shadow-lg">
+            <FolderKanban className="h-3 w-3" color="#D8D3CB" />
+            <div className="ml-[7px] text-[9px] mt-[1.4px] text-[#D8D3CB] font-medium">
+              PROJECTS
+            </div>
+          </div>
+          <Button
+            className={cn(
+              "bg-primary-black hover:bg-primary-black/80 hover:bg-gradient-to-tl hover:from-primary-black hover:via-zinc-400/5 ml-auto transition-opacity opacity-70 hover:opacity-100"
+            )}
+            onClick={() => router.push("/portfolio")}
+            size="sm"
+            variant="default"
+          >
+            Back
+          </Button>
+        </div>
+      </motion.div>
+      <motion.div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 sm:grid-cols-1 mt-[25px]">
+        <motion.div variants={footerVariants} className="flex items-center">
           <small className="font-sans max-w-lg text-[15px] text-[#717070]">
             Some of the projects are from work and some are on my own time.
           </small>
-        </div>
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 gap-4 gap-y-5"
-          variants={fadeIn({
-            direction: "up",
-            type: "tween",
-            delay: 0.1,
-            duration: 1,
-          })}
-        >
-          {projects?.map((val: ProjectItemsProps) => {
+        </motion.div>
+        <motion.div className="grid grid-cols-1 sm:grid-cols-2 gap-4 gap-y-5">
+          {projects?.map((val: ProjectItemsProps, index: number) => {
             return (
-              <Card key={val?.id}>
-                <div className="group w-full overflow-hidden relative cursor-pointer duration-700 rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600 ">
+              <motion.div
+                key={val?.id}
+                variants={fadeIn({
+                  direction: "up",
+                  type: "tween",
+                  delay: index * 0.1,
+                  duration: 0.8,
+                })}
+              >
+                <Card>
                   <div
+                    className="group w-full overflow-hidden relative cursor-pointer duration-700 rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600"
                     onClick={() => {
                       router.push(`/portfolio/project/${val?.id}`);
                     }}
@@ -106,13 +115,13 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
                       </AspectRatio>
                     </article>
                   </div>
-                </div>
-              </Card>
+                </Card>
+              </motion.div>
             );
           })}
         </motion.div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

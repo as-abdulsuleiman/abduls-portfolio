@@ -2,7 +2,7 @@
 
 "use client";
 
-import { fadeIn, staggerContainer } from "@/lib/constant";
+import { fadeIn, globalSectionStyle, staggerContainer } from "@/lib/constant";
 import { motion } from "framer-motion";
 import { Github, Briefcase } from "lucide-react";
 import { FC, ReactNode } from "react";
@@ -71,10 +71,7 @@ const Skills: FC<SkillsProps> = () => {
   ];
 
   return (
-    <motion.section
-      className="h-full xl:h-screen flex flex-col justify-start"
-      id="skills"
-    >
+    <motion.section id="skills" className={globalSectionStyle}>
       <motion.div
         variants={staggerContainer({
           delayChildren: 0.1,
@@ -96,13 +93,13 @@ const Skills: FC<SkillsProps> = () => {
             duration: 1,
           })}
         >
-          <div className="flex items-center justify-center border-[1px] px-[1px] bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 rounded-2xl py-[2.5px] border-[#717070] w-[80px] drop-shadow-md shadow-lg">
+          <div className="flex items-center justify-center border-[1px] px-[1px] bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black rounded-2xl py-[2.5px] border-[#717070] w-[80px] drop-shadow-md shadow-lg">
             <FolderRoot className="h-3 w-3" color="#D8D3CB" />
             <div className="ml-[7px] text-[9px] mt-[1.4px] text-[#D8D3CB] font-medium">
               SKILLS
             </div>
           </div>
-          <div className="pt-[40px] text-[#D8D3CB] font-medium text-4xl">
+          <div className="pt-[40px] text-[#D8D3CB] font-medium text-3xl">
             Technologies
           </div>
         </motion.div>

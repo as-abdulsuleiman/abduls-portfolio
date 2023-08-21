@@ -1,6 +1,6 @@
 /** @format */
 
-import { initializeApp,FirebaseApp, getApps } from "firebase/app";
+import { initializeApp, FirebaseApp, getApps } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getStorage, ref } from "firebase/storage";
 
@@ -21,7 +21,6 @@ if (apps?.length === 0) {
 } else {
   app = apps[0];
 }
-const db = getFirestore(app)
+const db = getFirestore(app);
 const projectStorage = getStorage(app);
 export { projectStorage, db, ref };
-

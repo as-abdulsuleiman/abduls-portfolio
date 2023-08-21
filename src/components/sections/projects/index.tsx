@@ -2,7 +2,7 @@
 
 "use client";
 
-import { fadeIn, staggerContainer } from "@/lib/constant";
+import { fadeIn, globalSectionStyle, staggerContainer } from "@/lib/constant";
 import { FolderKanban } from "lucide-react";
 import { FC } from "react";
 import { motion } from "framer-motion";
@@ -31,10 +31,7 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
   const router = useRouter();
 
   return (
-    <motion.section
-      className="h-full xl:h-screen flex flex-col justify-start"
-      id="projects"
-    >
+    <motion.section id="projects" className={globalSectionStyle}>
       <motion.div
         initial="hidden"
         whileInView="show"
@@ -56,42 +53,46 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
             duration: 1,
           })}
         >
-          <div className="flex items-center justify-center border-[1px] px-[1px] bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 rounded-2xl py-[2.5px] border-[#717070] w-[93px] drop-shadow-md shadow-lg">
+          <div className="flex items-center justify-center border-[1px] px-[1px] bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black rounded-2xl py-[2.5px] border-[#717070] w-[93px] drop-shadow-md shadow-lg">
             <FolderKanban className="h-3 w-3" color="#D8D3CB" />
             <div className="ml-[7px] text-[9px] mt-[1.4px] text-[#D8D3CB] font-medium">
               PROJECTS
             </div>
           </div>
-        </motion.div>
-        <motion.div
-          variants={fadeIn({
-            direction: "up",
-            type: "tween",
-            delay: 0.1,
-            duration: 1,
-          })}
-        >
+
           <div className="pt-[30px]">
             <div className="flex items-center">
-              <div className="text-[#D8D3CB] text-3xl md:text-4xl">
+              <div className="text-[#D8D3CB] text-3xl md:text-3xl">
                 Featured {""}
                 <span className="text-[#32DD89]">Projects</span>
               </div>
               <div
-                className="text-[15px] text-[#D8D3CB] cursor-pointer ml-auto flex"
+                className="text-[15px] text-[#D8D3CB] cursor-pointer ml-auto flex hover:scale-105 transition-transform ease-out duration-200"
                 onClick={() => router.push("/portfolio/projects")}
               >
                 View all <span className="text-[#32DD89] ml-1">→</span>
               </div>
             </div>
           </div>
-          <motion.div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 sm:grid-cols-1 mt-[20px]">
-            <motion.div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {projects?.slice(0, 4)?.map((val: ProjectItemsProps) => {
+        </motion.div>
+        <motion.div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 sm:grid-cols-1 mt-[20px]">
+          <motion.div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {projects
+              ?.slice(0, 4)
+              ?.map((val: ProjectItemsProps, index: number) => {
                 return (
-                  <Card key={val?.id}>
-                    <div className="group w-full overflow-hidden relative cursor-pointer duration-700 rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600">
+                  <motion.div
+                    key={val?.id}
+                    variants={fadeIn({
+                      direction: "up",
+                      type: "tween",
+                      delay: index * 0.1,
+                      duration: 0.8,
+                    })}
+                  >
+                    <Card>
                       <div
+                        className="group w-full overflow-hidden relative cursor-pointer duration-700 rounded-xl hover:bg-zinc-800/10 group md:gap-8 hover:border-zinc-400/50 border-zinc-600"
                         onClick={() => {
                           window.open(val?.url, "_blank");
                         }}
@@ -113,11 +114,10 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
                           </AspectRatio>
                         </article>
                       </div>
-                    </div>
-                  </Card>
+                    </Card>
+                  </motion.div>
                 );
               })}
-            </motion.div>
           </motion.div>
         </motion.div>
       </motion.div>

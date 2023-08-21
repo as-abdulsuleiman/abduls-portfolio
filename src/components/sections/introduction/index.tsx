@@ -7,7 +7,7 @@ import { FC, useContext } from "react";
 import Image from "next/image";
 import { NavContext } from "@/scroll-provider";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "@/lib/constant";
+import { fadeIn, globalSectionStyle, staggerContainer } from "@/lib/constant";
 
 interface IntroductionProps {
   projectCount: number;
@@ -17,12 +17,9 @@ const Introduction: FC<IntroductionProps> = ({ projectCount }) => {
   const { setValue } = useContext(NavContext);
 
   return (
-    <motion.section
-      className="h-full xl:h-screen flex flex-col justify-start"
-      id="introduction"
-    >
+    <motion.section id="introduction" className={globalSectionStyle}>
       <motion.div
-        className="mb-[100px] md:mb-[160px] xl:mb-0"
+        className="mb-[100px] md:mb-[160px] lg:mb-0"
         viewport={{
           once: true,
           amount: "some",
@@ -42,7 +39,7 @@ const Introduction: FC<IntroductionProps> = ({ projectCount }) => {
             duration: 1,
           })}
         >
-          <div className="flex items-center justify-center border-[1px] bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 px-[1px] rounded-2xl py-[2.5px] border-light-grey w-[93px] drop-shadow-md shadow-lg">
+          <div className="flex items-center justify-center border-[1px] bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black px-[1px] rounded-2xl py-[2.5px] border-light-grey w-[93px] drop-shadow-md shadow-lg">
             <Home className="h-3 w-3" color="#D8D3CB" />
             <div className="ml-[7px] text-[9px] mt-[1.4px] text-light-text font-medium">
               INTRODUCE
@@ -58,9 +55,12 @@ const Introduction: FC<IntroductionProps> = ({ projectCount }) => {
           })}
         >
           <div className="pt-[40px]">
-            <h1 className="text-light-text font-medium text-3xl md:text-4xl xl:text-5xl">
-              Hi 👋 from <span className="text-light-green">Abdul</span>, {""}
-              <p className="mt-[8px]">{`I'm a Software Developer`}</p>
+            <h1 className="text-light-text font-medium text-2xl md:text-3xl xl:text-4xl">
+              Hi 👋 from {""}
+              <span className="text-light-green">Abdul</span>,
+              <p className="mt-[8px] text-2xl md:text-3xl xl:text-4xl">
+                {`I'm a Software Developer.`}
+              </p>
             </h1>
             <small className="font-sans max-w-lg text-[15px] text-[#717070] mt-[20px]">
               I specialize in crafting interactive, user-friendly, and efficient
