@@ -4,10 +4,11 @@
     "start_url": "/",
     "description": "Software Developer",
     "background_color": "#262626",
-    "theme_color": "#262626",
+    "theme_color": "#fff",
     "display": "standalone",
     "orientation": "portrait-primary",
-    "id": "/",
+    "id": "/portfolio",
+    "spcope": "/",
     "lang": "en-US",
     "display_override": [
         "window-controls-overlay",
