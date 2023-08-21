@@ -34,7 +34,7 @@ export const metadata = {
     images: "/opengraph-image.png",
   },
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_WEBSITE_URL}`,
+    canonical: process.env.NEXT_PUBLIC_WEBSITE_URL,
   },
   openGraph: {
     ...openGraphImage,
@@ -74,7 +74,7 @@ export const metadata = {
   authors: [
     {
       name: "Abdul Suleiman",
-      url: "https://www.linkedin.com/in/abdul-suleiman-9448021b7/",
+      url: process.env.NEXT_PUBLIC_LINKEDIN_URL,
     },
   ],
 };
@@ -88,13 +88,13 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(
-        "min-h-screen antialiased scroll-smooth light scroll-py-9 sm:scroll-py-16 snap-start snap-y",
-        inter.className
+        "min-h-screen antialiased scroll-smooth light scroll-py-9 sm:scroll-py-16 snap-start bg-primary-black snap-y",
+        inter?.className
       )}
     >
       <body
         suppressHydrationWarning={true}
-        className={`min-h-screen w-full antialiased overflow-x-hidden overflow-y-scroll bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 m-0 p-0`}
+        className={`min-h-screen w-full antialiased overflow-x-hidden overflow-y-scroll bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black`}
       >
         {children}
         <Toaster />

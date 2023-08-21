@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import * as yup from "yup";
 import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
-import { fadeIn, staggerContainer } from "@/lib/constant";
+import { fadeIn, globalSectionStyle, staggerContainer } from "@/lib/constant";
 import { useStorage } from "@/hooks/use-storage";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "@/config";
@@ -113,10 +113,7 @@ const Contact: FC<ContactProps> = () => {
   };
 
   return (
-    <motion.section
-      className="h-full xl:h-screen flex flex-col justify-start"
-      id="contact"
-    >
+    <motion.section className={globalSectionStyle} id="contact">
       <motion.div
         variants={staggerContainer({
           delayChildren: 0.1,
@@ -137,7 +134,7 @@ const Contact: FC<ContactProps> = () => {
             delay: 0,
             duration: 1,
           })}
-          className="flex items-center justify-center border-[1px] px-[1px] rounded-2xl py-[2.5px] bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 border-[#717070] w-[93px] drop-shadow-md shadow-lg"
+          className="flex items-center justify-center border-[1px] px-[1px] rounded-2xl py-[2.5px] bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black border-[#717070] w-[93px] drop-shadow-md shadow-lg"
         >
           <ContactIcon className="h-3 w-3" color="#D8D3CB" />
           <div className="ml-[7px] text-[9px] mt-[1.4px] text-[#D8D3CB] font-medium">
@@ -153,7 +150,7 @@ const Contact: FC<ContactProps> = () => {
             duration: 1,
           })}
         >
-          <div className="text-[#D8D3CB] text-3xl md:text-4xl ">
+          <div className="text-[#D8D3CB] text-3xl md:text-3xl ">
             {`Let's Work`} {""}
             <span className="text-[#32DD89]">Together!</span>
           </div>

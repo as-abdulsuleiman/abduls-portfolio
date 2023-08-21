@@ -17,16 +17,16 @@ const Wrapper = () => {
         initial={{ opacity: 0 }}
         className="flex flex-col ml-auto"
       >
-        <div className="flex flex-col ml-auto mr-[35px] sm:mr-[15px] md:mr-[32px] z-50">
+        <div className="flex flex-col ml-auto mr-[33px] sm:mr-[15px] md:mr-[36px] z-10">
           <Navbar />
-        </div>
-        <div className="hidden lg:flex flex-col ml-auto mr-[20px] sm:mr-[15px] md:mr-[36px] z-30">
-          <div className="top-[280px] fixed z-30 border-[#717070] border-[0.1px] rounded-3xl drop-shadow-md shadow-lg">
+          <div className="top-[280px] fixed z-10 border-[#717070] border-[0.1px] rounded-3xl drop-shadow-md shadow-lg hidden md:flex">
             <Tabs />
           </div>
         </div>
       </motion.div>
     );
+  } else {
+    return null;
   }
 };
 

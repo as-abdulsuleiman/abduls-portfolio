@@ -2,7 +2,13 @@
 
 "use client";
 
-import { fadeIn, resumeItems, slideIn, staggerContainer } from "@/lib/constant";
+import {
+  fadeIn,
+  globalSectionStyle,
+  resumeItems,
+  slideIn,
+  staggerContainer,
+} from "@/lib/constant";
 import { motion } from "framer-motion";
 import { FileText } from "lucide-react";
 import { FC } from "react";
@@ -28,10 +34,7 @@ const Resume: FC<ResumeProps> = () => {
   }, {});
 
   return (
-    <motion.section
-      className="h-full xl:h-screen flex flex-col justify-start"
-      id="experience"
-    >
+    <motion.section id="experience" className={globalSectionStyle}>
       <motion.div
         variants={staggerContainer({
           delayChildren: 0.1,
@@ -53,13 +56,13 @@ const Resume: FC<ResumeProps> = () => {
             duration: 1,
           })}
         >
-          <div className="flex items-center justify-center border-[1px] px-[1px] bg-primary-black bg-gradient-to-tl from-primary-black via-zinc-400/5 to-zinc-900 rounded-2xl py-[2.5px] border-[#717070] w-[89px] drop-shadow-md shadow-lg">
+          <div className="flex items-center justify-center border-[1px] px-[1px] bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black rounded-2xl py-[2.5px] border-[#717070] w-[89px] drop-shadow-md shadow-lg">
             <FileText className="h-2 w-3" color="#D8D3CB" />
             <div className="ml-[6px] text-[9.5px] mt-[1.4px] text-[#D8D3CB] font-medium">
               Experience
             </div>
           </div>
-          <div className="pt-[40px] text-[#D8D3CB] text-3xl md:text-4xl">
+          <div className="pt-[40px] text-[#D8D3CB] text-3xl md:text-3xl">
             Education & <span className="text-[#32DD89]">Experience</span>
           </div>
         </motion.div>
