@@ -18,11 +18,13 @@ type ProjectItemsProps = {
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
+
   let projects: any = [];
   const projectRef = query(
     collection(db, "projects"),
     orderBy("timestamp", "desc")
   );
+
   const querySnapshot = await getDocs(projectRef);
   querySnapshot.forEach((doc) => {
     if (doc.exists()) {
