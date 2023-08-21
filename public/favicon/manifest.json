@@ -110,7 +110,7 @@
             "name": "Abdul's Portfolio / Homepage",
             "short_name": "Homepage",
             "description": "Software Developer",
-            "url": "/portfolio",
+            "url": "/",
             "icons": [
                 {
                     "src": "/favicon/android-icon-192x192.png",
