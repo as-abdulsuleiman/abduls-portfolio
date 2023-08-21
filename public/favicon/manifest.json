@@ -1,13 +1,13 @@
 {
     "name": "Abdul Suleiman's Portfolio",
     "short_name": "Abdul's Portfolio",
-    "start_url": "/portfolio",
+    "start_url": "/",
     "description": "Software Developer",
     "background_color": "#262626",
     "theme_color": "#262626",
     "display": "standalone",
     "orientation": "portrait-primary",
-    "id": "/portfolio",
+    "id": "/",
     "lang": "en-US",
     "display_override": [
         "window-controls-overlay",
