@@ -18,7 +18,9 @@ const Wrapper = () => {
         className="flex flex-col ml-auto"
       >
         <div className="flex flex-col ml-auto mr-[33px] sm:mr-[15px] md:mr-[36px] z-10">
-          <Navbar />
+          <div className="z-30">
+            <Navbar />
+          </div>
           <div className="top-[280px] fixed z-10 border-[#717070] border-[0.1px] rounded-3xl drop-shadow-md shadow-lg hidden md:flex">
             <Tabs />
           </div>

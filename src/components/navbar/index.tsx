@@ -109,7 +109,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
       <Menu.Button
         id="open-navbar"
         aria-label="open-navbar"
-        className="rounded-full z-[100] ring-[1px] cursor-pointer ring-[#717070] p-1.5 bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black transition-opacity opacity-70 hover:opacity-100"
+        className="rounded-full z-10 ring-[1px] cursor-pointer ring-[#717070] p-1.5 bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black transition-opacity opacity-70 hover:opacity-100"
       >
         <MenuIcon className="h-5 w-5" color="#D8D3CB" />
       </Menu.Button>
@@ -122,7 +122,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute mt-2 w-48 right-0 z-[999] rounded-md shadow-lg ring-[1px] ring-[#717070] ring-opacity-5 focus:outline-none bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black text-[#D8D3CB] drop-shadow-md border-[#717070] border-[0.5px]">
+        <Menu.Items className="absolute mt-2 w-48 right-0 z-10 rounded-md shadow-lg ring-[1px] ring-[#717070] ring-opacity-5 focus:outline-none bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black text-[#D8D3CB] drop-shadow-md border-[#717070] border-[0.5px]">
           <div className="px-1 py-1 ">
             {menuItems.map((val: menuItemsProps, index: number) => {
               const iconClass = `h-4 w-4 ml-auto ${

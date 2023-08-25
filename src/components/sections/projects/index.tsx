@@ -59,7 +59,6 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
               PROJECTS
             </div>
           </div>
-
           <div className="pt-[30px]">
             <div className="flex items-center">
               <div className="text-[#D8D3CB] text-3xl md:text-3xl">
