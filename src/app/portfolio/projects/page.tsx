@@ -5,6 +5,9 @@ import { db } from "@/config";
 import Projects from "@/components/projects";
 import { notFound } from "next/navigation";
 
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
+
 export const metadata = {
   title: "Abdul Suleiman's Portfolio - Projects",
   alternates: {
