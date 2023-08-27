@@ -67,12 +67,6 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "8avS9Rqssby8SHd4SAuElIoJcsZIlydBxd2jDsfRM20",
-    other: {
-      me: ["a.s.abdulsuleiman@gmail.com"],
-    },
-  },
   keywords: [...keywords],
   manifest: "/favicon/manifest.json",
   referrer: "origin-when-cross-origin",
