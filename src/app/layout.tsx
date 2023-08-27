@@ -40,7 +40,7 @@ export const metadata = {
     ...openGraphImage,
   },
   verification: {
-    google: "8avS9Rqssby8SHd4SAuElIoJcsZIlydBxd2jDsfRM20",
+    google: "Ywi2ejkvQoRCA4J4GJgijwSbZZHfAsyswY1-CE6bSj8",
     other: {
       me: ["a.s.abdulsuleiman@gmail.com"],
     },
