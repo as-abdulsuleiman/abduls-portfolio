@@ -11,7 +11,7 @@ export const fetchCache = "force-no-store";
 export const metadata = {
   title: "Abdul Suleiman's Portfolio - Projects",
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_WEBSITE_URL}projects`,
+    canonical: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/projects`,
   },
 };
 

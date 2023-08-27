@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: ProjectProps) {
     return {
       title: `Abdul Suleiman's Portfolio - Project`,
       alternates: {
-        canonical: `${process.env.NEXT_PUBLIC_WEBSITE_URL}project/${params?.id}`,
+        canonical: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/project/${params?.id}`,
       },
     };
   }
