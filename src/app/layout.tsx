@@ -87,14 +87,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn(
-        "min-h-screen antialiased scroll-smooth light scroll-py-9 sm:scroll-py-16 snap-start bg-primary-black snap-y",
-        inter?.className
-      )}
+      className="snap-mandatory scroll-py-9 sm:scroll-py-16 snap-start snap-y"
     >
       <body
-        suppressHydrationWarning={true}
-        className={`min-h-screen w-full antialiased overflow-x-hidden overflow-y-scroll bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black`}
+        suppressHydrationWarning
+        className={cn(
+          "min-h-screen w-full antialiased scroll-smooth overflow-x-hidden overflow-y-scroll bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black ",
+          inter?.className
+        )}
       >
         {children}
         <Toaster />
