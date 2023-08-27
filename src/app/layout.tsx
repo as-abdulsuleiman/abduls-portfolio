@@ -15,7 +15,6 @@ import {
 
 const inter = Inter({ subsets: ["latin"] });
 
-// <meta name="google-site-verification" content="8avS9Rqssby8SHd4SAuElIoJcsZIlydBxd2jDsfRM20" />
 export const metadata = {
   title: "Abdul Suleiman's Portfolio",
   description: "Software Developer",
