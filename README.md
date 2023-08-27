@@ -1,6 +1,6 @@
 ## Abdul's Portfolio
 
-[https://abduls-portfolio.vercel.app/portfolio](https://abduls-portfolio.vercel.app/portfolio)
+[https://abduls-portfolio-as-abdulsuleiman.vercel.app/portfolio](https://abduls-portfolio-as-abdulsuleiman.vercel.app/portfolio)
 
 ## Stack
 
