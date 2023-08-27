@@ -94,7 +94,7 @@ const ProjectModal: FC<ProjectProps> = ({ params }) => {
                   alt={(projectItem?.title as string) || "project-banner"}
                   fill
                   priority
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
                   quality={100}
                   className={`rounded-2xl object-cover border-[#717070]  border-[0.1px] relative ${
                     showimage ? "blur-sm " : "blur-none"

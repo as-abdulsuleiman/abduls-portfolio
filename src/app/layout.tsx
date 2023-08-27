@@ -39,6 +39,12 @@ export const metadata = {
   openGraph: {
     ...openGraphImage,
   },
+  verification: {
+    google: "8avS9Rqssby8SHd4SAuElIoJcsZIlydBxd2jDsfRM20",
+    other: {
+      me: ["a.s.abdulsuleiman@gmail.com"],
+    },
+  },
   icons: {
     icon: "/favicon.ico",
     shortcut: [...iconShortcut],
@@ -59,12 +65,6 @@ export const metadata = {
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
-    },
-  },
-  verification: {
-    google: "8avS9Rqssby8SHd4SAuElIoJcsZIlydBxd2jDsfRM20",
-    other: {
-      me: ["a.s.abdulsuleiman@gmail.com"],
     },
   },
   keywords: [...keywords],
@@ -93,16 +93,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn(
-        "min-h-screen antialiased scroll-smooth light scroll-py-9 sm:scroll-py-16 snap-start bg-primary-black snap-y",
-        inter?.className
-      )}
+      className="snap-mandatory antialiased scroll-py-9 sm:scroll-py-16 snap-start snap-y min-h-screen bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black"
     >
       <body
-        suppressHydrationWarning={true}
-        className={`min-h-screen w-full antialiased overflow-x-hidden overflow-y-scroll bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black`}
+        suppressHydrationWarning
+        className={cn(
+          "min-h-screen w-full antialiased overflow-x-hidden bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black ",
+          inter?.className
+        )}
       >
-        {children}
+        <div className="relative flex min-h-screen flex-col">{children}</div>
         <Toaster />
         <Analytics />
       </body>

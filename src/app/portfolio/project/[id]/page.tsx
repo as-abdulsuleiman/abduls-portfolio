@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: ProjectProps) {
   if (docSnap?.exists()) {
     const { title } = docSnap?.data();
     return {
-      title: `Abdul Suleiman's Portfolio - ${title} → Project `,
+      title: `Abdul Suleiman's Portfolio → ${title} Project `,
       alternates: {
         canonical: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/project/${params?.id}`,
       },

@@ -3,9 +3,9 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import Navbar from "../navbar";
 import Tabs from "../tabs";
 import { motion } from "framer-motion";
+import SheetDrawer from "../sheet-drawer";
 
 const Wrapper = () => {
   const pathname = usePathname();
@@ -18,10 +18,10 @@ const Wrapper = () => {
         className="flex flex-col ml-auto"
       >
         <div className="flex flex-col ml-auto mr-[33px] sm:mr-[15px] md:mr-[36px] z-10">
-          <div className="z-30">
-            <Navbar />
+          <div className="z-30 fixed flex lg:hidden">
+            <SheetDrawer />
           </div>
-          <div className="top-[280px] fixed z-10 border-[#717070] border-[0.1px] rounded-3xl drop-shadow-md shadow-lg hidden md:flex">
+          <div className="top-[280px] fixed z-50 border-[#717070] border-[0.1px] rounded-3xl drop-shadow-md shadow-lg bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black">
             <Tabs />
           </div>
         </div>

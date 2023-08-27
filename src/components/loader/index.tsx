@@ -1,7 +1,7 @@
 /** @format */
 
 import { FC } from "react";
-import Skeleton from "../skeleton";
+import { Skeleton } from "../ui/skeleton";
 
 interface LoaderProps {}
 
