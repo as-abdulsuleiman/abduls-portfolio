@@ -108,7 +108,7 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
                           alt={val?.title}
                           fill
                           priority
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
                           quality={100}
                           className="rounded-2xl object-cover w-full h-full"
                         />
