@@ -101,7 +101,7 @@ const Tabs: FC<indexProps> = ({}) => {
   };
 
   return (
-    <div className="flex flex-col px-[10px] py-[9px] relative">
+    <div className="flex flex-col px-[10px] py-[9px] relative ">
       {navs?.map((val, index) => {
         const iconClass = `h-3 w-3 sm:h-4 sm:w-4 ${
           val.hasFill

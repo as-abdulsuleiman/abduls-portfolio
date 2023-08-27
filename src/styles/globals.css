@@ -19,6 +19,15 @@ body {
   width: 4px;
 }
 
+.sheet-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.sheet-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Track */
 ::-webkit-scrollbar-track {
   background: none;

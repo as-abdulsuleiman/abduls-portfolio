@@ -15,6 +15,7 @@ import {
 
 const inter = Inter({ subsets: ["latin"] });
 
+// <meta name="google-site-verification" content="8avS9Rqssby8SHd4SAuElIoJcsZIlydBxd2jDsfRM20" />
 export const metadata = {
   title: "Abdul Suleiman's Portfolio",
   description: "Software Developer",
@@ -38,6 +39,12 @@ export const metadata = {
   },
   openGraph: {
     ...openGraphImage,
+  },
+  verification: {
+    google: "8avS9Rqssby8SHd4SAuElIoJcsZIlydBxd2jDsfRM20",
+    other: {
+      me: ["a.s.abdulsuleiman@gmail.com"],
+    },
   },
   icons: {
     icon: "/favicon.ico",
@@ -87,16 +94,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="snap-mandatory scroll-py-9 sm:scroll-py-16 snap-start snap-y"
+      className="snap-mandatory antialiased scroll-py-9 sm:scroll-py-16 snap-start snap-y min-h-screen bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black"
     >
       <body
         suppressHydrationWarning
         className={cn(
-          "min-h-screen w-full antialiased scroll-smooth overflow-x-hidden overflow-y-scroll bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black ",
+          "min-h-screen w-full antialiased overflow-x-hidden bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black ",
           inter?.className
         )}
       >
-        {children}
+        <div className="relative flex min-h-screen flex-col">{children}</div>
         <Toaster />
         <Analytics />
       </body>
