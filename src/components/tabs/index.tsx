@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ElementRef, FC, useContext, useRef } from "react";
 import {
-  Briefcase,
   Contact,
   FileText,
   Home,
