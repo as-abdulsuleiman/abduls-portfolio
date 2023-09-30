@@ -13,7 +13,7 @@ import {
   archiveItems,
 } from "./shared-metadata";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata = {
   title: "Abdul Suleiman's Portfolio",
@@ -93,7 +93,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="snap-mandatory antialiased scroll-py-9 sm:scroll-py-16 snap-start snap-y min-h-screen bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black"
+      className={cn(
+        "snap-mandatory antialiased scroll-py-9 sm:scroll-py-16 snap-start snap-y min-h-screen bg-primary-black bg-gradient-to-bl from-primary-black via-primary-black/5 to-primary-black",
+        inter?.className
+      )}
     >
       <body
         suppressHydrationWarning
