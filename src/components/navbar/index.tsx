@@ -105,7 +105,10 @@ const Navbar: FC<NavbarProps> = ({}) => {
   ];
 
   return (
-    <Menu as="div" className="block fixed top-[32px] md:top-[63px]">
+    <Menu
+      as="div"
+      className="block fixed top-[25px] md:top-[65px] right-[17px]  sm:right-[40px] lg:hidden"
+    >
       <Menu.Button
         id="open-navbar"
         aria-label="open-navbar"
