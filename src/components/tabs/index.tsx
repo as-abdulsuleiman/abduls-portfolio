@@ -31,7 +31,6 @@ type IconProps = {
 const Tabs: FC<indexProps> = ({}) => {
   const { value, setValue } = useContext(NavContext);
   const navContainerRef = useRef<ElementRef<"div">>(null);
-
   const navs = [
     {
       hasFill: false,
@@ -105,7 +104,7 @@ const Tabs: FC<indexProps> = ({}) => {
         const iconClass = `h-3 w-3 sm:h-4 sm:w-4 ${
           val.hasFill
             ? "fill-[1px] group-hover:fill-[#2BD984]"
-            : " stroke-[1px] group-hover:stroke-[#2BD984]"
+            : "stroke-[1px] group-hover:stroke-[#2BD984]"
         } ${
           value === `${val.path}`
             ? `${val.hasFill ? "fill-[#2BD984]" : "stroke-[#2BD984]"}`

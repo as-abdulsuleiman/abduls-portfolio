@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Inter } from "next/font/google";
 import { Toaster } from "@/components/ui/toaster";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import {
   openGraphImage,
   keywords,
@@ -105,7 +106,10 @@ export default function RootLayout({
           inter?.className
         )}
       >
-        <div className="relative flex min-h-screen flex-col">{children}</div>
+        <div className="relative flex min-h-screen flex-col">
+          {children}
+          <SpeedInsights />
+        </div>
         <Toaster />
         <Analytics />
       </body>
