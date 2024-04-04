@@ -32,7 +32,7 @@ export const metadata = {
     creator: "@Abdul__Suleiman",
     title: "Abdul Suleiman's Portfolio",
     description: "Software Developer",
-    images: "/opengraph-image.png",
+    images: "/twitter-image.png",
   },
   alternates: {
     canonical: process.env.NEXT_PUBLIC_WEBSITE_URL,

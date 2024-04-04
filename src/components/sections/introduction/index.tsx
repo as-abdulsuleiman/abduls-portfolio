@@ -16,6 +16,11 @@ interface IntroductionProps {
 const Introduction: FC<IntroductionProps> = ({ projectCount }) => {
   const { setValue } = useContext(NavContext);
 
+  const calculateExperience = (startYear: number) => {
+    const currentYear = new Date().getFullYear();
+    return currentYear - startYear;
+  };
+
   return (
     <motion.section id="introduction" className={globalSectionStyle}>
       <motion.div
@@ -89,7 +94,8 @@ const Introduction: FC<IntroductionProps> = ({ projectCount }) => {
             <div className="flex items-center w-full pt-[50px]">
               <div className="ml-0">
                 <div className="text-light-green text-5xl lg:text-6xl">
-                  3<span className="text-4xl font-medium">+</span>
+                  {calculateExperience(2020)}
+                  <span className="text-4xl font-medium">+</span>
                 </div>
                 <div className="font-sans text-xs leading-3 text-[#717070] mt-[6px]">
                   <small className="text-[11px]">

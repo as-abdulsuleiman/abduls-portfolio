@@ -171,20 +171,28 @@ export const footerVariants = {
 export const resumeItems = [
   {
     isPresent: true,
-    section: "Experience",
+    section: "Freelance",
     showButton: false,
-    date: "2021 - Present",
+    date: "Aug 2023 - Present ",
     name: "Software Developer",
-    company: "Pramie Technologies",
+    company: "DynastyU",
   },
   {
-    isPresent: true,
-    section: "Freelancing",
+    isPresent: false,
+    section: "Experience",
     showButton: false,
-    date: "2020",
+    date: "Aug 2021 - Feb 2024",
     name: "Software Developer",
     company: "Pramie Technologies",
   },
+  // {
+  //   isPresent: false,
+  //   section: "Freelance",
+  //   showButton: false,
+  //   date: "2020-2021",
+  //   name: "Software Developer",
+  //   company: "Pramie Technologies",
+  // },
   {
     isPresent: false,
     section: "Education",
@@ -195,20 +203,26 @@ export const resumeItems = [
   },
 ];
 
+
+
+
 export const aboutMeItems = [
   {
-    description: `I pursued a degree in Computer Applications from Bangalore University-affiliated college, Bengaluru, India. After finishing my degree, I decided to pursue my passion for programming. I started my career by enrolling in coding tutorials offered on YouTube and other online platforms, where I learned about web development.`,
+    description: `I'm Abdul Suleiman, a passionate Software Developer who believes in the power of technology to transform lives. My arsenal includes JavaScript, TypeScript, Reactjs, and a slew of other technologies aimed at creating seamless, impactful applications`,
   },
   {
     description:
-      "The art of problem-solving is one part of programming that I find quite appealing. When I eventually decipher a solution to a complex problem, I feel a sense of accomplishment.",
+      "My professional path has been an exciting mix of freelance work and impactful contributions to companies like Pramie Technologies, where I’ve not only developed websites and applications but also mentored emerging talents. My projects, from Firstactive365 to DynastyU, highlight my commitment to excellence and innovation.",
   },
   {
-    description: `My primary skill set includes the use of technologies such as React.js, Next.js, JavaScript, and TypeScript, among others. These tools enable me to design dynamic and interesting online applications that promote efficiency and user-friendliness while meeting user needs. My commitment to learning and remaining current with industry developments drives my ongoing development as a web developer.`,
+    description: `I'm all about using my skills to make a difference, be it through developing apps that connect communities or websites that drive businesses forward. Interested in crafting something great together? Let’s chat.`,
   },
   {
-    description: `When I'm not immersed in programming, I find joy in playing football, FIFA, watching Football matches, and Formula 1 races. These leisure activities provide the perfect balance to my intense dedication to software development.`,
+    description:`Each version is designed to showcase Abdul's skills, experiences, and personality in a unique light while inviting readers to engage further.`
   },
+  // {
+  //   description: `When I'm not immersed in programming, I find joy in playing football, FIFA, watching Football matches, and Formula 1 races. These leisure activities provide the perfect balance to my intense dedication to software development.`,
+  // },
 ];
 
 export const globalSectionStyle = "h-full lg:h-screen flex flex-col justify-start"

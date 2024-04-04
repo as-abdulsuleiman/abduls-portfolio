@@ -20,6 +20,7 @@ export const archiveItems = [
   "https://bloco.co.uk/",
   "https://www.sadiqakuki.com/",
   "https://firstactive365.com/",
+  "https://www.vascan.io/",
 ];
 
 export const iconShortcut = [
